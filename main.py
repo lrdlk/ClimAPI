@@ -6,6 +6,19 @@ Este script:
 2. Define los endpoints para datos meteorológicos
 3. Integra múltiples fuentes de datos
 4. Proporciona documentación automática
+
+ClimAPI - API de Datos Meteorológicos
+
+Este módulo es el punto de entrada principal de la aplicación FastAPI que proporciona:
+- Una API REST para consultar datos meteorológicos
+- Integración con múltiples fuentes de datos
+- Sistema de caché para mejorar el rendimiento
+- Documentación automática con Swagger UI y ReDoc
+
+Módulos principales:
+- data_sources/: Fuentes de datos meteorológicos
+- processing/: Procesamiento y transformación de datos
+- backend/: Implementación de la API FastAPI
 """
 
 import pandas as pd
