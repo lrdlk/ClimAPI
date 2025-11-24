@@ -6,16 +6,37 @@ pydantic-settings>=2.0.0
 python-multipart>=0.0.6
 
 # Data processing
-pandas>=2.0.0
-requests>=2.31.0
+pandas
+requests
+numpy
 
 # Caching
-diskcache>=5.6.0
+diskcache
 
 # Logging
-python-json-logger>=2.0.0
+python-json-logger
 
 # Original dashboard (optional)
-streamlit>=1.28.0
-plotly>=5.17.0
+streamlit
+plotly
 
+# Pydantic y validación
+pydantic
+pydantic-settings
+
+# Peticiones HTTP
+httpx==0.25.2
+
+# Desarrollo
+pytest
+pytest-asyncio
+black
+isort
+mypy
+
+# Seguridad
+python-jose[cryptography]
+passlib[bcrypt]
+
+# CORS
+python-multipart
