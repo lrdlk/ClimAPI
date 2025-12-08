@@ -44,35 +44,36 @@ class PinggyTunnel:
             print("🌐 INICIANDO TÚNEL PINGGY.IO")
             print("="*70)
             
-            # Comando para iniciar el túnel
-            # Si tienes token, úsalo; si no, genera uno temporal
+            # Comando para iniciar el túnel usando pinggy.exe
             if self.token:
                 cmd = [
-                    "ssh",
-                    "-R",
-                    f"0:localhost:{self.dashboard_port}",
-                    f"{self.token}@a.pinggy.io"
+                    "pinggy.exe",
+                    "-p", "443",
+                    "-R0:127.0.0.1:8501",
+                    "-o", "StrictHostKeyChecking=no",
+                    "-o", "ServerAliveInterval=30",
+                    f"{self.token}@free.pinggy.io"
                 ]
                 print(f"✓ Token Pinggy configurado")
             else:
-                print("⚠️  Sin token - generando túnel temporal")
-                print("   Para obtener un token permanente:")
-                print("   1. Ve a https://pinggy.io/")
-                print("   2. Inicia sesión/crea cuenta")
-                print("   3. Copia tu token")
-                print("   4. Exporta: $env:PINGGY_TOKEN='tu_token'")
-                
+                # Fallback a SSH si no hay pinggy.exe
                 cmd = [
                     "ssh",
                     "-R",
                     f"0:localhost:{self.dashboard_port}",
                     "a.pinggy.io"
                 ]
+                print("⚠️  Sin token - generando túnel temporal")
+                print("   Para obtener un token permanente:")
+                print("   1. Ve a https://pinggy.io/")
+                print("   2. Inicia sesión/crea cuenta")
+                print("   3. Copia tu token")
+                print("   4. Exporta: $env:PINGGY_TOKEN='tu_token'")
             
             print(f"\n✓ Exponiendo puerto {self.dashboard_port} a través de Pinggy")
             print("  Esperando URL pública...\n")
             
-            # Iniciar proceso SSH
+            # Iniciar proceso
             self.process = subprocess.Popen(
                 cmd,
                 stdout=subprocess.PIPE,
@@ -119,11 +120,9 @@ class PinggyTunnel:
                 print("   Monitorea la salida anterior para la URL.\n")
                 return True  # El proceso está corriendo
                 
-        except FileNotFoundError:
-            print("\n❌ SSH no está disponible en el PATH")
-            print("   Instalación recomendada:")
-            print("   • Windows: Instalar OpenSSH desde Configuración > Apps")
-            print("   • Linux/Mac: $ sudo apt-get install openssh-client")
+        except FileNotFoundError as e:
+            print(f"\n❌ No se encontró: {e.filename}")
+            print("   Asegúrate de que pinggy.exe o SSH están disponibles")
             return False
         except Exception as e:
             print(f"\n❌ Error al iniciar túnel: {e}")

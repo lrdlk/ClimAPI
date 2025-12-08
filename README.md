@@ -155,24 +155,27 @@ python main.py help
 Para exponer tu dashboard a internet con **HTTPS seguro**:
 
 ```bash
-# Opción A: Instalador interactivo (Recomendado)
-python pinggy_installer.py
+# Opción A: Script Automático (Recomendado)
+python pinggy_direct.py
 
-# Opción B: Script avanzado
-python run_with_pinggy.py
+# Opción B: Comando Directo
+pinggy.exe -p 443 -R0:127.0.0.1:8501 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 Fm4hH7kZ8sz+force@free.pinggy.io
+
+# Opción C: Instalador Interactivo
+python pinggy_installer.py
 ```
 
 **Resultado:**
-- URL pública: `https://xxxx-xxxx.pinggy.io`
+- URL pública: `https://Fm4hH7kZ8sz.free.pinggy.io`
 - Accesible desde cualquier dispositivo
 - HTTPS automático (sin certificados)
 - Compartible con equipo/clientes
 
-**Requisitos:**
-- ✅ SSH (incluido en Windows 10+)
-- ✅ Token Pinggy (gratis en https://pinggy.io)
+**Requiere:**
+- ✅ pinggy.exe (descargable desde https://pinggy.io)
+- ✅ Dashboard en puerto 8501
 
-📖 Ver: [`PINGGY_QUICKSTART.md`](PINGGY_QUICKSTART.md) | [`PINGGY_INTEGRATION.md`](PINGGY_INTEGRATION.md)
+📖 Ver: [`START_PINGGY.md`](START_PINGGY.md) | [`PINGGY_COMMAND.md`](PINGGY_COMMAND.md) | [`PINGGY_GUIDE.md`](PINGGY_GUIDE.md)
 
 ### 4. Dashboard Streamlit - 4 Modos
 

@@ -2,44 +2,29 @@
 
 ## ⚡ En 3 Pasos (2 Minutos)
 
-### Paso 1️⃣: Ejecutar Instalador
+### Paso 1️⃣: Opción A - Script (Recomendado)
 ```powershell
-python pinggy_installer.py
+python pinggy_direct.py
 ```
 
-### Paso 2️⃣: Seleccionar Opción 1
-```
-¿Qué deseas hacer?
+Selecciona **opción 1 o 2**
 
-1. 🚀 Iniciar Dashboard con Pinggy (acceso público HTTPS)
-2. 🔐 Configurar/cambiar Token Pinggy
-3. 📊 Iniciar Dashboard solo local
-4. ❌ Salir
-
-Selecciona (1-4): 1
+### Paso 1️⃣: Opción B - Comando Directo
+```powershell
+pinggy.exe -p 443 -R0:127.0.0.1:8501 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 Fm4hH7kZ8sz+force@free.pinggy.io
 ```
 
-### Paso 3️⃣: Esperar la URL Pública
+### Paso 2️⃣: Abrir Nueva Terminal
+```powershell
+.venv\Scripts\streamlit.exe run dashboard/app.py
 ```
-🌐 INICIANDO TÚNEL PINGGY.IO
-⏳ Iniciando túnel...
-⏳ Exponiendo puerto 8501 a través de Pinggy
-   Esperando URL pública...
 
-[Pinggy] Port 8501 is forwarded to https://xxxx-xxxx.pinggy.io
+### Paso 3️⃣: Compartir URL
+```
+Output en Terminal 1:
+Port 8501 is forwarded to https://Fm4hH7kZ8sz.free.pinggy.io
 
-═══════════════════════════════════════════════════════════════════════
-
-✅ TÚNEL ACTIVO
-
-🔗 URL Pública (HTTPS):
-   https://xxxx-xxxx.pinggy.io
-
-📱 Acceso:
-   • Desde internet: https://xxxx-xxxx.pinggy.io
-   • Localmente: http://localhost:8501
-
-═══════════════════════════════════════════════════════════════════════
+✅ ¡Usa esta URL!
 ```
 
 ## ✨ ¡Listo!

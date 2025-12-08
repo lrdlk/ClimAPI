@@ -129,11 +129,13 @@ def quick_start():
     print("🚀 INICIANDO DASHBOARD CON PINGGY.IO")
     print("="*80 + "\n")
     
-    # Comando para abrir túnel
+    # Comando para abrir túnel usando pinggy.exe
     if token:
-        cmd = f"ssh -R 0:localhost:8501 {token}@a.pinggy.io"
+        # Usar comando pinggy.exe con token
+        cmd = f'pinggy.exe -p 443 -R0:127.0.0.1:8501 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 {token}@free.pinggy.io'
         print(f"✓ Usando token configurado")
     else:
+        # Fallback a SSH si no hay token
         cmd = "ssh -R 0:localhost:8501 a.pinggy.io"
         print(f"ℹ️  Usando túnel temporal (URL cambiará en próximas sesiones)")
     
@@ -141,7 +143,7 @@ def quick_start():
     print("Espera a ver: 'Port 8501 is forwarded to https://...'")
     print("━" * 80 + "\n")
     
-    # Ejecutar SSH
+    # Ejecutar comando
     try:
         subprocess.run(cmd, shell=True)
     except KeyboardInterrupt:

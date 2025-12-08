@@ -62,15 +62,15 @@ class PinggyConfig:
     @staticmethod
     def get_ssh_command() -> str:
         """
-        Genera el comando SSH para iniciar el túnel.
+        Genera el comando Pinggy para iniciar el túnel.
         
         Returns:
-            Comando SSH completo
+            Comando Pinggy completo
         """
         if PINGGY_TOKEN:
-            return f"ssh -R 0:localhost:{PINGGY_PORT} {PINGGY_TOKEN}@{PINGGY_HOST}"
+            return f'pinggy.exe -p 443 -R0:127.0.0.1:8501 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 {PINGGY_TOKEN}@free.pinggy.io'
         else:
-            return f"ssh -R 0:localhost:{PINGGY_PORT} {PINGGY_HOST}"
+            return f"ssh -R 0:localhost:{PINGGY_PORT} a.pinggy.io"
     
     @staticmethod
     def is_configured() -> bool:
