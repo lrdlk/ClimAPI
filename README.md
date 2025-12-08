@@ -150,6 +150,30 @@ python main.py test
 python main.py help
 ```
 
+### 4. 🌐 Acceso Remoto con Pinggy.io (NUEVO)
+
+Para exponer tu dashboard a internet con **HTTPS seguro**:
+
+```bash
+# Opción A: Instalador interactivo (Recomendado)
+python pinggy_installer.py
+
+# Opción B: Script avanzado
+python run_with_pinggy.py
+```
+
+**Resultado:**
+- URL pública: `https://xxxx-xxxx.pinggy.io`
+- Accesible desde cualquier dispositivo
+- HTTPS automático (sin certificados)
+- Compartible con equipo/clientes
+
+**Requisitos:**
+- ✅ SSH (incluido en Windows 10+)
+- ✅ Token Pinggy (gratis en https://pinggy.io)
+
+📖 Ver: [`PINGGY_QUICKSTART.md`](PINGGY_QUICKSTART.md) | [`PINGGY_INTEGRATION.md`](PINGGY_INTEGRATION.md)
+
 ### 4. Dashboard Streamlit - 4 Modos
 
 **Tiempo Real**: Datos en directo desde múltiples fuentes (Open-Meteo, SIATA, etc.)
