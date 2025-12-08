@@ -1,8 +1,11 @@
 # 🌤️ ClimAPI v1.0.0 - Dashboard Meteorológico
 
-**Estado:** ✅ **PROYECTO EN ESTADO ÓPTIMO** | **Integridad:** 100%
+**Estado:** ✅ **PROYECTO EN ESTADO ÓPTIMO** | **Integridad:** 100% | **Pinggy.io:** ✅ **ACTIVO**
 
 Dashboard meteorológico unificado con datos de múltiples fuentes en tiempo real. Backend FastAPI + Frontend Next.js.
+
+> **⚠️ ¿Error de PowerShell?** Lee [`POWERSHELL_ERROR_FIXED.md`](POWERSHELL_ERROR_FIXED.md) - **¡Problema resuelto!**  
+> **⚡ INICIO RÁPIDO:** Ejecuta `.\run-tunnel.ps1` para iniciar el túnel Pinggy
 
 ---
 
@@ -99,6 +102,42 @@ ClimAPI/
 ```
 
 ## 🚀 Inicio Rápido
+
+### ⚡ Opción A: Con Acceso Remoto (Pinggy.io)
+
+```powershell
+# 1. Abre PowerShell en el directorio del proyecto
+cd "e:\C0D3\Python\Jupyter\ClimAPI"
+
+# 2. Inicia el túnel (Terminal 1)
+.\start_tunnel.ps1
+# Selecciona opción 1 en el menú
+
+# 3. En una NUEVA terminal, inicia el dashboard (Terminal 2)
+.venv\Scripts\streamlit.exe run dashboard/app.py
+
+# 4. Accede al dashboard:
+#    - Local:  http://localhost:8501
+#    - Remoto: https://Fm4hH7kZ8sz.free.pinggy.io
+```
+
+**Nota:** Si encuentras error de PowerShell, lee [`QUICK_START_SCRIPTS.md`](QUICK_START_SCRIPTS.md)
+
+---
+
+### ⚡ Opción B: Solo Local (sin Pinggy)
+
+```bash
+# 1. Activa el entorno virtual
+.venv\Scripts\activate
+
+# 2. Inicia el dashboard
+streamlit run dashboard/app.py
+
+# 3. Accede a http://localhost:8501
+```
+
+---
 
 ### Requisitos
 - Python 3.10+
