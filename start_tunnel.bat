@@ -6,6 +6,9 @@ REM ============================================================================
 
 setlocal enabledelayedexpansion
 
+REM Detectar la ruta correcta del archivo .bat
+cd /d "%~dp0"
+
 echo.
 echo ╔════════════════════════════════════════════════════════════════════════════╗
 echo ║              🌐 CLIMAPI DASHBOARD - PINGGY.IO TUNNEL STARTER              ║
