@@ -7,6 +7,11 @@ import logging
 from typing import Dict, Any, List, Optional
 from datetime import datetime
 from dataclasses import dataclass
+import os
+from dotenv import load_dotenv
+
+# Cargar variables de entorno desde .env
+load_dotenv()
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +37,18 @@ class WeatherAggregator:
     
     def __init__(self):
         """Inicializa el agregador."""
+        # Cargar API keys desde .env
+        self.openweather_api_key = os.getenv("OPENWEATHER_API_KEY", "")
+        self.meteoblue_api_key = os.getenv("METEOBLUE_API_KEY", "")
+        self.ideam_username = os.getenv("IDEAM_USERNAME", "")
+        self.ideam_password = os.getenv("IDEAM_PASSWORD", "")
+        self.ideam_radar_url = os.getenv("IDEAM_RADAR_URL", "http://www.pronosticosyalertas.gov.co/archivos-radar")
+        
+        # Determinar qué fuentes están activas basado en credenciales
+        openweather_active = bool(self.openweather_api_key)
+        meteoblue_active = bool(self.meteoblue_api_key)
+        ideam_active = bool(self.ideam_radar_url)  # IDEAM es público
+        
         self.sources = {
             "open_meteo": WeatherSource(
                 name="Open-Meteo",
@@ -48,22 +65,26 @@ class WeatherAggregator:
             "openweather": WeatherSource(
                 name="OpenWeatherMap",
                 icon="☁️",
-                active=False,  # Requiere API key
+                active=openweather_active,
                 priority=3
             ),
             "meteoblue": WeatherSource(
                 name="MeteoBlue",
                 icon="🎯",
-                active=False,  # Requiere API key
+                active=meteoblue_active,
                 priority=4
             ),
             "radar_ideam": WeatherSource(
                 name="Radar IDEAM",
                 icon="📡",
-                active=False,  # Datos limitados
+                active=ideam_active,
                 priority=5
             ),
         }
+        
+        # Log de fuentes activas
+        active_sources = [s.name for s in self.sources.values() if s.active]
+        logger.info(f"Fuentes activas: {', '.join(active_sources)}")
     
     async def fetch_all_sources(
         self,
@@ -173,7 +194,44 @@ class WeatherAggregator:
         timeout: int
     ) -> Dict[str, Any]:
         """Obtiene datos de OpenWeatherMap."""
-        return {"error": "API key no configurada"}
+        try:
+            if not self.openweather_api_key:
+                return {"error": "API key de OpenWeatherMap no configurada"}
+            
+            import httpx
+            
+            params = {
+                "lat": latitude,
+                "lon": longitude,
+                "appid": self.openweather_api_key,
+                "units": "metric",
+                "lang": "es"
+            }
+            
+            async with httpx.AsyncClient(timeout=timeout) as client:
+                response = await client.get(
+                    "https://api.openweathermap.org/data/2.5/weather",
+                    params=params
+                )
+                response.raise_for_status()
+                data = response.json()
+                
+                logger.info(f"✓ Datos obtenidos de OpenWeatherMap para ({latitude}, {longitude})")
+                return {
+                    "data": {
+                        "temperature": data["main"]["temp"],
+                        "humidity": data["main"]["humidity"],
+                        "pressure": data["main"]["pressure"],
+                        "wind_speed": data["wind"]["speed"],
+                        "description": data["weather"][0]["description"],
+                        "location": data.get("name", "")
+                    },
+                    "timestamp": datetime.utcnow().isoformat(),
+                    "cached": False
+                }
+        except Exception as e:
+            logger.error(f"Error OpenWeatherMap: {str(e)}")
+            return {"error": str(e)}
     
     async def _fetch_meteoblue(
         self,
@@ -182,7 +240,44 @@ class WeatherAggregator:
         timeout: int
     ) -> Dict[str, Any]:
         """Obtiene datos de MeteoBlue."""
-        return {"error": "API key no configurada"}
+        try:
+            if not self.meteoblue_api_key:
+                return {"error": "API key de MeteoBlue no configurada"}
+            
+            import httpx
+            
+            params = {
+                "apikey": self.meteoblue_api_key,
+                "lat": latitude,
+                "lon": longitude,
+                "asl": 700,
+                "timeformat": "unixtime"
+            }
+            
+            async with httpx.AsyncClient(timeout=timeout) as client:
+                response = await client.get(
+                    "https://api.meteoblue.com/v1/current",
+                    params=params
+                )
+                response.raise_for_status()
+                data = response.json()
+                
+                logger.info(f"✓ Datos obtenidos de MeteoBlue para ({latitude}, {longitude})")
+                return {
+                    "data": {
+                        "temperature": data["data"]["temperature"],
+                        "humidity": data["data"]["relativehumidity"],
+                        "wind_speed": data["data"]["windspeed"],
+                        "wind_direction": data["data"]["winddirection"],
+                        "precipitation": data["data"].get("precipitation", 0),
+                        "weather": data["data"].get("weathercode", "")
+                    },
+                    "timestamp": datetime.utcnow().isoformat(),
+                    "cached": False
+                }
+        except Exception as e:
+            logger.error(f"Error MeteoBlue: {str(e)}")
+            return {"error": str(e)}
     
     async def _fetch_radar_ideam(
         self,
@@ -191,7 +286,25 @@ class WeatherAggregator:
         timeout: int
     ) -> Dict[str, Any]:
         """Obtiene datos de Radar IDEAM."""
-        return {"error": "Datos limitados en esta fase"}
+        try:
+            from backend.app.services.ideam_radar import get_radar_data
+            
+            data = await asyncio.wait_for(
+                get_radar_data(latitude, longitude),
+                timeout=timeout
+            )
+            
+            logger.info(f"✓ Datos obtenidos de Radar IDEAM para ({latitude}, {longitude})")
+            return {
+                "data": data,
+                "timestamp": datetime.utcnow().isoformat(),
+                "cached": False
+            }
+        except asyncio.TimeoutError:
+            return {"error": "Timeout al obtener datos de IDEAM"}
+        except Exception as e:
+            logger.error(f"Error Radar IDEAM: {str(e)}")
+            return {"error": str(e)}
     
     def get_active_sources(self) -> List[str]:
         """Retorna lista de fuentes activas."""
