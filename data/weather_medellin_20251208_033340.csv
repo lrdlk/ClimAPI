@@ -1,0 +1,12 @@
+Campo,Valor
+source,open_meteo
+processed_at,2025-12-08T03:33:40.348215
+status,processed
+temperature,23.3
+wind_speed,2.3
+wind_direction,309
+weather_code,80
+timestamp,2025-12-07T22:30
+--- Ubicación ---,
+location_latitude,6.125
+location_longitude,-75.75

@@ -1,42 +1,25 @@
-# Backend dependencies
-fastapi>=0.104.0
-uvicorn[standard]>=0.24.0
-pydantic>=2.0.0
-pydantic-settings>=2.0.0
-python-multipart>=0.0.6
+# API Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
 
-# Data processing
-pandas
-requests
-numpy
-
-# Caching
-diskcache
-
-# Logging
-python-json-logger
-
-# Original dashboard (optional)
-streamlit
-plotly
-
-# Pydantic y validación
-pydantic
-pydantic-settings
-
-# Peticiones HTTP
+# HTTP Clients
 httpx==0.25.2
+requests==2.31.0
 
-# Desarrollo
-pytest
-pytest-asyncio
-black
-isort
-mypy
+# Cache
+diskcache==5.6.3
 
-# Seguridad
-python-jose[cryptography]
-passlib[bcrypt]
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-asyncio==0.23.1
+pytest-mock==3.12.0
 
-# CORS
-python-multipart
+# Streamlit (opcional)
+streamlit==1.31.1
+plotly==5.18.0
+
+# Utilidades
+python-dotenv==1.0.0

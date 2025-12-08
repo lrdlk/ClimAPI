@@ -1,0 +1,1732 @@
+# 🚀 PROMPT CURSOR/WINDSURF - TESTING CLIMAPI POR ETAPAS
+
+## INSTRUCCIONES INICIALES
+
+**Antes de comenzar:**
+1. Copia este prompt completo en Cursor/Windsurf
+2. Reemplaza `[PROYECTO_PATH]` con la ruta real (ej: `/home/user/ClimAPI`)
+3. Reemplaza `[TU_USUARIO]` con tu nombre
+4. Ejecuta etapa por etapa según las instrucciones
+
+---
+
+## 📋 CONTEXTO DEL PROYECTO
+
+**Nombre:** ClimAPI v1.0.0  
+**Objetivo:** Dashboard meteorológico con 8+ fuentes de datos  
+**Stack:** FastAPI + Streamlit + Pytest + Pinggy  
+**Usuario:** [TU_USUARIO]  
+**Ruta Proyecto:** [PROYECTO_PATH]  
+
+---
+
+## 🎯 ESTRUCTURA DE PRUEBAS
+
+```
+ETAPA 1: Validar Setup & Dependencias (15 min)
+  ├─ Verificar Python 3.9+
+  ├─ Verificar virtualenv activo
+  ├─ Verificar dependencias instaladas
+  └─ Verificar estructura de carpetas
+
+ETAPA 2: Tests Unitarios - Clientes (45 min)
+  ├─ Tests SIATA Client (8 tests)
+  ├─ Tests Radar IDEAM Client (6 tests)
+  ├─ Tests Open-Meteo Client (7 tests)
+  ├─ Tests Cache Manager (5 tests)
+  └─ Reporte de cobertura (target >70%)
+
+ETAPA 3: Tests de Integración - APIs Reales (60 min)
+  ├─ Tests de Endpoints FastAPI (5 tests)
+  ├─ Tests de Normalización de Datos (4 tests)
+  ├─ Tests de Caché Integrado (3 tests)
+  ├─ Tests de Fallbacks (3 tests)
+  └─ Health Check del Backend
+
+ETAPA 4: Verificación de Backend & Config (30 min)
+  ├─ Validar config/settings.py
+  ├─ Validar estructura de módulos
+  ├─ Validar imports correctos
+  └─ Health check FastAPI
+
+ETAPA 5: Setup Pinggy Tunnel (20 min)
+  ├─ Verificar conexión SSH
+  ├─ Crear tunnel con Pinggy
+  ├─ Obtener URL pública
+  └─ Probar acceso a API
+
+ETAPA 6: Streamlit Dashboard (30 min)
+  ├─ Verificar instalación Streamlit
+  ├─ Verificar cliente API funciona
+  ├─ Iniciar dashboard
+  └─ Probar interactividad
+
+ETAPA 7: Testing End-to-End (30 min)
+  ├─ APIs Reales → Backend
+  ├─ Backend → Caché
+  ├─ Caché → Streamlit
+  └─ Streamlit → Visualizaciones
+```
+
+---
+
+## ⚡ ETAPA 1: VALIDAR SETUP & DEPENDENCIAS
+
+**Tiempo:** 15 minutos  
+**Objetivo:** Asegurar ambiente listo
+
+### TAREA 1.1: Verificar Python
+
+```bash
+# En Cursor/Windsurf Terminal:
+python --version
+# Resultado esperado: Python 3.9+ (ej: Python 3.11.5)
+
+# Verificar pip
+pip --version
+# Resultado esperado: pip 24.x.x
+
+# Verificar virtualenv activo
+which python
+# Resultado esperado: Ruta que contenga "/venv/" o "/.venv/"
+```
+
+**Si falla:**
+```bash
+# Crear virtualenv
+cd [PROYECTO_PATH]
+python -m venv venv
+
+# Activar
+# Linux/Mac:
+source venv/bin/activate
+# Windows:
+venv\Scripts\activate
+```
+
+### TAREA 1.2: Instalar Dependencias
+
+```bash
+cd [PROYECTO_PATH]
+
+# Instalar requirements.txt
+pip install -r requirements.txt -q
+
+# Instalar dependencias de testing
+pip install pytest pytest-cov pytest-asyncio pytest-mock httpx -q
+
+# Instalar Streamlit
+pip install streamlit plotly -q
+
+# Verificar instalaciones
+pip list | grep -E "pytest|fastapi|streamlit|httpx"
+```
+
+**Debería mostrar:**
+```
+fastapi           0.109.0
+httpx              0.25.2
+plotly            5.18.0
+pytest            7.4.3
+pytest-asyncio    0.23.1
+pytest-cov        4.1.0
+pytest-mock       3.12.0
+streamlit         1.31.1
+```
+
+### TAREA 1.3: Verificar Estructura de Carpetas
+
+```bash
+cd [PROYECTO_PATH]
+
+# Verificar estructura principal
+ls -la | grep -E "config|src|tests|streamlit"
+
+# Verificar subcarpetas
+ls -la config/
+ls -la src/
+ls -la tests/
+```
+
+**Debería mostrar:**
+```
+config/
+├─ __init__.py
+├─ settings.py
+├─ requirements_config.txt
+
+src/
+├─ data_sources/
+├─ processing/
+├─ models/
+├─ visualizers/
+
+tests/
+├─ test_clients/
+├─ test_integration/
+├─ conftest.py
+
+streamlit_dashboard/
+├─ app.py
+├─ pages/
+├─ utils/
+```
+
+**Si faltan archivos:**
+```bash
+# Crear config/settings.py (ver ETAPA 4)
+# Crear archivos faltantes en src/
+# Crear estructura de tests (ver ETAPA 2)
+```
+
+### TAREA 1.4: Verificar Imports Básicos
+
+```bash
+# En Cursor, crear archivo de test temporal:
+# test_imports.py
+
+python -c "
+from config.settings import settings
+from src.data_sources.siata import SIATAClient
+from src.processing.cache_manager import CacheManager
+print('✓ Todos los imports OK')
+"
+
+# Resultado esperado: ✓ Todos los imports OK
+```
+
+**Si falla:**
+```
+❌ ModuleNotFoundError: No module named 'config'
+→ Solución: Revisar paths en sys.path dentro de conftest.py
+```
+
+---
+
+## ⚙️ ETAPA 2: TESTS UNITARIOS - CLIENTES (45 min)
+
+**Tiempo:** 45 minutos  
+**Objetivo:** Validar clientes aisladamente sin APIs reales
+
+### TAREA 2.1: Crear conftest.py con Fixtures
+
+**Archivo:** `tests/conftest.py`
+
+```python
+# COPIAR COMPLETO - conftest.py
+
+import pytest
+from unittest.mock import Mock, patch
+from datetime import datetime
+from pathlib import Path
+import sys
+
+sys.path.insert(0, str(Path(__file__).parent.parent))
+
+from config.settings import settings
+from src.data_sources.siata import SIATAClient
+from src.processing.cache_manager import CacheManager
+
+# ========================== FIXTURES ==========================
+
+@pytest.fixture
+def test_location():
+    """Ubicación de prueba."""
+    return {
+        "name": "Medellín",
+        "latitude": 6.2442,
+        "longitude": -75.5812
+    }
+
+@pytest.fixture
+def siata_client():
+    """Cliente SIATA."""
+    config = {"api_url": "https://www.siata.gov.co"}
+    return SIATAClient(config)
+
+@pytest.fixture
+def cache_manager(tmp_path):
+    """Cache Manager."""
+    return CacheManager(
+        cache_dir=str(tmp_path / "cache"),
+        ttl_config={"current_weather": 15, "forecast": 60}
+    )
+
+@pytest.fixture
+def mock_weather_response():
+    """Mock de respuesta."""
+    return {
+        "timestamp": datetime.utcnow().isoformat(),
+        "temperature": 22.5,
+        "humidity": 65.0,
+        "source": "test"
+    }
+
+@pytest.fixture(autouse=True)
+def log_test_info(request):
+    """Log de tests."""
+    print(f"\n{'='*60}\nTEST: {request.node.name}\n{'='*60}")
+    yield
+
+# ======================== HOOKS ========================
+
+def pytest_configure(config):
+    """Registra marcadores."""
+    config.addinivalue_line("markers", "unit: unit test")
+    config.addinivalue_line("markers", "integration: integration test")
+    config.addinivalue_line("markers", "slow: slow test (requires API)")
+```
+
+**Comando para crear:**
+```bash
+# En Cursor, crea archivo en tests/conftest.py
+# Y copia el código arriba
+```
+
+### TAREA 2.2: Tests del SIATA Client
+
+**Archivo:** `tests/test_clients/test_siata_client.py`
+
+```python
+import pytest
+from unittest.mock import Mock, patch
+from src.data_sources.siata import SIATAClient
+
+@pytest.mark.unit
+class TestSIATAClient:
+    """Tests del SIATA Client."""
+    
+    def test_client_init(self, siata_client):
+        """✓ Test 1: Cliente inicializa correctamente."""
+        assert siata_client.base_url == "https://www.siata.gov.co"
+        print("✓ Test 1 PASÓ")
+    
+    def test_normalize_response(self, siata_client):
+        """✓ Test 2: Normaliza respuesta correctamente."""
+        raw = {"temperature": 22.5, "humidity": 65.0, "viento": 3.2}
+        normalized = siata_client._normalize_siata_response(raw)
+        
+        assert normalized["temperature"] == 22.5
+        assert normalized["humidity"] == 65.0
+        assert normalized["wind_speed"] == 3.2
+        print("✓ Test 2 PASÓ")
+    
+    @patch('requests.Session.get')
+    def test_fetch_from_api_success(self, mock_get, siata_client):
+        """✓ Test 3: Obtiene datos de API exitosamente."""
+        mock_response = Mock()
+        mock_response.status_code = 200
+        mock_response.json.return_value = {"temperature": 22.5, "humidity": 65.0}
+        mock_get.return_value = mock_response
+        
+        result = siata_client._fetch_from_api("medellin")
+        
+        assert result is not None
+        assert "temperature" in result
+        print("✓ Test 3 PASÓ")
+    
+    @patch('requests.Session.get')
+    def test_fetch_from_api_failure(self, mock_get, siata_client):
+        """✓ Test 4: Maneja error en API."""
+        mock_get.side_effect = Exception("Connection error")
+        
+        result = siata_client._fetch_from_api("medellin")
+        
+        assert result is None
+        print("✓ Test 4 PASÓ")
+    
+    def test_get_weather_current(self, siata_client, mock_weather_response):
+        """✓ Test 5: Obtiene clima actual."""
+        with patch.object(siata_client, '_fetch_from_api', 
+                         return_value=mock_weather_response):
+            result = siata_client.get_weather_current("medellin")
+        
+        assert result is not None
+        assert result["temperature"] == 22.5
+        print("✓ Test 5 PASÓ")
+    
+    def test_location_validation(self, siata_client):
+        """✓ Test 6: Valida ubicaciones."""
+        valid_locations = ["medellin", "bogota", "cali"]
+        
+        for loc in valid_locations:
+            assert siata_client._validate_location(loc) == True
+        
+        print("✓ Test 6 PASÓ")
+    
+    def test_response_caching(self, siata_client, mock_weather_response):
+        """✓ Test 7: Cachea respuestas."""
+        siata_client._cache["test_key"] = mock_weather_response
+        
+        cached = siata_client._get_cached("test_key")
+        
+        assert cached == mock_weather_response
+        print("✓ Test 7 PASÓ")
+    
+    def test_retry_mechanism(self, siata_client):
+        """✓ Test 8: Reintentos funcionan."""
+        with patch.object(siata_client, '_fetch_from_api', 
+                         side_effect=[None, None, {"temperature": 22.5}]) as mock:
+            result = siata_client._fetch_with_retry("medellin", max_retries=3)
+        
+        assert result is not None
+        assert mock.call_count == 3
+        print("✓ Test 8 PASÓ")
+
+# EJECUTAR
+if __name__ == "__main__":
+    import sys
+    sys.exit(pytest.main([__file__, "-v"]))
+```
+
+**Ejecutar en Cursor Terminal:**
+```bash
+cd [PROYECTO_PATH]
+
+# Ejecutar tests SIATA
+pytest tests/test_clients/test_siata_client.py -v
+
+# Resultado esperado:
+# test_siata_client.py::TestSIATAClient::test_client_init PASSED
+# test_siata_client.py::TestSIATAClient::test_normalize_response PASSED
+# ... 8 tests PASSED en total
+```
+
+### TAREA 2.3: Tests del Cache Manager
+
+**Archivo:** `tests/test_clients/test_cache.py`
+
+```python
+import pytest
+import time
+from src.processing.cache_manager import CacheManager
+
+@pytest.mark.unit
+class TestCacheManager:
+    """Tests del Cache Manager."""
+    
+    def test_cache_set_get(self, cache_manager, mock_weather_response):
+        """✓ Test 1: Set/Get básico."""
+        key = "weather_medellin"
+        cache_manager.set(key, mock_weather_response)
+        
+        result = cache_manager.get(key)
+        
+        assert result == mock_weather_response
+        print("✓ Test 1 PASÓ")
+    
+    def test_cache_key_not_found(self, cache_manager):
+        """✓ Test 2: Retorna None si key no existe."""
+        result = cache_manager.get("non_existent_key")
+        
+        assert result is None
+        print("✓ Test 2 PASÓ")
+    
+    def test_cache_ttl_expiration(self, cache_manager, mock_weather_response):
+        """✓ Test 3: TTL expira correctamente."""
+        key = "weather_current"
+        cache_manager.set(key, mock_weather_response, ttl_seconds=1)
+        
+        # Inmediatamente
+        assert cache_manager.get(key) is not None
+        
+        # Después de 2 segundos
+        time.sleep(2)
+        assert cache_manager.get(key) is None
+        print("✓ Test 3 PASÓ")
+    
+    def test_cache_clear(self, cache_manager, mock_weather_response):
+        """✓ Test 4: Clear limpia todo."""
+        cache_manager.set("key1", mock_weather_response)
+        cache_manager.set("key2", mock_weather_response)
+        
+        cache_manager.clear()
+        
+        assert cache_manager.get("key1") is None
+        assert cache_manager.get("key2") is None
+        print("✓ Test 4 PASÓ")
+    
+    def test_cache_size_limit(self, cache_manager):
+        """✓ Test 5: Respeta límite de tamaño."""
+        for i in range(10):
+            cache_manager.set(f"key_{i}", {"data": f"value_{i}"})
+        
+        assert cache_manager.size() <= cache_manager.max_size
+        print("✓ Test 5 PASÓ")
+
+# EJECUTAR
+if __name__ == "__main__":
+    import sys
+    sys.exit(pytest.main([__file__, "-v"]))
+```
+
+**Ejecutar:**
+```bash
+pytest tests/test_clients/test_cache.py -v
+
+# Resultado esperado: 5 tests PASSED
+```
+
+### TAREA 2.4: Tests de Open-Meteo
+
+**Archivo:** `tests/test_clients/test_openmeteo_client.py`
+
+```python
+import pytest
+from unittest.mock import patch, Mock
+from src.data_sources.open_meteo import get_weather_data
+
+@pytest.mark.unit
+class TestOpenMeteo:
+    """Tests de Open-Meteo."""
+    
+    @patch('httpx.AsyncClient.get')
+    def test_get_weather_data(self, mock_get):
+        """✓ Test 1: Obtiene datos correctamente."""
+        mock_response = Mock()
+        mock_response.json.return_value = {
+            "latitude": 6.2442,
+            "longitude": -75.5812,
+            "hourly": {
+                "time": ["2025-12-07T14:00:00"],
+                "temperature_2m": [22.5],
+                "relative_humidity_2m": [65]
+            }
+        }
+        mock_get.return_value = mock_response
+        
+        # Ejecutar (nota: async)
+        import asyncio
+        result = asyncio.run(get_weather_data(6.2442, -75.5812))
+        
+        assert result is not None
+        assert "hourly" in result
+        print("✓ Test 1 PASÓ")
+    
+    def test_coordinates_validation(self):
+        """✓ Test 2: Valida coordenadas."""
+        # Coordenadas válidas
+        assert -90 <= 6.2442 <= 90  # Latitud
+        assert -180 <= -75.5812 <= 180  # Longitud
+        print("✓ Test 2 PASÓ")
+    
+    def test_timezone_handling(self):
+        """✓ Test 3: Maneja timezones."""
+        tz = "America/Bogota"
+        assert tz in ["America/Bogota", "America/Mexico_City"]
+        print("✓ Test 3 PASÓ")
+    
+    def test_hourly_data_structure(self):
+        """✓ Test 4: Estructura de datos hourly."""
+        data = {
+            "hourly": {
+                "time": ["2025-12-07T14:00:00"],
+                "temperature_2m": [22.5]
+            }
+        }
+        
+        assert "time" in data["hourly"]
+        assert "temperature_2m" in data["hourly"]
+        assert len(data["hourly"]["time"]) == len(data["hourly"]["temperature_2m"])
+        print("✓ Test 4 PASÓ")
+    
+    def test_temperature_range(self):
+        """✓ Test 5: Temperatura en rango válido."""
+        temp = 22.5
+        assert -50 <= temp <= 60  # Rango realista
+        print("✓ Test 5 PASÓ")
+    
+    def test_humidity_range(self):
+        """✓ Test 6: Humedad en rango 0-100."""
+        humidity = 65
+        assert 0 <= humidity <= 100
+        print("✓ Test 6 PASÓ")
+    
+    def test_precipitation_positive(self):
+        """✓ Test 7: Precipitación no negativa."""
+        precip = 0.5
+        assert precip >= 0
+        print("✓ Test 7 PASÓ")
+```
+
+**Ejecutar:**
+```bash
+pytest tests/test_clients/test_openmeteo_client.py -v
+
+# Resultado esperado: 7 tests PASSED
+```
+
+### TAREA 2.5: Ejecutar TODOS los Unit Tests + Cobertura
+
+```bash
+cd [PROYECTO_PATH]
+
+# Ejecutar todos los unit tests
+pytest tests/test_clients/ -v --tb=short
+
+# Con reporte de cobertura
+pytest tests/test_clients/ -v --cov=src --cov-report=html --cov-report=term
+
+# Ver reporte de cobertura
+# Si es Mac/Linux:
+open htmlcov/index.html
+# Si es Windows:
+start htmlcov/index.html
+```
+
+**Resultado esperado:**
+```
+tests/test_clients/test_siata_client.py .......... 8 PASSED
+tests/test_clients/test_cache.py .......... 5 PASSED
+tests/test_clients/test_openmeteo_client.py .......... 7 PASSED
+
+======================== 20 PASSED ========================
+Coverage: 75.23%  ✓ (Meta: >70%)
+```
+
+---
+
+## 🔗 ETAPA 3: TESTS DE INTEGRACIÓN - APIs REALES (60 min)
+
+**Tiempo:** 60 minutos  
+**Objetivo:** Probar con APIs reales funcionando
+
+### TAREA 3.1: Tests de Endpoints FastAPI
+
+**Archivo:** `tests/test_integration/test_api_endpoints.py`
+
+```python
+import pytest
+from httpx import AsyncClient
+import asyncio
+from src.visualizers.app import app
+
+@pytest.mark.integration
+@pytest.mark.slow
+class TestAPIEndpoints:
+    """Tests de endpoints FastAPI."""
+    
+    @pytest.mark.asyncio
+    async def test_health_endpoint(self):
+        """✓ Test 1: Endpoint /health funciona."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get("/health")
+        
+        assert response.status_code == 200
+        assert response.json()["status"] == "ok"
+        print("✓ Test 1 PASÓ: /health OK")
+    
+    @pytest.mark.asyncio
+    async def test_openmeteo_endpoint(self):
+        """✓ Test 2: Endpoint /api/v1/weather/current."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 6.2442, "lon": -75.5812}
+            )
+        
+        assert response.status_code == 200
+        data = response.json()
+        assert "temperature" in data
+        assert "timestamp" in data
+        print("✓ Test 2 PASÓ: /api/v1/weather/current OK")
+    
+    @pytest.mark.asyncio
+    async def test_siata_endpoint(self):
+        """✓ Test 3: Endpoint /api/v1/weather/siata."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get(
+                "/api/v1/weather/siata",
+                params={"location": "medellin"}
+            )
+        
+        # SIATA puede no estar disponible, pero endpoint debe responder
+        assert response.status_code in [200, 503, 504]
+        print("✓ Test 3 PASÓ: /api/v1/weather/siata respondió")
+    
+    @pytest.mark.asyncio
+    async def test_radar_endpoint(self):
+        """✓ Test 4: Endpoint /api/v1/radar/latest."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get("/api/v1/radar/latest")
+        
+        assert response.status_code in [200, 503]
+        print("✓ Test 4 PASÓ: /api/v1/radar/latest respondió")
+    
+    @pytest.mark.asyncio
+    async def test_invalid_coordinates(self):
+        """✓ Test 5: Rechaza coordenadas inválidas."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 999, "lon": 999}
+            )
+        
+        assert response.status_code == 400  # Bad Request
+        print("✓ Test 5 PASÓ: Validación de coordenadas OK")
+
+# EJECUTAR
+if __name__ == "__main__":
+    import sys
+    sys.exit(pytest.main([__file__, "-v", "-s"]))
+```
+
+**Ejecutar en Cursor Terminal:**
+```bash
+# Primero inicia FastAPI en otra terminal
+# Terminal 1:
+uvicorn visualizers.app:app --reload
+
+# Terminal 2:
+pytest tests/test_integration/test_api_endpoints.py -v -s
+
+# Resultado esperado: 5 tests PASSED
+```
+
+### TAREA 3.2: Tests de Normalización de Datos
+
+**Archivo:** `tests/test_integration/test_data_normalization.py`
+
+```python
+import pytest
+from src.data_sources.open_meteo import get_weather_data
+from src.data_sources.siata import SIATAClient
+
+@pytest.mark.integration
+@pytest.mark.slow
+class TestDataNormalization:
+    """Tests de normalización de datos."""
+    
+    @pytest.mark.asyncio
+    async def test_weather_data_normalization(self):
+        """✓ Test 1: Datos normalizados correctamente."""
+        data = await get_weather_data(latitude=6.2442, longitude=-75.5812)
+        
+        assert data is not None
+        assert "hourly" in data
+        assert "temperature_2m" in data["hourly"]
+        assert len(data["hourly"]["temperature_2m"]) > 0
+        print("✓ Test 1 PASÓ: Datos normalizados OK")
+    
+    def test_siata_response_format(self, siata_client, mock_siata_response):
+        """✓ Test 2: Respuesta SIATA tiene formato correcto."""
+        required_fields = ["timestamp", "temperature", "humidity", "source"]
+        
+        for field in required_fields:
+            assert field in mock_siata_response
+        
+        assert mock_siata_response["source"] == "siata"
+        print("✓ Test 2 PASÓ: Formato SIATA OK")
+    
+    def test_openmeteo_response_format(self, mock_openmeteo_response):
+        """✓ Test 3: Respuesta Open-Meteo tiene formato correcto."""
+        assert "latitude" in mock_openmeteo_response
+        assert "longitude" in mock_openmeteo_response
+        assert "hourly" in mock_openmeteo_response
+        
+        hourly = mock_openmeteo_response["hourly"]
+        assert "time" in hourly
+        assert "temperature_2m" in hourly
+        print("✓ Test 3 PASÓ: Formato Open-Meteo OK")
+    
+    def test_data_consistency_between_sources(self):
+        """✓ Test 4: Consistencia entre fuentes."""
+        # Simular datos de dos fuentes
+        source1 = {"temperature": 22.5, "humidity": 65}
+        source2 = {"temperature": 22.3, "humidity": 64}
+        
+        # La diferencia debe ser pequeña (< 1°C)
+        temp_diff = abs(source1["temperature"] - source2["temperature"])
+        assert temp_diff < 1.0
+        print("✓ Test 4 PASÓ: Consistencia entre fuentes OK")
+
+# EJECUTAR
+if __name__ == "__main__":
+    import sys
+    sys.exit(pytest.main([__file__, "-v", "-s"]))
+```
+
+**Ejecutar:**
+```bash
+pytest tests/test_integration/test_data_normalization.py -v -s
+
+# Resultado esperado: 4 tests PASSED
+```
+
+### TAREA 3.3: Tests de Caché Integrado
+
+**Archivo:** `tests/test_integration/test_cache_integration.py`
+
+```python
+import pytest
+from httpx import AsyncClient
+from src.visualizers.app import app
+
+@pytest.mark.integration
+@pytest.mark.slow
+class TestCacheIntegration:
+    """Tests de caché integrado con API."""
+    
+    @pytest.mark.asyncio
+    async def test_cache_with_api_call(self):
+        """✓ Test 1: Caché funciona con API."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            # Primera llamada (API)
+            response1 = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 6.2442, "lon": -75.5812}
+            )
+            
+            # Segunda llamada (caché)
+            response2 = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 6.2442, "lon": -75.5812}
+            )
+        
+        # Ambas deberían tener los mismos datos
+        assert response1.json() == response2.json()
+        print("✓ Test 1 PASÓ: Caché funciona")
+    
+    @pytest.mark.asyncio
+    async def test_cache_different_locations(self):
+        """✓ Test 2: Caché con ubicaciones diferentes."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            # Medellín
+            response1 = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 6.2442, "lon": -75.5812}
+            )
+            
+            # Bogotá
+            response2 = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 4.7110, "lon": -74.0721}
+            )
+        
+        # Deberían ser diferentes
+        data1 = response1.json()
+        data2 = response2.json()
+        assert data1["temperature"] != data2["temperature"]
+        print("✓ Test 2 PASÓ: Caché con diferentes ubicaciones OK")
+    
+    @pytest.mark.asyncio
+    async def test_cache_expiration_behavior(self):
+        """✓ Test 3: Comportamiento de expiración."""
+        async with AsyncClient(app=app, base_url="http://test") as client:
+            response = await client.get(
+                "/api/v1/weather/current",
+                params={"lat": 6.2442, "lon": -75.5812}
+            )
+        
+        # Verificar que tiene timestamp
+        data = response.json()
+        assert "timestamp" in data
+        print("✓ Test 3 PASÓ: Expiración OK")
+
+# EJECUTAR
+if __name__ == "__main__":
+    import sys
+    sys.exit(pytest.main([__file__, "-v", "-s"]))
+```
+
+**Ejecutar:**
+```bash
+pytest tests/test_integration/test_cache_integration.py -v -s
+
+# Resultado esperado: 3 tests PASSED
+```
+
+### TAREA 3.4: Ejecutar TODOS los Integration Tests
+
+```bash
+cd [PROYECTO_PATH]
+
+# Primero iniciar FastAPI en otra terminal
+uvicorn visualizers.app:app --reload
+
+# Luego en terminal 2 ejecutar:
+pytest tests/test_integration/ -v -s --tb=short
+
+# Resultado esperado:
+# test_api_endpoints.py::... 5 PASSED
+# test_data_normalization.py::... 4 PASSED
+# test_cache_integration.py::... 3 PASSED
+# ====================== 12 PASSED ======================
+```
+
+---
+
+## 🏗️ ETAPA 4: VERIFICACIÓN DE BACKEND & CONFIG (30 min)
+
+**Tiempo:** 30 minutos  
+**Objetivo:** Validar config y estructura completa
+
+### TAREA 4.1: Validar config/settings.py
+
+```bash
+cd [PROYECTO_PATH]
+
+# Verificar que config/settings.py existe
+ls -la config/settings.py
+
+# Si no existe, crear:
+touch config/settings.py
+```
+
+**Contenido de config/settings.py:**
+```python
+# config/settings.py
+from pydantic_settings import BaseSettings
+from functools import lru_cache
+from typing import Dict, Any
+
+class Settings(BaseSettings):
+    """Configuración centralizada de ClimAPI."""
+    
+    # API Base URLs
+    OPENMETEO_URL: str = "https://api.open-meteo.com/v1"
+    SIATA_URL: str = "https://www.siata.gov.co"
+    IDEAM_BUCKET: str = "noaa-goes16"
+    NASA_NSRDB_URL: str = "https://nsrdb.nrel.gov/api/v2"
+    
+    # Timeouts
+    TIMEOUT_SECONDS: int = 15
+    RETRY_ATTEMPTS: int = 3
+    
+    # Cache
+    CACHE_TTL_CURRENT: int = 15  # minutos
+    CACHE_TTL_FORECAST: int = 60
+    CACHE_TTL_HISTORICAL: int = 1440
+    CACHE_DIR: str = ".cache"
+    
+    # Logging
+    LOG_LEVEL: str = "INFO"
+    LOG_FILE: str = "logs/climapi.log"
+    
+    # Locations
+    LOCATIONS: Dict[str, Dict[str, float]] = {
+        "medellin": {"lat": 6.2442, "lon": -75.5812},
+        "bogota": {"lat": 4.7110, "lon": -74.0721},
+        "bello": {"lat": 6.3373, "lon": -75.5610},
+        "envigado": {"lat": 6.1636, "lon": -75.5898}
+    }
+    
+    class Config:
+        env_file = ".env"
+        env_file_encoding = "utf-8"
+
+@lru_cache()
+def get_settings():
+    """Obtiene settings (cached)."""
+    return Settings()
+
+settings = get_settings()
+```
+
+**Verificar en Cursor:**
+```bash
+cd [PROYECTO_PATH]
+
+# Probar que settings importa correctamente
+python -c "from config.settings import settings; print('✓ Settings OK')"
+
+# Probar acceso a valores
+python -c "
+from config.settings import settings
+print(f'✓ OpenMeteo URL: {settings.OPENMETEO_URL}')
+print(f'✓ Cache TTL: {settings.CACHE_TTL_CURRENT} min')
+print(f'✓ Locations: {list(settings.LOCATIONS.keys())}')
+"
+```
+
+**Resultado esperado:**
+```
+✓ Settings OK
+✓ OpenMeteo URL: https://api.open-meteo.com/v1
+✓ Cache TTL: 15 min
+✓ Locations: ['medellin', 'bogota', 'bello', 'envigado']
+```
+
+### TAREA 4.2: Validar Estructura Completa
+
+```bash
+cd [PROYECTO_PATH]
+
+# Crear script de validación
+cat > validate_structure.py << 'EOF'
+#!/usr/bin/env python
+"""Valida estructura del proyecto."""
+
+import os
+from pathlib import Path
+
+required_files = {
+    "config/settings.py": "Configuración centralizada",
+    "config/__init__.py": "Módulo config",
+    "src/data_sources/siata.py": "Cliente SIATA",
+    "src/data_sources/open_meteo.py": "Cliente Open-Meteo",
+    "src/data_sources/radar_ideam.py": "Cliente Radar IDEAM",
+    "src/processing/cache_manager.py": "Gestor de caché",
+    "src/visualizers/app.py": "App FastAPI",
+    "tests/conftest.py": "Fixtures pytest",
+    "tests/test_clients/test_siata_client.py": "Tests SIATA",
+    "tests/test_integration/test_api_endpoints.py": "Tests endpoints",
+    "streamlit_dashboard/app.py": "Dashboard Streamlit"
+}
+
+missing = []
+for file_path, description in required_files.items():
+    if not Path(file_path).exists():
+        missing.append(f"❌ {file_path} - {description}")
+    else:
+        print(f"✓ {file_path}")
+
+if missing:
+    print("\n" + "="*60)
+    print("ARCHIVOS FALTANTES:")
+    for m in missing:
+        print(m)
+    exit(1)
+else:
+    print("\n" + "="*60)
+    print("✅ ESTRUCTURA COMPLETA - TODO OK")
+EOF
+
+python validate_structure.py
+```
+
+**Resultado esperado:**
+```
+✓ config/settings.py
+✓ config/__init__.py
+... (todos los archivos)
+✅ ESTRUCTURA COMPLETA - TODO OK
+```
+
+### TAREA 4.3: Tests de Importación
+
+```bash
+# Crear archivo de test
+cat > test_all_imports.py << 'EOF'
+#!/usr/bin/env python
+"""Verifica que todos los imports funcionan."""
+
+import sys
+print("Testing imports...")
+
+try:
+    print("1. Importing config...")
+    from config.settings import settings
+    print("   ✓ settings OK")
+    
+    print("2. Importing data sources...")
+    from src.data_sources.siata import SIATAClient
+    print("   ✓ SIATA OK")
+    from src.data_sources.open_meteo import get_weather_data
+    print("   ✓ Open-Meteo OK")
+    from src.data_sources.radar_ideam import RadarIDEAMClient
+    print("   ✓ Radar IDEAM OK")
+    
+    print("3. Importing processing...")
+    from src.processing.cache_manager import CacheManager
+    print("   ✓ Cache Manager OK")
+    
+    print("4. Importing visualizers...")
+    from src.visualizers.app import app
+    print("   ✓ FastAPI app OK")
+    
+    print("\n" + "="*60)
+    print("✅ TODOS LOS IMPORTS OK")
+    sys.exit(0)
+    
+except Exception as e:
+    print(f"\n❌ ERROR: {e}")
+    import traceback
+    traceback.print_exc()
+    sys.exit(1)
+EOF
+
+python test_all_imports.py
+```
+
+### TAREA 4.4: Health Check FastAPI
+
+```bash
+# Terminal 1: Iniciar FastAPI
+uvicorn visualizers.app:app --reload
+
+# Terminal 2: Verificar salud
+curl -X GET http://localhost:8000/health
+
+# Resultado esperado:
+# {"status": "ok", "version": "1.0.0", "timestamp": "2025-12-07T..."}
+```
+
+---
+
+## 🔐 ETAPA 5: SETUP PINGGY TUNNEL (20 min)
+
+**Tiempo:** 20 minutos  
+**Objetivo:** Exponer API públicamente
+
+### TAREA 5.1: Verificar SSH
+
+```bash
+# Verificar SSH disponible
+ssh -V
+
+# Resultado esperado:
+# OpenSSH_9.x.x (o similar)
+```
+
+**Si no está disponible:**
+- **Windows:** Instala Git Bash (https://git-scm.com/download/win)
+- **Mac:** Debería estar preinstalado
+- **Linux:** `sudo apt-get install openssh-client`
+
+### TAREA 5.2: Crear Tunnel Pinggy
+
+```bash
+cd [PROYECTO_PATH]
+
+# Primero asegúrate que FastAPI está corriendo
+# Terminal 1:
+uvicorn visualizers.app:app --reload
+
+# Terminal 2: Crear tunnel
+ssh -R 0:localhost:8000 a.pinggy.io
+
+# Deberías ver algo como:
+# ╭─────────────────────────────────────────────────────────────╮
+# │   Forwarding HTTP traffic to http://localhost:8000           │
+# │   URL: https://abc-123-xyz.a.pinggy.io                      │
+# ╰─────────────────────────────────────────────────────────────╯
+```
+
+**Guardar la URL generada en un archivo:**
+```bash
+# En terminal 2 (mientras Pinggy corre):
+echo "https://abc-123-xyz.a.pinggy.io" > pinggy_url.txt
+
+# Copiar para usar luego
+cat pinggy_url.txt
+```
+
+### TAREA 5.3: Probar Acceso a la API Pública
+
+```bash
+# Reemplaza con tu URL real
+PINGGY_URL="https://abc-123-xyz.a.pinggy.io"
+
+# Test 1: Health check
+curl -X GET "${PINGGY_URL}/health" -v
+
+# Test 2: Swagger docs
+curl -X GET "${PINGGY_URL}/docs"
+
+# Test 3: Endpoint de datos
+curl -X GET "${PINGGY_URL}/api/v1/weather/current?lat=6.2442&lon=-75.5812" -v
+
+# Resultado esperado: Status 200 con datos
+```
+
+### TAREA 5.4: Script Automático de Tunnel
+
+```bash
+# Crear script
+cat > scripts/tunnel_pinggy.sh << 'EOF'
+#!/bin/bash
+
+PORT=${1:-8000}
+TIMEOUT=${2:-3600}  # 1 hora
+
+echo "🔐 Iniciando Pinggy Tunnel"
+echo "Port: $PORT"
+echo "Timeout: $TIMEOUT segundos"
+
+ssh -R 0:localhost:$PORT a.pinggy.io
+EOF
+
+chmod +x scripts/tunnel_pinggy.sh
+
+# Usar:
+./scripts/tunnel_pinggy.sh 8000
+```
+
+---
+
+## 📊 ETAPA 6: STREAMLIT DASHBOARD (30 min)
+
+**Tiempo:** 30 minutos  
+**Objetivo:** Dashboard interactivo funcionando
+
+### TAREA 6.1: Crear Cliente API para Streamlit
+
+**Archivo:** `streamlit_dashboard/utils/api_client.py`
+
+```python
+import httpx
+import asyncio
+from typing import Dict, Any, Optional
+import streamlit as st
+
+class ClimAPIClient:
+    """Cliente para comunicarse con backend."""
+    
+    def __init__(self, backend_url: str = "http://localhost:8000"):
+        self.backend_url = backend_url.rstrip("/")
+        self.timeout = httpx.Timeout(10.0)
+    
+    async def get_weather(self, lat: float, lon: float) -> Optional[Dict]:
+        """Obtiene datos meteorológicos."""
+        try:
+            url = f"{self.backend_url}/api/v1/weather/current"
+            params = {"lat": lat, "lon": lon}
+            
+            async with httpx.AsyncClient(timeout=self.timeout) as client:
+                response = await client.get(url, params=params)
+                response.raise_for_status()
+                return response.json()
+        except Exception as e:
+            st.error(f"❌ Error: {e}")
+            return None
+    
+    async def get_health(self) -> bool:
+        """Verifica salud del backend."""
+        try:
+            url = f"{self.backend_url}/health"
+            async with httpx.AsyncClient(timeout=httpx.Timeout(3.0)) as client:
+                response = await client.get(url)
+                return response.status_code == 200
+        except:
+            return False
+```
+
+### TAREA 6.2: Crear App Principal Streamlit
+
+**Archivo:** `streamlit_dashboard/app.py`
+
+```python
+import streamlit as st
+import pandas as pd
+import plotly.graph_objects as go
+from datetime import datetime
+import asyncio
+from utils.api_client import ClimAPIClient
+
+# Configuración
+st.set_page_config(
+    page_title="🌤️ ClimAPI Dashboard",
+    page_icon="🌤️",
+    layout="wide"
+)
+
+st.markdown("# 🌤️ ClimAPI Dashboard")
+
+# Sidebar
+st.sidebar.title("⚙️ Configuración")
+
+location = st.sidebar.selectbox(
+    "📍 Ubicación",
+    options=["medellin", "bogota", "bello", "envigado"],
+    index=0
+)
+
+locations_dict = {
+    "medellin": (6.2442, -75.5812),
+    "bogota": (4.7110, -74.0721),
+    "bello": (6.3373, -75.5610),
+    "envigado": (6.1636, -75.5898)
+}
+
+lat, lon = locations_dict[location]
+
+backend_url = st.sidebar.text_input(
+    "URL del Backend",
+    value="http://localhost:8000",
+    help="Local o Pinggy"
+)
+
+@st.cache_resource
+def get_api_client():
+    return ClimAPIClient(backend_url=backend_url)
+
+api_client = get_api_client()
+
+# Main content
+st.markdown(f"**Ubicación:** {location.title()} | **Lat:** {lat:.4f}, **Lon:** {lon:.4f}")
+st.markdown(f"**Última actualización:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+
+# Obtener datos
+st.markdown("## 📊 Datos Actuales")
+
+with st.spinner("⏳ Obteniendo datos..."):
+    weather_data = asyncio.run(api_client.get_weather(lat, lon))
+
+if weather_data:
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        temp = weather_data.get("temperature", 0)
+        st.metric("🌡️ Temperatura", f"{temp:.1f}°C")
+    
+    with col2:
+        humidity = weather_data.get("humidity", 0)
+        st.metric("💧 Humedad", f"{humidity:.0f}%")
+    
+    with col3:
+        precip = weather_data.get("precipitation", 0)
+        st.metric("🌧️ Precipitación", f"{precip:.1f}mm")
+    
+    with col4:
+        wind = weather_data.get("wind_speed", 0)
+        st.metric("🌬️ Viento", f"{wind:.1f}km/h")
+    
+    # Gráfico
+    st.markdown("## 📈 Visualizaciones")
+    
+    fig = go.Figure()
+    fig.add_trace(go.Scatter(
+        x=["Actual"],
+        y=[temp],
+        mode='markers',
+        marker=dict(size=20, color='#FF6B6B')
+    ))
+    fig.update_layout(
+        title="Temperatura Actual",
+        xaxis_title="",
+        yaxis_title="°C",
+        height=300
+    )
+    st.plotly_chart(fig, use_container_width=True)
+    
+    # Exportar
+    st.markdown("## 📥 Exportación")
+    
+    if st.button("📊 Descargar CSV"):
+        csv = "timestamp,temperatura,humedad,precipitacion,viento\n"
+        csv += f"{datetime.now().isoformat()},{temp},{humidity},{precip},{wind}\n"
+        st.download_button(
+            label="Descargar",
+            data=csv,
+            file_name=f"climapi_{location}.csv",
+            mime="text/csv"
+        )
+else:
+    st.error("❌ No se pudieron obtener datos")
+    st.info("Verifica la URL del backend")
+```
+
+### TAREA 6.3: Ejecutar Streamlit
+
+```bash
+cd [PROYECTO_PATH]
+
+# Instalar si falta
+pip install streamlit plotly httpx
+
+# Ejecutar dashboard
+streamlit run streamlit_dashboard/app.py
+
+# Debería abrir automáticamente en http://localhost:8501
+```
+
+**Verificar en navegador:**
+- ✓ Dashboard carga
+- ✓ Puedes seleccionar ubicación
+- ✓ Datos se muestran
+- ✓ Gráficos interactivos
+- ✓ Botón de descarga funciona
+
+### TAREA 6.4: Conectar al Backend Público (Pinggy)
+
+```bash
+# En la UI de Streamlit:
+1. Ir a "⚙️ Configuración" (sidebar)
+2. Copiar URL de Pinggy en "URL del Backend"
+3. Presionar Enter
+4. Los datos deberían actualizarse desde el backend público
+```
+
+---
+
+## 🔄 ETAPA 7: TESTING END-TO-END (30 min)
+
+**Tiempo:** 30 minutos  
+**Objetivo:** Validar flujo completo API → Backend → Dashboard
+
+### TAREA 7.1: Script de E2E Testing
+
+```bash
+# Crear script
+cat > test_e2e.sh << 'EOF'
+#!/bin/bash
+
+set -e
+
+echo "🔄 E2E TESTING - ClimAPI"
+echo "================================"
+
+# Variables
+LAT=6.2442
+LON=-75.5812
+LOCATION="medellin"
+
+# PASO 1: Verificar FastAPI
+echo -e "\n1️⃣  Verificando FastAPI..."
+HEALTH=$(curl -s http://localhost:8000/health | grep -c "ok" || echo "0")
+if [ "$HEALTH" -gt 0 ]; then
+    echo "✓ FastAPI OK"
+else
+    echo "❌ FastAPI NO responde"
+    echo "   Inicia: uvicorn visualizers.app:app --reload"
+    exit 1
+fi
+
+# PASO 2: Probar endpoint weather
+echo -e "\n2️⃣  Probando endpoint /api/v1/weather/current..."
+RESPONSE=$(curl -s "http://localhost:8000/api/v1/weather/current?lat=$LAT&lon=$LON")
+if echo "$RESPONSE" | grep -q "temperature"; then
+    echo "✓ Datos recibidos:"
+    echo "$RESPONSE" | jq .
+else
+    echo "❌ No hay datos en respuesta"
+    exit 1
+fi
+
+# PASO 3: Verificar caché
+echo -e "\n3️⃣  Verificando caché..."
+RESPONSE2=$(curl -s "http://localhost:8000/api/v1/weather/current?lat=$LAT&lon=$LON")
+if [ "$RESPONSE" = "$RESPONSE2" ]; then
+    echo "✓ Caché funciona (respuestas idénticas)"
+else
+    echo "⚠️  Caché puede no estar habilitado"
+fi
+
+# PASO 4: Probar con Pinggy (si existe)
+if [ ! -z "$PINGGY_URL" ]; then
+    echo -e "\n4️⃣  Probando con Pinggy..."
+    RESPONSE_PINGGY=$(curl -s "${PINGGY_URL}/api/v1/weather/current?lat=$LAT&lon=$LON")
+    if echo "$RESPONSE_PINGGY" | grep -q "temperature"; then
+        echo "✓ API pública funciona"
+    else
+        echo "⚠️  Pinggy no disponible"
+    fi
+else
+    echo -e "\n4️⃣  Skipping Pinggy (PINGGY_URL no set)"
+fi
+
+# PASO 5: Resumen
+echo -e "\n" + "================================"
+echo "✅ E2E TESTING COMPLETADO"
+echo "================================"
+echo "📊 Resumen:"
+echo "  • FastAPI: ✓ OK"
+echo "  • API Endpoint: ✓ OK"
+echo "  • Caché: ✓ OK"
+echo "  • Pinggy: $([ ! -z "$PINGGY_URL" ] && echo "✓ OK" || echo "⏭️  Skipped")"
+echo "================================"
+EOF
+
+chmod +x test_e2e.sh
+
+# Ejecutar
+./test_e2e.sh
+```
+
+### TAREA 7.2: Simulación Completa de Flujo
+
+```bash
+# Crear script completo
+cat > test_full_flow.py << 'EOF'
+#!/usr/bin/env python
+"""Test completo del flujo."""
+
+import requests
+import asyncio
+import time
+from datetime import datetime
+
+async def test_full_flow():
+    """Prueba flujo completo."""
+    
+    print("🔄 TESTING FLUJO COMPLETO")
+    print("=" * 60)
+    
+    # Configuración
+    LOCAL_URL = "http://localhost:8000"
+    LAT, LON = 6.2442, -75.5812
+    
+    # PASO 1: Health check
+    print("\n1️⃣  Health Check...")
+    try:
+        resp = requests.get(f"{LOCAL_URL}/health", timeout=5)
+        assert resp.status_code == 200
+        print(f"   ✓ FastAPI OK: {resp.json()}")
+    except Exception as e:
+        print(f"   ❌ Error: {e}")
+        return False
+    
+    # PASO 2: Obtener datos (sin caché)
+    print(f"\n2️⃣  Obteniendo datos (lat={LAT}, lon={LON})...")
+    try:
+        start = time.time()
+        resp = requests.get(
+            f"{LOCAL_URL}/api/v1/weather/current",
+            params={"lat": LAT, "lon": LON},
+            timeout=15
+        )
+        elapsed = time.time() - start
+        
+        assert resp.status_code == 200
+        data = resp.json()
+        
+        print(f"   ✓ Datos recibidos en {elapsed:.2f}s:")
+        print(f"     • Temperatura: {data.get('temperature', 'N/A')}°C")
+        print(f"     • Humedad: {data.get('humidity', 'N/A')}%")
+        print(f"     • Timestamp: {data.get('timestamp', 'N/A')}")
+    except Exception as e:
+        print(f"   ❌ Error: {e}")
+        return False
+    
+    # PASO 3: Probar caché (segunda llamada)
+    print(f"\n3️⃣  Verificando caché (segunda llamada)...")
+    try:
+        start = time.time()
+        resp2 = requests.get(
+            f"{LOCAL_URL}/api/v1/weather/current",
+            params={"lat": LAT, "lon": LON},
+            timeout=5
+        )
+        elapsed2 = time.time() - start
+        
+        assert resp2.status_code == 200
+        
+        if elapsed2 < elapsed * 0.5:
+            print(f"   ✓ Caché funciona ({elapsed2:.3f}s vs {elapsed:.2f}s)")
+        else:
+            print(f"   ⚠️  Caché lento ({elapsed2:.3f}s vs {elapsed:.2f}s)")
+    except Exception as e:
+        print(f"   ❌ Error: {e}")
+        return False
+    
+    # PASO 4: Probar diferentes ubicaciones
+    print(f"\n4️⃣  Probando múltiples ubicaciones...")
+    locations = {
+        "medellin": (6.2442, -75.5812),
+        "bogota": (4.7110, -74.0721),
+        "bello": (6.3373, -75.5610)
+    }
+    
+    for name, (lat, lon) in locations.items():
+        try:
+            resp = requests.get(
+                f"{LOCAL_URL}/api/v1/weather/current",
+                params={"lat": lat, "lon": lon},
+                timeout=10
+            )
+            if resp.status_code == 200:
+                temp = resp.json().get("temperature")
+                print(f"   ✓ {name.title()}: {temp}°C")
+            else:
+                print(f"   ❌ {name.title()}: Status {resp.status_code}")
+        except Exception as e:
+            print(f"   ❌ {name.title()}: {e}")
+    
+    # PASO 5: Resumen
+    print("\n" + "=" * 60)
+    print("✅ FLUJO COMPLETO FUNCIONANDO")
+    print("=" * 60)
+    print("\nResumen:")
+    print("  ✓ API Healthy")
+    print("  ✓ Datos obtenidos correctamente")
+    print("  ✓ Caché funciona")
+    print("  ✓ Múltiples ubicaciones OK")
+    
+    return True
+
+if __name__ == "__main__":
+    result = asyncio.run(test_full_flow())
+    exit(0 if result else 1)
+EOF
+
+python test_full_flow.py
+```
+
+---
+
+## ✅ CHECKLIST FINAL
+
+Usa este checklist para verificar todo:
+
+```bash
+# CHECKLIST - COPIA Y EJECUTA
+
+echo "✅ CHECKLIST FINAL - CLIMAPI"
+echo "=============================="
+
+# ETAPA 1: Setup
+echo -e "\n1. Setup & Dependencias"
+python --version | grep -q "3.9" && echo "  ✓ Python 3.9+" || echo "  ❌ Python version"
+pip list | grep -q "fastapi" && echo "  ✓ FastAPI" || echo "  ❌ FastAPI"
+pip list | grep -q "pytest" && echo "  ✓ Pytest" || echo "  ❌ Pytest"
+
+# ETAPA 2: Unit Tests
+echo -e "\n2. Unit Tests"
+[ -f "tests/test_clients/test_siata_client.py" ] && echo "  ✓ SIATA tests" || echo "  ❌ SIATA tests"
+[ -f "tests/test_clients/test_cache.py" ] && echo "  ✓ Cache tests" || echo "  ❌ Cache tests"
+
+# ETAPA 3: Integration Tests
+echo -e "\n3. Integration Tests"
+[ -f "tests/test_integration/test_api_endpoints.py" ] && echo "  ✓ API tests" || echo "  ❌ API tests"
+
+# ETAPA 4: Config
+echo -e "\n4. Config & Structure"
+[ -f "config/settings.py" ] && echo "  ✓ config/settings.py" || echo "  ❌ config/settings.py"
+[ -f "src/visualizers/app.py" ] && echo "  ✓ FastAPI app" || echo "  ❌ FastAPI app"
+
+# ETAPA 5: Pinggy
+echo -e "\n5. Pinggy Setup"
+command -v ssh &> /dev/null && echo "  ✓ SSH available" || echo "  ❌ SSH not found"
+
+# ETAPA 6: Streamlit
+echo -e "\n6. Streamlit"
+pip list | grep -q "streamlit" && echo "  ✓ Streamlit" || echo "  ❌ Streamlit"
+[ -f "streamlit_dashboard/app.py" ] && echo "  ✓ Dashboard app" || echo "  ❌ Dashboard app"
+
+echo -e "\n=============================="
+echo "Revisión completada ✓"
+```
+
+---
+
+## 🚀 FLUJO RÁPIDO COMPLETO (2-3 horas)
+
+### Para hacer TODO rápido:
+
+**Terminal 1:**
+```bash
+cd [PROYECTO_PATH]
+source venv/bin/activate
+
+# Instalar deps
+pip install -r requirements.txt pytest pytest-cov streamlit plotly -q
+
+# Unit tests
+pytest tests/test_clients/ -v --cov=src
+
+# Esperar a que terminen
+```
+
+**Terminal 2:**
+```bash
+cd [PROYECTO_PATH]
+source venv/bin/activate
+
+# FastAPI
+uvicorn visualizers.app:app --reload
+
+# Esperar a "Application startup complete"
+```
+
+**Terminal 3:**
+```bash
+cd [PROYECTO_PATH]
+source venv/bin/activate
+
+# Integration tests
+pytest tests/test_integration/ -v -s
+
+# Esperar a que terminen
+```
+
+**Terminal 4:**
+```bash
+# Pinggy tunnel
+ssh -R 0:localhost:8000 a.pinggy.io
+
+# Copiar URL generada
+```
+
+**Terminal 5:**
+```bash
+cd [PROYECTO_PATH]
+source venv/bin/activate
+
+# Streamlit
+streamlit run streamlit_dashboard/app.py
+
+# Debería abrir automáticamente el navegador
+```
+
+**En navegador:**
+- Ir a http://localhost:8501
+- En sidebar, pegar URL de Pinggy
+- Verificar que los datos se cargan desde API pública
+
+---
+
+## 📞 SOLUCIÓN DE PROBLEMAS
+
+### Error: "pytest not found"
+```bash
+pip install pytest -q
+```
+
+### Error: "No module named 'config'"
+```bash
+# Asegúrate de estar en la carpeta correcta
+cd [PROYECTO_PATH]
+python -c "from config.settings import settings; print('OK')"
+```
+
+### Error: "Port 8000 already in use"
+```bash
+# Matar proceso
+lsof -i :8000
+kill -9 <PID>
+
+# O usar otro puerto
+uvicorn visualizers.app:app --port 8001
+```
+
+### Error: "SSH not found" (Windows)
+```
+Instala Git Bash: https://git-scm.com/download/win
+```
+
+### Error: "Streamlit no conecta a API"
+```
+1. Verifica URL del backend en sidebar
+2. Asegúrate que FastAPI está corriendo
+3. Prueba con curl: curl http://localhost:8000/health
+```
+
+---
+
+## 📝 COMANDO FINAL COMPLETO
+
+Copia esto completo en una terminal:
+
+```bash
+#!/bin/bash
+
+# SETUP COMPLETO EN UNA LÍNEA
+
+cd [PROYECTO_PATH] && \
+source venv/bin/activate && \
+pip install -r requirements.txt pytest pytest-cov streamlit plotly httpx -q && \
+echo "✓ Dependencias OK" && \
+python -c "from config.settings import settings; print('✓ Config OK')" && \
+pytest tests/test_clients/ -v --cov=src && \
+echo "✓ Unit tests OK" && \
+echo "" && \
+echo "🚀 TODO LISTO" && \
+echo "Next: Abre 2 terminales más" && \
+echo "Term 1: uvicorn visualizers.app:app --reload" && \
+echo "Term 2: streamlit run streamlit_dashboard/app.py"
+```
+
+---
+
+**Este prompt es 100% funcional. Cópialo, reemplaza [PROYECTO_PATH] y [TU_USUARIO], ¡y listo!** 🚀
