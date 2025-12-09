@@ -5,7 +5,7 @@
 Dashboard meteorológico unificado con datos de múltiples fuentes en tiempo real. Backend FastAPI + Frontend Next.js.
 
 > **⚠️ ¿Error de PowerShell?** Lee [`POWERSHELL_ERROR_FIXED.md`](POWERSHELL_ERROR_FIXED.md) - **¡Problema resuelto!**  
-> **⚡ INICIO RÁPIDO:** Ejecuta `.\run-tunnel.ps1` para iniciar el túnel Pinggy
+> **⚡ INICIO RÁPIDO:** Ejecuta `.\run-tunnel-ssh.ps1` para iniciar el túnel SSH (sin necesidad de pinggy.exe)
 
 ---
 
@@ -103,15 +103,14 @@ ClimAPI/
 
 ## 🚀 Inicio Rápido
 
-### ⚡ Opción A: Con Acceso Remoto (Pinggy.io)
+### ⚡ Opción A: Con Acceso Remoto (Pinggy.io vía SSH)
 
 ```powershell
 # 1. Abre PowerShell en el directorio del proyecto
 cd "e:\C0D3\Python\Jupyter\ClimAPI"
 
-# 2. Inicia el túnel (Terminal 1)
-.\start_tunnel.ps1
-# Selecciona opción 1 en el menú
+# 2. Inicia el túnel SSH (Terminal 1) - SIN necesidad de pinggy.exe
+.\run-tunnel-ssh.ps1
 
 # 3. En una NUEVA terminal, inicia el dashboard (Terminal 2)
 .venv\Scripts\streamlit.exe run dashboard/app.py
@@ -121,7 +120,7 @@ cd "e:\C0D3\Python\Jupyter\ClimAPI"
 #    - Remoto: https://Fm4hH7kZ8sz.free.pinggy.io
 ```
 
-**Nota:** Si encuentras error de PowerShell, lee [`QUICK_START_SCRIPTS.md`](QUICK_START_SCRIPTS.md)
+**Nota:** Esta opción usa SSH (que ya tienes instalado). No necesitas descargar pinggy.exe.
 
 ---
 

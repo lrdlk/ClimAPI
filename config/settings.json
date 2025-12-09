@@ -14,7 +14,7 @@
         "default_filename": "weather_data.csv"
     },
     "dashboard": {
-        "title": "Dashboard Meteorológico - Open-Meteo",
+        "title": "Dashboard Meteorológico - ClimAPI",
         "default_days": 7
     }
 }

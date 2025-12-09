@@ -11,6 +11,7 @@ Valida que:
 import asyncio
 import sys
 import json
+import pytest
 from pathlib import Path
 from datetime import datetime
 
@@ -21,8 +22,9 @@ from backend.app.services.aggregator import WeatherAggregator
 from backend.app.processors.storage import CacheManager
 from backend.app.processors.transform import calculate_statistics
 
-
+@pytest.mark.asyncio
 async def test_aggregator():
+    """Prueba 1: Agregador obtiene datos de todas las fuentes."""
     """Prueba 1: Agregador obtiene datos de todas las fuentes."""
     print("\n" + "="*80)
     print("PRUEBA 1: Agregador - Obtención de datos de múltiples fuentes")
@@ -68,8 +70,9 @@ async def test_aggregator():
     print(f"   En caché: {sum(1 for s in status.values() if s['cached'])}/{len(status)}")
     
     return aggregator, sources
-
-
+@pytest.mark.asyncio
+async def test_aggregation_statistics(aggregator, sources):
+    """Prueba 2: Normalización y estadísticas agregadas."""
 async def test_aggregation_statistics(aggregator, sources):
     """Prueba 2: Normalización y estadísticas agregadas."""
     print("\n" + "="*80)
@@ -174,8 +177,9 @@ def test_dashboard_integration(aggregator, aggregated, cache):
    # Acceder a: http://localhost:8501
 """)
     
-    return True
-
+@pytest.mark.asyncio
+async def test_performance():
+    """Prueba 5: Rendimiento - tiempo de respuesta."""
 
 async def test_performance():
     """Prueba 5: Rendimiento - tiempo de respuesta."""
