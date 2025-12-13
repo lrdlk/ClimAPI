@@ -22,11 +22,13 @@ ENV/
 # Datos
 data/
 # Si necesitas versionar marcadores vacíos, descomenta:
-# !data/**/.gitkeep
+!data/.gitkeep
 
 # Logs
 *.log
 logs/
+!logs/.gitkeep
+!logs/**/.gitkeep
 
 # IDEs
 .vscode/
