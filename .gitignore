@@ -20,11 +20,9 @@ ENV/
 *.ipynb_checkpoints
 
 # Datos
-data/cache/
-data/raw/*
-data/processed/*
-!data/raw/.gitkeep
-!data/processed/.gitkeep
+data/
+# Si necesitas versionar marcadores vacíos, descomenta:
+# !data/**/.gitkeep
 
 # Logs
 *.log
