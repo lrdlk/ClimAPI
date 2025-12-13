@@ -1,0 +1,19 @@
+Resumen de DatosPacum_Octubre2025.txt
+Generado: 2025-12-13 05:01:57.101734
+==================================================
+
+Primeras 10 filas:
+   Estacion                                      Nombre    Municipio      Barrio  Climatologia mes  Acumulado Mes (mm)  Porcentaje Mes
+0       295               Laguna Quitasol - Pluviometro        Bello          NA            157.07             329.184         209.578
+1        74            Edificio Gaspar de Rodas - Bello        Bello      Centro            152.68             313.944         205.622
+2       437    Paradero Jalisco San Felix - Pluviometro        Bello          NA            160.87             314.452         195.470
+3       121                            I.E Barrio Paris        Bello       Paris            158.50             308.356         194.546
+4       168            Santa Rita Guatape - Pluviometro   Alejandria          NA            389.23             741.426         190.485
+5        66            I.E San Andres (Sede El Socorro)    Girardota          NA            174.36             302.006         173.208
+6        51                          Represa La Garcia         Bello          NA            204.84             343.408         167.647
+7       242                        IE Jesus Maria Valle     Medellin     Picacho            146.10             240.538         164.639
+8        89                               I.E Pedro Nel     Medellin   Florencia            157.37             257.810         163.824
+9       127   I.E. Manuel Jose Sierra - Sede la Holanda    Girardota          NA            183.99             299.720         162.900
+
+Información del DataFrame:
+None

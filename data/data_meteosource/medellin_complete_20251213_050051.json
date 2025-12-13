@@ -1,0 +1,683 @@
+{
+  "lat": "6.25184N",
+  "lon": "75.56359W",
+  "elevation": 1405,
+  "timezone": "America/Bogota",
+  "units": "metric",
+  "current": {
+    "icon": "overcast",
+    "icon_num": 7,
+    "summary": "Overcast",
+    "temperature": 17.2,
+    "wind": {
+      "speed": 0.0,
+      "angle": 82,
+      "dir": "E"
+    },
+    "precipitation": {
+      "total": 0.0,
+      "type": "none"
+    },
+    "cloud_cover": 100
+  },
+  "hourly": {
+    "data": [
+      {
+        "date": "2025-12-13T05:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 17.2,
+        "wind": {
+          "speed": 0.0,
+          "dir": "E",
+          "angle": 82
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T06:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 17.0,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ENE",
+          "angle": 79
+        },
+        "cloud_cover": {
+          "total": 99
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T07:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 18.0,
+        "wind": {
+          "speed": 0.0,
+          "dir": "E",
+          "angle": 98
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T08:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 19.2,
+        "wind": {
+          "speed": 0.0,
+          "dir": "NE",
+          "angle": 47
+        },
+        "cloud_cover": {
+          "total": 98
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T09:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 20.8,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ENE",
+          "angle": 68
+        },
+        "cloud_cover": {
+          "total": 98
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T10:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 22.2,
+        "wind": {
+          "speed": 0.0,
+          "dir": "E",
+          "angle": 81
+        },
+        "cloud_cover": {
+          "total": 98
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T11:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 23.8,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ENE",
+          "angle": 62
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T12:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 24.5,
+        "wind": {
+          "speed": 0.0,
+          "dir": "NE",
+          "angle": 46
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T13:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 25.0,
+        "wind": {
+          "speed": 0.0,
+          "dir": "NNE",
+          "angle": 32
+        },
+        "cloud_cover": {
+          "total": 95
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T14:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 25.2,
+        "wind": {
+          "speed": 0.1,
+          "dir": "NE",
+          "angle": 40
+        },
+        "cloud_cover": {
+          "total": 94
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T15:00:00",
+        "weather": "mostly_cloudy",
+        "icon": 5,
+        "summary": "Mostly cloudy",
+        "temperature": 25.5,
+        "wind": {
+          "speed": 0.2,
+          "dir": "NE",
+          "angle": 46
+        },
+        "cloud_cover": {
+          "total": 72
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T16:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 25.0,
+        "wind": {
+          "speed": 0.1,
+          "dir": "NNE",
+          "angle": 23
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T17:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 24.0,
+        "wind": {
+          "speed": 0.6,
+          "dir": "NNE",
+          "angle": 26
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T18:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 22.8,
+        "wind": {
+          "speed": 0.9,
+          "dir": "ENE",
+          "angle": 60
+        },
+        "cloud_cover": {
+          "total": 97
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T19:00:00",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Overcast",
+        "temperature": 21.8,
+        "wind": {
+          "speed": 0.8,
+          "dir": "ENE",
+          "angle": 77
+        },
+        "cloud_cover": {
+          "total": 100
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T20:00:00",
+        "weather": "mostly_cloudy",
+        "icon": 29,
+        "summary": "Mostly cloudy",
+        "temperature": 20.8,
+        "wind": {
+          "speed": 0.6,
+          "dir": "ENE",
+          "angle": 78
+        },
+        "cloud_cover": {
+          "total": 73
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T21:00:00",
+        "weather": "mostly_cloudy",
+        "icon": 29,
+        "summary": "Mostly cloudy",
+        "temperature": 19.8,
+        "wind": {
+          "speed": 0.2,
+          "dir": "E",
+          "angle": 83
+        },
+        "cloud_cover": {
+          "total": 71
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T22:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 19.5,
+        "wind": {
+          "speed": 0.0,
+          "dir": "E",
+          "angle": 86
+        },
+        "cloud_cover": {
+          "total": 56
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-13T23:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 19.0,
+        "wind": {
+          "speed": 0.0,
+          "dir": "E",
+          "angle": 92
+        },
+        "cloud_cover": {
+          "total": 32
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-14T00:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 18.2,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ESE",
+          "angle": 107
+        },
+        "cloud_cover": {
+          "total": 29
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-14T01:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 17.8,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ESE",
+          "angle": 117
+        },
+        "cloud_cover": {
+          "total": 38
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-14T02:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 17.5,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ESE",
+          "angle": 108
+        },
+        "cloud_cover": {
+          "total": 37
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-14T03:00:00",
+        "weather": "partly_clear",
+        "icon": 28,
+        "summary": "Partly clear",
+        "temperature": 17.2,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ESE",
+          "angle": 105
+        },
+        "cloud_cover": {
+          "total": 27
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      },
+      {
+        "date": "2025-12-14T04:00:00",
+        "weather": "fog",
+        "icon": 9,
+        "summary": "Fog",
+        "temperature": 16.8,
+        "wind": {
+          "speed": 0.0,
+          "dir": "ESE",
+          "angle": 115
+        },
+        "cloud_cover": {
+          "total": 41
+        },
+        "precipitation": {
+          "total": 0.0,
+          "type": "none"
+        }
+      }
+    ]
+  },
+  "daily": {
+    "data": [
+      {
+        "day": "2025-12-13",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Cloudy, fewer clouds in the evening. Temperature 17/26 °C.",
+        "all_day": {
+          "weather": "overcast",
+          "icon": 7,
+          "temperature": 21.8,
+          "temperature_min": 17.0,
+          "temperature_max": 25.5,
+          "wind": {
+            "speed": 0.2,
+            "dir": "ENE",
+            "angle": 68
+          },
+          "cloud_cover": {
+            "total": 87
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-14",
+        "weather": "overcast",
+        "icon": 7,
+        "summary": "Fog in the morning, cloudy later. Temperature 16/26 °C.",
+        "all_day": {
+          "weather": "overcast",
+          "icon": 7,
+          "temperature": 22.0,
+          "temperature_min": 16.0,
+          "temperature_max": 26.2,
+          "wind": {
+            "speed": 0.3,
+            "dir": "E",
+            "angle": 87
+          },
+          "cloud_cover": {
+            "total": 79
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-15",
+        "weather": "rain_shower",
+        "icon": 13,
+        "summary": "Fog in the morning, possible rain later. Temperature 17/27 °C.",
+        "all_day": {
+          "weather": "rain_shower",
+          "icon": 13,
+          "temperature": 22.2,
+          "temperature_min": 16.5,
+          "temperature_max": 26.5,
+          "wind": {
+            "speed": 0.5,
+            "dir": "ENE",
+            "angle": 73
+          },
+          "cloud_cover": {
+            "total": 67
+          },
+          "precipitation": {
+            "total": 4.4,
+            "type": "rain"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-16",
+        "weather": "psbl_rain",
+        "icon": 12,
+        "summary": "Rain showers changing to light rain by afternoon. Temperature 18/26 °C.",
+        "all_day": {
+          "weather": "psbl_rain",
+          "icon": 12,
+          "temperature": 22.5,
+          "temperature_min": 18.0,
+          "temperature_max": 26.0,
+          "wind": {
+            "speed": 0.6,
+            "dir": "ENE",
+            "angle": 78
+          },
+          "cloud_cover": {
+            "total": 73
+          },
+          "precipitation": {
+            "total": 3.1,
+            "type": "rain"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-17",
+        "weather": "light_rain",
+        "icon": 10,
+        "summary": "Mostly cloudy changing to light rain in the afternoon. Temperature 18/26 °C.",
+        "all_day": {
+          "weather": "light_rain",
+          "icon": 10,
+          "temperature": 22.5,
+          "temperature_min": 18.2,
+          "temperature_max": 26.0,
+          "wind": {
+            "speed": 0.4,
+            "dir": "E",
+            "angle": 79
+          },
+          "cloud_cover": {
+            "total": 76
+          },
+          "precipitation": {
+            "total": 7.0,
+            "type": "rain"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-18",
+        "weather": "psbl_rain",
+        "icon": 12,
+        "summary": "Fog in the morning, light rain later. Temperature 18/26 °C.",
+        "all_day": {
+          "weather": "psbl_rain",
+          "icon": 12,
+          "temperature": 22.5,
+          "temperature_min": 17.8,
+          "temperature_max": 26.0,
+          "wind": {
+            "speed": 0.4,
+            "dir": "ENE",
+            "angle": 73
+          },
+          "cloud_cover": {
+            "total": 88
+          },
+          "precipitation": {
+            "total": 2.4,
+            "type": "rain"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      },
+      {
+        "day": "2025-12-19",
+        "weather": "psbl_rain",
+        "icon": 12,
+        "summary": "Fog in the morning, possible rain later. Temperature 18/26 °C.",
+        "all_day": {
+          "weather": "psbl_rain",
+          "icon": 12,
+          "temperature": 23.0,
+          "temperature_min": 18.2,
+          "temperature_max": 26.2,
+          "wind": {
+            "speed": 0.4,
+            "dir": "ENE",
+            "angle": 72
+          },
+          "cloud_cover": {
+            "total": 94
+          },
+          "precipitation": {
+            "total": 1.9,
+            "type": "rain"
+          }
+        },
+        "morning": null,
+        "afternoon": null,
+        "evening": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "location": "Cali",
+  "coordinates": {
+    "lat": 3.4516,
+    "lon": -76.532
+  },
+  "timestamp": "2025-12-13T05:01:35",
+  "weather": {
+    "description": "muy nuboso",
+    "main": "Clouds",
+    "icon": "04n"
+  },
+  "temperature": {
+    "current": 18.15,
+    "feels_like": 18.48,
+    "min": 18.15,
+    "max": 20.82
+  },
+  "pressure": 1012,
+  "humidity": 94,
+  "visibility": 10.0,
+  "wind": {
+    "speed": 0.51,
+    "direction": 0,
+    "gust": null
+  },
+  "clouds": 75,
+  "sunrise": "06:02:50",
+  "sunset": "17:58:14"
+}

@@ -1,0 +1,19 @@
+Resumen de DatosPacum_Mayo2025.txt
+Generado: 2025-12-13 05:02:05.321464
+==================================================
+
+Primeras 10 filas:
+   Estacion                                     Nombre     Municipio                               Barrio  Climatologia mes  Acumulado Mes (mm)  Porcentaje Mes
+0       421             CC Viva Envigado - Pluviometro      Envigado                            Las Vegas            169.67             568.198         334.884
+1        47                    Villa Nueva Sede La Luz    Copacabana                                   NA            203.81             468.630         229.935
+2       437   Paradero Jalisco San Felix - Pluviometro         Bello                                   NA            180.09             390.906         217.061
+3       420                 Pueblo Viejo - Pluviometro   La Estrella                                 NULL            156.08             321.818         206.188
+4       146           Club del Adulto Mayor - Sabaneta      Sabaneta                   Prados de Sabaneta            224.68             455.168         202.585
+5        51                         Represa La Garcia          Bello                                   NA            202.61             402.082         198.451
+6       395      La Harenala Santa Maria - Pluviometro        Itagui                    Santa Maria No. 1            223.18             440.690         197.459
+7       334         Manuel Mejia Vallejo - Pluviometro      Envigado                   Loma El Atravesado            199.52             389.128         195.032
+8        19                      Tecnologico Antioquia        Itagui   Las Americas-Zona Industrial No. 1            216.73             419.100         193.374
+9       376              Feria de Ganado - Pluviometro      Medellin                           Belalcazar            151.89             292.608         192.645
+
+Información del DataFrame:
+None

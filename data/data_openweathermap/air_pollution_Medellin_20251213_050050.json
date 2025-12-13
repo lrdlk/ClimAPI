@@ -1,0 +1,22 @@
+{
+  "location": "Medellin",
+  "coordinates": {
+    "lat": 6.245,
+    "lon": -75.5715
+  },
+  "timestamp": "2025-12-13T05:00:51",
+  "aqi": {
+    "value": 2,
+    "label": "Aceptable"
+  },
+  "components": {
+    "co": 137.61,
+    "no": 0.31,
+    "no2": 3.81,
+    "o3": 4.45,
+    "so2": 6.25,
+    "pm2_5": 12.34,
+    "pm10": 12.78,
+    "nh3": 2.42
+  }
+}

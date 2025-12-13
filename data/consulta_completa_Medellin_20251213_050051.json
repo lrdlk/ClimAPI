@@ -1,0 +1,2002 @@
+{
+  "location": "Medellin",
+  "coordinates": {
+    "lat": 6.245,
+    "lon": -75.5715,
+    "asl": 1495
+  },
+  "timestamp": "2025-12-13T05:00:45.474006",
+  "meteoblue": {
+    "metadata": {
+      "modelrun_updatetime_utc": "2025-12-13 10:00",
+      "name": "",
+      "height": 1495,
+      "timezone_abbrevation": "GMT-05",
+      "latitude": 6.245,
+      "modelrun_utc": "2025-12-13 10:00",
+      "longitude": -75.5715,
+      "utc_timeoffset": -5.0,
+      "generation_time_ms": 15.727043
+    },
+    "units": {
+      "predictability": "percent",
+      "precipitation": "mm",
+      "windspeed": "ms-1",
+      "precipitation_probability": "percent",
+      "relativehumidity": "percent",
+      "time": "YYYY-MM-DD hh:mm",
+      "temperature": "C",
+      "pressure": "hPa",
+      "winddirection": "degree"
+    },
+    "data_day": {
+      "time": [
+        "2025-12-13",
+        "2025-12-14",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19"
+      ],
+      "temperature_instant": [
+        17.76,
+        17.74,
+        17.71,
+        17.19,
+        17.44,
+        17.48,
+        16.69
+      ],
+      "precipitation": [
+        1.63,
+        2.57,
+        8.5,
+        5.21,
+        5.73,
+        4.76,
+        2.8
+      ],
+      "predictability": [
+        53,
+        54,
+        51,
+        55,
+        55,
+        54,
+        55
+      ],
+      "temperature_max": [
+        26.39,
+        26.09,
+        26.22,
+        27.55,
+        28.11,
+        27.0,
+        25.66
+      ],
+      "sealevelpressure_mean": [
+        1012,
+        1013,
+        1013,
+        1013,
+        1012,
+        1013,
+        1013
+      ],
+      "windspeed_mean": [
+        1.38,
+        1.38,
+        1.27,
+        1.32,
+        1.42,
+        1.36,
+        1.22
+      ],
+      "precipitation_hours": [
+        9.0,
+        14.0,
+        15.0,
+        9.0,
+        12.0,
+        9.0,
+        4.0
+      ],
+      "sealevelpressure_min": [
+        1009,
+        1010,
+        1010,
+        1009,
+        1009,
+        1009,
+        1009
+      ],
+      "pictocode": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        8
+      ],
+      "snowfraction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "humiditygreater90_hours": [
+        0.63,
+        1.0,
+        0.83,
+        0.75,
+        1.0,
+        0.67,
+        0.79
+      ],
+      "convective_precipitation": [
+        1.63,
+        2.57,
+        8.49,
+        5.21,
+        5.73,
+        4.76,
+        2.6
+      ],
+      "relativehumidity_max": [
+        87,
+        90,
+        90,
+        89,
+        89,
+        92,
+        93
+      ],
+      "temperature_min": [
+        17.73,
+        17.71,
+        17.19,
+        17.27,
+        17.48,
+        16.67,
+        16.76
+      ],
+      "winddirection": [
+        90,
+        90,
+        90,
+        90,
+        90,
+        90,
+        45
+      ],
+      "felttemperature_max": [
+        27.81,
+        27.21,
+        27.7,
+        28.63,
+        29.28,
+        28.23,
+        26.53
+      ],
+      "relativehumidity_min": [
+        53,
+        55,
+        55,
+        49,
+        47,
+        50,
+        55
+      ],
+      "felttemperature_mean": [
+        22.32,
+        22.29,
+        22.14,
+        22.36,
+        22.56,
+        21.9,
+        21.57
+      ],
+      "windspeed_min": [
+        0.94,
+        0.87,
+        0.78,
+        0.75,
+        0.94,
+        0.74,
+        0.44
+      ],
+      "felttemperature_min": [
+        18.64,
+        18.93,
+        18.33,
+        18.44,
+        18.26,
+        17.35,
+        17.71
+      ],
+      "precipitation_probability": [
+        63,
+        58,
+        67,
+        60,
+        78,
+        84,
+        79
+      ],
+      "uvindex": [
+        9,
+        9,
+        4,
+        8,
+        9,
+        11,
+        11
+      ],
+      "rainspot": [
+        "3333133312323331322333022233333222232322323333222",
+        "3322233312322332111333122223333312333322312333123",
+        "3333333313333333233333223333333323322323323312322",
+        "3333233313223332132333113222333313331322222202322",
+        "3333233313333332233333133223333223332322322212222",
+        "3323333322322332222233122222333223232222232212233",
+        "3322233322002332222333222223321223233112223101222"
+      ],
+      "temperature_mean": [
+        21.1,
+        20.97,
+        20.77,
+        21.13,
+        21.36,
+        20.71,
+        20.32
+      ],
+      "sealevelpressure_max": [
+        1014,
+        1015,
+        1016,
+        1015,
+        1015,
+        1015,
+        1015
+      ],
+      "relativehumidity_mean": [
+        74,
+        75,
+        76,
+        74,
+        73,
+        76,
+        77
+      ],
+      "predictability_class": [
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0,
+        3.0
+      ],
+      "windspeed_max": [
+        1.79,
+        2.04,
+        1.63,
+        1.77,
+        1.8,
+        1.75,
+        2.27
+      ]
+    }
+  },
+  "openmeteo": {
+    "location": "Medellin",
+    "coordinates": {
+      "latitude": 6.25,
+      "longitude": -75.5,
+      "elevation": 1473.0
+    },
+    "timezone": -18000,
+    "hourly": "Datos guardados en CSV",
+    "daily": "Datos guardados en CSV"
+  },
+  "openweather": {
+    "current": {
+      "location": "Medellin",
+      "coordinates": {
+        "lat": 6.245,
+        "lon": -75.5715
+      },
+      "timestamp": "2025-12-13T05:00:51",
+      "weather": {
+        "description": "nubes",
+        "main": "Clouds",
+        "icon": "04n"
+      },
+      "temperature": {
+        "current": 13.83,
+        "feels_like": 13.83,
+        "min": 13.62,
+        "max": 18.17
+      },
+      "pressure": 1013,
+      "humidity": 98,
+      "visibility": 10.0,
+      "wind": {
+        "speed": 0.18,
+        "direction": 63,
+        "gust": 0.08
+      },
+      "clouds": 100,
+      "sunrise": "06:03:48",
+      "sunset": "17:49:36"
+    },
+    "forecast": {
+      "location": "Medellin",
+      "coordinates": {
+        "lat": 6.245,
+        "lon": -75.5715
+      },
+      "city": "Medellín",
+      "country": "CO",
+      "timezone": -18000,
+      "forecast": [
+        {
+          "datetime": "2025-12-13T07:00:00",
+          "date": "2025-12-13",
+          "time": "07:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.07,
+            "feels_like": 15.19,
+            "min": 15.07,
+            "max": 17.56
+          },
+          "pressure": 1014,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.58,
+            "direction": 106
+          },
+          "clouds": 99,
+          "precipitation_probability": 16.0
+        },
+        {
+          "datetime": "2025-12-13T10:00:00",
+          "date": "2025-12-13",
+          "time": "10:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 18.4,
+            "feels_like": 18.65,
+            "min": 18.4,
+            "max": 20.69
+          },
+          "pressure": 1014,
+          "humidity": 90,
+          "wind": {
+            "speed": 0.12,
+            "direction": 31
+          },
+          "clouds": 100,
+          "precipitation_probability": 90.0,
+          "rain_3h": 0.64
+        },
+        {
+          "datetime": "2025-12-13T13:00:00",
+          "date": "2025-12-13",
+          "time": "13:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 21.81,
+            "feels_like": 22.16,
+            "min": 21.81,
+            "max": 21.81
+          },
+          "pressure": 1011,
+          "humidity": 81,
+          "wind": {
+            "speed": 0.66,
+            "direction": 85
+          },
+          "clouds": 100,
+          "precipitation_probability": 100,
+          "rain_3h": 1.62
+        },
+        {
+          "datetime": "2025-12-13T16:00:00",
+          "date": "2025-12-13",
+          "time": "16:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 23.12,
+            "feels_like": 23.34,
+            "min": 23.12,
+            "max": 23.12
+          },
+          "pressure": 1008,
+          "humidity": 71,
+          "wind": {
+            "speed": 1.35,
+            "direction": 5
+          },
+          "clouds": 78,
+          "precipitation_probability": 100,
+          "rain_3h": 0.99
+        },
+        {
+          "datetime": "2025-12-13T19:00:00",
+          "date": "2025-12-13",
+          "time": "19:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.2,
+            "feels_like": 16.43,
+            "min": 16.2,
+            "max": 16.2
+          },
+          "pressure": 1013,
+          "humidity": 98,
+          "wind": {
+            "speed": 1.32,
+            "direction": 79
+          },
+          "clouds": 88,
+          "precipitation_probability": 100,
+          "rain_3h": 2.21
+        },
+        {
+          "datetime": "2025-12-13T22:00:00",
+          "date": "2025-12-13",
+          "time": "22:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 15.38,
+            "feels_like": 15.56,
+            "min": 15.38,
+            "max": 15.38
+          },
+          "pressure": 1015,
+          "humidity": 99,
+          "wind": {
+            "speed": 1.28,
+            "direction": 91
+          },
+          "clouds": 81,
+          "precipitation_probability": 53.0,
+          "rain_3h": 0.44
+        },
+        {
+          "datetime": "2025-12-14T01:00:00",
+          "date": "2025-12-14",
+          "time": "01:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.02,
+            "feels_like": 15.16,
+            "min": 15.02,
+            "max": 15.02
+          },
+          "pressure": 1014,
+          "humidity": 99,
+          "wind": {
+            "speed": 0.97,
+            "direction": 100
+          },
+          "clouds": 86,
+          "precipitation_probability": 17.0
+        },
+        {
+          "datetime": "2025-12-14T04:00:00",
+          "date": "2025-12-14",
+          "time": "04:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 14.63,
+            "feels_like": 14.71,
+            "min": 14.63,
+            "max": 14.63
+          },
+          "pressure": 1014,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.62,
+            "direction": 94
+          },
+          "clouds": 76,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-14T07:00:00",
+          "date": "2025-12-14",
+          "time": "07:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.58,
+            "feels_like": 15.75,
+            "min": 15.58,
+            "max": 15.58
+          },
+          "pressure": 1016,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.32,
+            "direction": 90
+          },
+          "clouds": 72,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-14T10:00:00",
+          "date": "2025-12-14",
+          "time": "10:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 22.73,
+            "feels_like": 22.83,
+            "min": 22.73,
+            "max": 22.73
+          },
+          "pressure": 1014,
+          "humidity": 68,
+          "wind": {
+            "speed": 0.88,
+            "direction": 283
+          },
+          "clouds": 99,
+          "precipitation_probability": 27.0,
+          "rain_3h": 0.12
+        },
+        {
+          "datetime": "2025-12-14T13:00:00",
+          "date": "2025-12-14",
+          "time": "13:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 22.64,
+            "feels_like": 22.97,
+            "min": 22.64,
+            "max": 22.64
+          },
+          "pressure": 1012,
+          "humidity": 77,
+          "wind": {
+            "speed": 0.45,
+            "direction": 290
+          },
+          "clouds": 99,
+          "precipitation_probability": 90.0,
+          "rain_3h": 1.49
+        },
+        {
+          "datetime": "2025-12-14T16:00:00",
+          "date": "2025-12-14",
+          "time": "16:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 21.79,
+            "feels_like": 22.17,
+            "min": 21.79,
+            "max": 21.79
+          },
+          "pressure": 1010,
+          "humidity": 82,
+          "wind": {
+            "speed": 1.01,
+            "direction": 79
+          },
+          "clouds": 98,
+          "precipitation_probability": 100,
+          "rain_3h": 2.5
+        },
+        {
+          "datetime": "2025-12-14T19:00:00",
+          "date": "2025-12-14",
+          "time": "19:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.54,
+            "feels_like": 16.78,
+            "min": 16.54,
+            "max": 16.54
+          },
+          "pressure": 1014,
+          "humidity": 97,
+          "wind": {
+            "speed": 0.95,
+            "direction": 82
+          },
+          "clouds": 96,
+          "precipitation_probability": 100,
+          "rain_3h": 2.07
+        },
+        {
+          "datetime": "2025-12-14T22:00:00",
+          "date": "2025-12-14",
+          "time": "22:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 15.26,
+            "feels_like": 15.4,
+            "min": 15.26,
+            "max": 15.26
+          },
+          "pressure": 1016,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.97,
+            "direction": 88
+          },
+          "clouds": 83,
+          "precipitation_probability": 75.0,
+          "rain_3h": 0.52
+        },
+        {
+          "datetime": "2025-12-15T01:00:00",
+          "date": "2025-12-15",
+          "time": "01:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 14.62,
+            "feels_like": 14.72,
+            "min": 14.62,
+            "max": 14.62
+          },
+          "pressure": 1015,
+          "humidity": 99,
+          "wind": {
+            "speed": 0.57,
+            "direction": 103
+          },
+          "clouds": 89,
+          "precipitation_probability": 53.0,
+          "rain_3h": 0.27
+        },
+        {
+          "datetime": "2025-12-15T04:00:00",
+          "date": "2025-12-15",
+          "time": "04:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 14.27,
+            "feels_like": 14.34,
+            "min": 14.27,
+            "max": 14.27
+          },
+          "pressure": 1015,
+          "humidity": 99,
+          "wind": {
+            "speed": 0.48,
+            "direction": 117
+          },
+          "clouds": 86,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-15T07:00:00",
+          "date": "2025-12-15",
+          "time": "07:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.45,
+            "feels_like": 15.61,
+            "min": 15.45,
+            "max": 15.45
+          },
+          "pressure": 1017,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.25,
+            "direction": 108
+          },
+          "clouds": 71,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-15T10:00:00",
+          "date": "2025-12-15",
+          "time": "10:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 23.01,
+            "feels_like": 23.09,
+            "min": 23.01,
+            "max": 23.01
+          },
+          "pressure": 1015,
+          "humidity": 66,
+          "wind": {
+            "speed": 0.7,
+            "direction": 276
+          },
+          "clouds": 68,
+          "precipitation_probability": 21.0,
+          "rain_3h": 0.1
+        },
+        {
+          "datetime": "2025-12-15T13:00:00",
+          "date": "2025-12-15",
+          "time": "13:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 22.61,
+            "feels_like": 22.96,
+            "min": 22.61,
+            "max": 22.61
+          },
+          "pressure": 1012,
+          "humidity": 78,
+          "wind": {
+            "speed": 0.59,
+            "direction": 5
+          },
+          "clouds": 69,
+          "precipitation_probability": 98.0,
+          "rain_3h": 2.16
+        },
+        {
+          "datetime": "2025-12-15T16:00:00",
+          "date": "2025-12-15",
+          "time": "16:00",
+          "weather": {
+            "description": "lluvia moderada",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 21.11,
+            "feels_like": 21.57,
+            "min": 21.11,
+            "max": 21.11
+          },
+          "pressure": 1010,
+          "humidity": 88,
+          "wind": {
+            "speed": 1.6,
+            "direction": 69
+          },
+          "clouds": 51,
+          "precipitation_probability": 100,
+          "rain_3h": 4.5
+        },
+        {
+          "datetime": "2025-12-15T19:00:00",
+          "date": "2025-12-15",
+          "time": "19:00",
+          "weather": {
+            "description": "lluvia moderada",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.98,
+            "feels_like": 17.29,
+            "min": 16.98,
+            "max": 16.98
+          },
+          "pressure": 1014,
+          "humidity": 98,
+          "wind": {
+            "speed": 1.69,
+            "direction": 71
+          },
+          "clouds": 59,
+          "precipitation_probability": 100,
+          "rain_3h": 3.3
+        },
+        {
+          "datetime": "2025-12-15T22:00:00",
+          "date": "2025-12-15",
+          "time": "22:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.15,
+            "feels_like": 16.33,
+            "min": 16.15,
+            "max": 16.15
+          },
+          "pressure": 1016,
+          "humidity": 96,
+          "wind": {
+            "speed": 1.05,
+            "direction": 68
+          },
+          "clouds": 80,
+          "precipitation_probability": 89.0,
+          "rain_3h": 0.81
+        },
+        {
+          "datetime": "2025-12-16T01:00:00",
+          "date": "2025-12-16",
+          "time": "01:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.62,
+            "feels_like": 15.8,
+            "min": 15.62,
+            "max": 15.62
+          },
+          "pressure": 1015,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.46,
+            "direction": 99
+          },
+          "clouds": 76,
+          "precipitation_probability": 70.0
+        },
+        {
+          "datetime": "2025-12-16T04:00:00",
+          "date": "2025-12-16",
+          "time": "04:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 15.84,
+            "feels_like": 16.04,
+            "min": 15.84,
+            "max": 15.84
+          },
+          "pressure": 1013,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.09,
+            "direction": 36
+          },
+          "clouds": 88,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-16T07:00:00",
+          "date": "2025-12-16",
+          "time": "07:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 16.41,
+            "feels_like": 16.67,
+            "min": 16.41,
+            "max": 16.41
+          },
+          "pressure": 1015,
+          "humidity": 98,
+          "wind": {
+            "speed": 0.55,
+            "direction": 50
+          },
+          "clouds": 90,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-16T10:00:00",
+          "date": "2025-12-16",
+          "time": "10:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 21.38,
+            "feels_like": 21.56,
+            "min": 21.38,
+            "max": 21.38
+          },
+          "pressure": 1014,
+          "humidity": 76,
+          "wind": {
+            "speed": 0.23,
+            "direction": 255
+          },
+          "clouds": 89,
+          "precipitation_probability": 22.0,
+          "rain_3h": 0.23
+        },
+        {
+          "datetime": "2025-12-16T13:00:00",
+          "date": "2025-12-16",
+          "time": "13:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 23.45,
+            "feels_like": 23.76,
+            "min": 23.45,
+            "max": 23.45
+          },
+          "pressure": 1010,
+          "humidity": 73,
+          "wind": {
+            "speed": 0.24,
+            "direction": 185
+          },
+          "clouds": 74,
+          "precipitation_probability": 95.0,
+          "rain_3h": 1.23
+        },
+        {
+          "datetime": "2025-12-16T16:00:00",
+          "date": "2025-12-16",
+          "time": "16:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 20.98,
+            "feels_like": 21.41,
+            "min": 20.98,
+            "max": 20.98
+          },
+          "pressure": 1009,
+          "humidity": 87,
+          "wind": {
+            "speed": 1.63,
+            "direction": 77
+          },
+          "clouds": 78,
+          "precipitation_probability": 100,
+          "rain_3h": 2.26
+        },
+        {
+          "datetime": "2025-12-16T19:00:00",
+          "date": "2025-12-16",
+          "time": "19:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 17.11,
+            "feels_like": 17.44,
+            "min": 17.11,
+            "max": 17.11
+          },
+          "pressure": 1013,
+          "humidity": 98,
+          "wind": {
+            "speed": 1.53,
+            "direction": 74
+          },
+          "clouds": 80,
+          "precipitation_probability": 100,
+          "rain_3h": 1.68
+        },
+        {
+          "datetime": "2025-12-16T22:00:00",
+          "date": "2025-12-16",
+          "time": "22:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.83,
+            "feels_like": 17.13,
+            "min": 16.83,
+            "max": 16.83
+          },
+          "pressure": 1015,
+          "humidity": 98,
+          "wind": {
+            "speed": 1.32,
+            "direction": 65
+          },
+          "clouds": 63,
+          "precipitation_probability": 70.0,
+          "rain_3h": 0.58
+        },
+        {
+          "datetime": "2025-12-17T01:00:00",
+          "date": "2025-12-17",
+          "time": "01:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.72,
+            "feels_like": 16.93,
+            "min": 16.72,
+            "max": 16.72
+          },
+          "pressure": 1014,
+          "humidity": 95,
+          "wind": {
+            "speed": 0.89,
+            "direction": 72
+          },
+          "clouds": 76,
+          "precipitation_probability": 57.99999999999999,
+          "rain_3h": 0.1
+        },
+        {
+          "datetime": "2025-12-17T04:00:00",
+          "date": "2025-12-17",
+          "time": "04:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 16.06,
+            "feels_like": 16.2,
+            "min": 16.06,
+            "max": 16.06
+          },
+          "pressure": 1013,
+          "humidity": 95,
+          "wind": {
+            "speed": 0.72,
+            "direction": 63
+          },
+          "clouds": 85,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-17T07:00:00",
+          "date": "2025-12-17",
+          "time": "07:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 16.44,
+            "feels_like": 16.62,
+            "min": 16.44,
+            "max": 16.44
+          },
+          "pressure": 1015,
+          "humidity": 95,
+          "wind": {
+            "speed": 0.89,
+            "direction": 77
+          },
+          "clouds": 57,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-17T10:00:00",
+          "date": "2025-12-17",
+          "time": "10:00",
+          "weather": {
+            "description": "algo de nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 24.04,
+            "feels_like": 24.04,
+            "min": 24.04,
+            "max": 24.04
+          },
+          "pressure": 1013,
+          "humidity": 59,
+          "wind": {
+            "speed": 0.31,
+            "direction": 295
+          },
+          "clouds": 23,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-17T13:00:00",
+          "date": "2025-12-17",
+          "time": "13:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 22.87,
+            "feels_like": 23.12,
+            "min": 22.87,
+            "max": 22.87
+          },
+          "pressure": 1010,
+          "humidity": 73,
+          "wind": {
+            "speed": 0.28,
+            "direction": 153
+          },
+          "clouds": 48,
+          "precipitation_probability": 40.0,
+          "rain_3h": 0.48
+        },
+        {
+          "datetime": "2025-12-17T16:00:00",
+          "date": "2025-12-17",
+          "time": "16:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 22.17,
+            "feels_like": 22.53,
+            "min": 22.17,
+            "max": 22.17
+          },
+          "pressure": 1008,
+          "humidity": 80,
+          "wind": {
+            "speed": 1.35,
+            "direction": 57
+          },
+          "clouds": 63,
+          "precipitation_probability": 100,
+          "rain_3h": 1.11
+        },
+        {
+          "datetime": "2025-12-17T19:00:00",
+          "date": "2025-12-17",
+          "time": "19:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.9,
+            "feels_like": 17.23,
+            "min": 16.9,
+            "max": 16.9
+          },
+          "pressure": 1013,
+          "humidity": 99,
+          "wind": {
+            "speed": 1.61,
+            "direction": 68
+          },
+          "clouds": 53,
+          "precipitation_probability": 100,
+          "rain_3h": 1.68
+        },
+        {
+          "datetime": "2025-12-17T22:00:00",
+          "date": "2025-12-17",
+          "time": "22:00",
+          "weather": {
+            "description": "lluvia ligera",
+            "main": "Rain"
+          },
+          "temperature": {
+            "temp": 16.95,
+            "feels_like": 17.26,
+            "min": 16.95,
+            "max": 16.95
+          },
+          "pressure": 1014,
+          "humidity": 98,
+          "wind": {
+            "speed": 1.23,
+            "direction": 79
+          },
+          "clouds": 56,
+          "precipitation_probability": 21.0,
+          "rain_3h": 0.21
+        },
+        {
+          "datetime": "2025-12-18T01:00:00",
+          "date": "2025-12-18",
+          "time": "01:00",
+          "weather": {
+            "description": "muy nuboso",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 16.79,
+            "feels_like": 17.06,
+            "min": 16.79,
+            "max": 16.79
+          },
+          "pressure": 1013,
+          "humidity": 97,
+          "wind": {
+            "speed": 0.73,
+            "direction": 88
+          },
+          "clouds": 74,
+          "precipitation_probability": 0
+        },
+        {
+          "datetime": "2025-12-18T04:00:00",
+          "date": "2025-12-18",
+          "time": "04:00",
+          "weather": {
+            "description": "nubes",
+            "main": "Clouds"
+          },
+          "temperature": {
+            "temp": 16.6,
+            "feels_like": 16.82,
+            "min": 16.6,
+            "max": 16.6
+          },
+          "pressure": 1013,
+          "humidity": 96,
+          "wind": {
+            "speed": 0.58,
+            "direction": 77
+          },
+          "clouds": 95,
+          "precipitation_probability": 0
+        }
+      ]
+    },
+    "air_quality": {
+      "location": "Medellin",
+      "coordinates": {
+        "lat": 6.245,
+        "lon": -75.5715
+      },
+      "timestamp": "2025-12-13T05:00:51",
+      "aqi": {
+        "value": 2,
+        "label": "Aceptable"
+      },
+      "components": {
+        "co": 137.61,
+        "no": 0.31,
+        "no2": 3.81,
+        "o3": 4.45,
+        "so2": 6.25,
+        "pm2_5": 12.34,
+        "pm10": 12.78,
+        "nh3": 2.42
+      }
+    }
+  },
+  "meteosource": {
+    "lat": "6.25184N",
+    "lon": "75.56359W",
+    "elevation": 1405,
+    "timezone": "America/Bogota",
+    "units": "metric",
+    "current": {
+      "icon": "overcast",
+      "icon_num": 7,
+      "summary": "Overcast",
+      "temperature": 17.2,
+      "wind": {
+        "speed": 0.0,
+        "angle": 82,
+        "dir": "E"
+      },
+      "precipitation": {
+        "total": 0.0,
+        "type": "none"
+      },
+      "cloud_cover": 100
+    },
+    "hourly": {
+      "data": [
+        {
+          "date": "2025-12-13T05:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 17.2,
+          "wind": {
+            "speed": 0.0,
+            "dir": "E",
+            "angle": 82
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T06:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 17.0,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ENE",
+            "angle": 79
+          },
+          "cloud_cover": {
+            "total": 99
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T07:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 18.0,
+          "wind": {
+            "speed": 0.0,
+            "dir": "E",
+            "angle": 98
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T08:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 19.2,
+          "wind": {
+            "speed": 0.0,
+            "dir": "NE",
+            "angle": 47
+          },
+          "cloud_cover": {
+            "total": 98
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T09:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 20.8,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ENE",
+            "angle": 68
+          },
+          "cloud_cover": {
+            "total": 98
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T10:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 22.2,
+          "wind": {
+            "speed": 0.0,
+            "dir": "E",
+            "angle": 81
+          },
+          "cloud_cover": {
+            "total": 98
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T11:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 23.8,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ENE",
+            "angle": 62
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T12:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 24.5,
+          "wind": {
+            "speed": 0.0,
+            "dir": "NE",
+            "angle": 46
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T13:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 25.0,
+          "wind": {
+            "speed": 0.0,
+            "dir": "NNE",
+            "angle": 32
+          },
+          "cloud_cover": {
+            "total": 95
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T14:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 25.2,
+          "wind": {
+            "speed": 0.1,
+            "dir": "NE",
+            "angle": 40
+          },
+          "cloud_cover": {
+            "total": 94
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T15:00:00",
+          "weather": "mostly_cloudy",
+          "icon": 5,
+          "summary": "Mostly cloudy",
+          "temperature": 25.5,
+          "wind": {
+            "speed": 0.2,
+            "dir": "NE",
+            "angle": 46
+          },
+          "cloud_cover": {
+            "total": 72
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T16:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 25.0,
+          "wind": {
+            "speed": 0.1,
+            "dir": "NNE",
+            "angle": 23
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T17:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 24.0,
+          "wind": {
+            "speed": 0.6,
+            "dir": "NNE",
+            "angle": 26
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T18:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 22.8,
+          "wind": {
+            "speed": 0.9,
+            "dir": "ENE",
+            "angle": 60
+          },
+          "cloud_cover": {
+            "total": 97
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T19:00:00",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Overcast",
+          "temperature": 21.8,
+          "wind": {
+            "speed": 0.8,
+            "dir": "ENE",
+            "angle": 77
+          },
+          "cloud_cover": {
+            "total": 100
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T20:00:00",
+          "weather": "mostly_cloudy",
+          "icon": 29,
+          "summary": "Mostly cloudy",
+          "temperature": 20.8,
+          "wind": {
+            "speed": 0.6,
+            "dir": "ENE",
+            "angle": 78
+          },
+          "cloud_cover": {
+            "total": 73
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T21:00:00",
+          "weather": "mostly_cloudy",
+          "icon": 29,
+          "summary": "Mostly cloudy",
+          "temperature": 19.8,
+          "wind": {
+            "speed": 0.2,
+            "dir": "E",
+            "angle": 83
+          },
+          "cloud_cover": {
+            "total": 71
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T22:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 19.5,
+          "wind": {
+            "speed": 0.0,
+            "dir": "E",
+            "angle": 86
+          },
+          "cloud_cover": {
+            "total": 56
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-13T23:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 19.0,
+          "wind": {
+            "speed": 0.0,
+            "dir": "E",
+            "angle": 92
+          },
+          "cloud_cover": {
+            "total": 32
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-14T00:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 18.2,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ESE",
+            "angle": 107
+          },
+          "cloud_cover": {
+            "total": 29
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-14T01:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 17.8,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ESE",
+            "angle": 117
+          },
+          "cloud_cover": {
+            "total": 38
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-14T02:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 17.5,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ESE",
+            "angle": 108
+          },
+          "cloud_cover": {
+            "total": 37
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-14T03:00:00",
+          "weather": "partly_clear",
+          "icon": 28,
+          "summary": "Partly clear",
+          "temperature": 17.2,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ESE",
+            "angle": 105
+          },
+          "cloud_cover": {
+            "total": 27
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        },
+        {
+          "date": "2025-12-14T04:00:00",
+          "weather": "fog",
+          "icon": 9,
+          "summary": "Fog",
+          "temperature": 16.8,
+          "wind": {
+            "speed": 0.0,
+            "dir": "ESE",
+            "angle": 115
+          },
+          "cloud_cover": {
+            "total": 41
+          },
+          "precipitation": {
+            "total": 0.0,
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "daily": {
+      "data": [
+        {
+          "day": "2025-12-13",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Cloudy, fewer clouds in the evening. Temperature 17/26 °C.",
+          "all_day": {
+            "weather": "overcast",
+            "icon": 7,
+            "temperature": 21.8,
+            "temperature_min": 17.0,
+            "temperature_max": 25.5,
+            "wind": {
+              "speed": 0.2,
+              "dir": "ENE",
+              "angle": 68
+            },
+            "cloud_cover": {
+              "total": 87
+            },
+            "precipitation": {
+              "total": 0.0,
+              "type": "none"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-14",
+          "weather": "overcast",
+          "icon": 7,
+          "summary": "Fog in the morning, cloudy later. Temperature 16/26 °C.",
+          "all_day": {
+            "weather": "overcast",
+            "icon": 7,
+            "temperature": 22.0,
+            "temperature_min": 16.0,
+            "temperature_max": 26.2,
+            "wind": {
+              "speed": 0.3,
+              "dir": "E",
+              "angle": 87
+            },
+            "cloud_cover": {
+              "total": 79
+            },
+            "precipitation": {
+              "total": 0.0,
+              "type": "none"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-15",
+          "weather": "rain_shower",
+          "icon": 13,
+          "summary": "Fog in the morning, possible rain later. Temperature 17/27 °C.",
+          "all_day": {
+            "weather": "rain_shower",
+            "icon": 13,
+            "temperature": 22.2,
+            "temperature_min": 16.5,
+            "temperature_max": 26.5,
+            "wind": {
+              "speed": 0.5,
+              "dir": "ENE",
+              "angle": 73
+            },
+            "cloud_cover": {
+              "total": 67
+            },
+            "precipitation": {
+              "total": 4.4,
+              "type": "rain"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-16",
+          "weather": "psbl_rain",
+          "icon": 12,
+          "summary": "Rain showers changing to light rain by afternoon. Temperature 18/26 °C.",
+          "all_day": {
+            "weather": "psbl_rain",
+            "icon": 12,
+            "temperature": 22.5,
+            "temperature_min": 18.0,
+            "temperature_max": 26.0,
+            "wind": {
+              "speed": 0.6,
+              "dir": "ENE",
+              "angle": 78
+            },
+            "cloud_cover": {
+              "total": 73
+            },
+            "precipitation": {
+              "total": 3.1,
+              "type": "rain"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-17",
+          "weather": "light_rain",
+          "icon": 10,
+          "summary": "Mostly cloudy changing to light rain in the afternoon. Temperature 18/26 °C.",
+          "all_day": {
+            "weather": "light_rain",
+            "icon": 10,
+            "temperature": 22.5,
+            "temperature_min": 18.2,
+            "temperature_max": 26.0,
+            "wind": {
+              "speed": 0.4,
+              "dir": "E",
+              "angle": 79
+            },
+            "cloud_cover": {
+              "total": 76
+            },
+            "precipitation": {
+              "total": 7.0,
+              "type": "rain"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-18",
+          "weather": "psbl_rain",
+          "icon": 12,
+          "summary": "Fog in the morning, light rain later. Temperature 18/26 °C.",
+          "all_day": {
+            "weather": "psbl_rain",
+            "icon": 12,
+            "temperature": 22.5,
+            "temperature_min": 17.8,
+            "temperature_max": 26.0,
+            "wind": {
+              "speed": 0.4,
+              "dir": "ENE",
+              "angle": 73
+            },
+            "cloud_cover": {
+              "total": 88
+            },
+            "precipitation": {
+              "total": 2.4,
+              "type": "rain"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        },
+        {
+          "day": "2025-12-19",
+          "weather": "psbl_rain",
+          "icon": 12,
+          "summary": "Fog in the morning, possible rain later. Temperature 18/26 °C.",
+          "all_day": {
+            "weather": "psbl_rain",
+            "icon": 12,
+            "temperature": 23.0,
+            "temperature_min": 18.2,
+            "temperature_max": 26.2,
+            "wind": {
+              "speed": 0.4,
+              "dir": "ENE",
+              "angle": 72
+            },
+            "cloud_cover": {
+              "total": 94
+            },
+            "precipitation": {
+              "total": 1.9,
+              "type": "rain"
+            }
+          },
+          "morning": null,
+          "afternoon": null,
+          "evening": null
+        }
+      ]
+    }
+  }
+}

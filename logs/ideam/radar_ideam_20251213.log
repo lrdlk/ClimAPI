@@ -1174,3 +1174,84 @@
 2025-12-13 04:42:49,681 - INFO - Archivos guardados en: data\siata_historico
 2025-12-13 04:42:49,681 - INFO - ============================================================
 2025-12-13 04:43:19,517 - INFO - Buscando archivos en: s3://s3-radaresideam/l2_data/2025/12/12/Guaviare/GUA251212
+2025-12-13 05:00:33,556 - INFO - IDEAMRadarDownloader inicializado
+2025-12-13 05:00:33,579 - INFO - Bucket AWS: s3://s3-radaresideam
+2025-12-13 05:00:33,579 - INFO - Directorio de datos: data\Radar_IDEAM
+2025-12-13 05:01:46,013 - INFO - ============================================================
+2025-12-13 05:01:46,013 - INFO - Iniciando descarga de datos históricos de SIATA
+2025-12-13 05:01:46,014 - INFO - Directorio de destino: data\siata_historico
+2025-12-13 05:01:46,014 - INFO - ============================================================
+2025-12-13 05:01:46,015 - INFO - Explorando directorio (profundidad 0): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 05:01:46,015 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 05:01:47,229 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:47,233 - INFO - Encontrados 8 subdirectorios
+2025-12-13 05:01:47,241 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 05:01:47,242 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 05:01:48,311 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:48,312 - INFO - Encontrados 7 subdirectorios
+2025-12-13 05:01:48,313 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 05:01:48,314 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 05:01:49,376 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:49,377 - INFO - Encontrados 8 subdirectorios
+2025-12-13 05:01:49,377 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 05:01:49,377 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 05:01:50,453 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:50,454 - INFO - Encontrados 8 subdirectorios
+2025-12-13 05:01:50,454 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/
+2025-12-13 05:01:50,454 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 05:01:51,859 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:51,859 - INFO - Encontrados 13 subdirectorios
+2025-12-13 05:01:51,859 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 05:01:51,860 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 05:01:52,930 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:01:52,931 - INFO - Encontrados 8 subdirectorios
+2025-12-13 05:01:52,931 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 05:01:52,931 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 05:01:54,722 - INFO - Encontrados 11 archivos de datos
+2025-12-13 05:01:54,723 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 05:01:55,869 - INFO - Descargado: DatosPacum_Noviembre2025.txt -> precipitacion_acumulada/
+2025-12-13 05:01:55,883 - INFO - Resumen guardado: DatosPacum_Noviembre2025_summary.txt
+2025-12-13 05:01:55,886 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 05:01:57,090 - INFO - Descargado: DatosPacum_Octubre2025.txt -> precipitacion_acumulada/
+2025-12-13 05:01:57,119 - INFO - Resumen guardado: DatosPacum_Octubre2025_summary.txt
+2025-12-13 05:01:57,133 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 05:01:58,257 - INFO - Descargado: DatosPacum_Junio2025.txt -> precipitacion_acumulada/
+2025-12-13 05:01:58,270 - INFO - Resumen guardado: DatosPacum_Junio2025_summary.txt
+2025-12-13 05:01:58,271 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 05:01:59,507 - INFO - Descargado: DatosPacum_Abril2025.txt -> precipitacion_acumulada/
+2025-12-13 05:01:59,524 - INFO - Resumen guardado: DatosPacum_Abril2025_summary.txt
+2025-12-13 05:01:59,526 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 05:02:00,672 - INFO - Descargado: DatosPacum_Diciembre2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:00,683 - INFO - Resumen guardado: DatosPacum_Diciembre2025_summary.txt
+2025-12-13 05:02:00,684 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 05:02:01,834 - INFO - Descargado: DatosPacum_Agosto2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:01,879 - INFO - Resumen guardado: DatosPacum_Agosto2025_summary.txt
+2025-12-13 05:02:01,898 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 05:02:03,085 - INFO - Descargado: DatosPacum_Septiembre2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:03,099 - INFO - Resumen guardado: DatosPacum_Septiembre2025_summary.txt
+2025-12-13 05:02:03,100 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 05:02:04,212 - INFO - Descargado: DatosPacum_Julio2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:04,223 - INFO - Resumen guardado: DatosPacum_Julio2025_summary.txt
+2025-12-13 05:02:04,223 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 05:02:05,318 - INFO - Descargado: DatosPacum_Mayo2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:05,330 - INFO - Resumen guardado: DatosPacum_Mayo2025_summary.txt
+2025-12-13 05:02:05,332 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 05:02:06,467 - INFO - Descargado: DatosPacum_Febrero2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:06,477 - INFO - Resumen guardado: DatosPacum_Febrero2025_summary.txt
+2025-12-13 05:02:06,487 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 05:02:07,594 - INFO - Descargado: DatosPacum_Marzo2025.txt -> precipitacion_acumulada/
+2025-12-13 05:02:07,646 - INFO - Resumen guardado: DatosPacum_Marzo2025_summary.txt
+2025-12-13 05:02:07,708 - INFO - Encontrados 8 subdirectorios
+2025-12-13 05:02:07,741 - INFO - Explorando directorio (profundidad 1): http://www.siata.gov.co/
+2025-12-13 05:02:07,749 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 05:02:15,160 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:02:15,161 - INFO - Encontrados 13 subdirectorios
+2025-12-13 05:02:15,161 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/
+2025-12-13 05:02:15,162 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 05:02:16,325 - INFO - Encontrados 0 archivos de datos
+2025-12-13 05:02:16,325 - INFO - Encontrados 17 subdirectorios
+2025-12-13 05:02:16,326 - INFO - ============================================================
+2025-12-13 05:02:16,326 - INFO - Descarga completada
+2025-12-13 05:02:16,326 - INFO - Tiempo total: 0:00:30.310830
+2025-12-13 05:02:16,326 - INFO - Archivos guardados en: data\siata_historico
+2025-12-13 05:02:16,327 - INFO - ============================================================

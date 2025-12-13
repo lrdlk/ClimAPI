@@ -1,0 +1,19 @@
+Resumen de DatosPacum_Junio2025.txt
+Generado: 2025-12-13 05:01:58.260133
+==================================================
+
+Primeras 10 filas:
+   Estacion                                                Nombre    Municipio              Barrio  Climatologia mes  Acumulado Mes (mm)  Porcentaje Mes
+0       154   Centro de Desarrollo Infantil Pequenos Exploradores        Bello          Santa Rita             88.38             230.886         261.242
+1        89                                         I.E Pedro Nel     Medellin           Florencia            107.32             275.082         256.319
+2       121                                      I.E Barrio Paris        Bello               Paris            118.68             300.482         253.187
+3       160                                  Samana - Pluviometro       Samana                  NA            191.44             483.616         252.620
+4       275                   Q. La Loca El Cafetal - Pluviometro        Bello               Paris            109.22             274.320         251.163
+5        74                      Edificio Gaspar de Rodas - Bello        Bello              Centro            106.12             261.112         246.054
+6        15                                    Colegio San Lucas      Medellin           San Lucas            142.85             345.694         241.998
+7        32                  Colegio Presbitero Bernardo Montoya    Copacabana            La Maria            104.26             251.206         240.942
+8        50                            Universidad CES (Sabaneta)     Sabaneta   Virgen del Carmen            137.82             330.200         239.588
+9        47                               Villa Nueva Sede La Luz   Copacabana                  NA            175.27             408.940         233.320
+
+Información del DataFrame:
+None

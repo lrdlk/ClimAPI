@@ -1,0 +1,19 @@
+Resumen de DatosPacum_Abril2025.txt
+Generado: 2025-12-13 05:01:59.513188
+==================================================
+
+Primeras 10 filas:
+   Estacion                                              Nombre  Municipio                Barrio  Climatologia mes  Acumulado Mes (mm)  Porcentaje Mes
+0       437            Paradero Jalisco San Felix - Pluviometro      Bello                    NA            107.95             477.774         442.588
+1        37                                Liceo Fernando Velez      Bello            El Carmelo            138.43             476.250         344.037
+2       121                                    I.E Barrio Paris      Bello                 Paris            146.21             493.014         337.196
+3       393          Deprimido Terminal del Norte - Pluviometro   Medellin                Caribe            121.75             405.130         332.756
+4        74                    Edificio Gaspar de Rodas - Bello      Bello                Centro            124.66             411.480         330.082
+5        51                                  Represa La Garcia       Bello                    NA            128.57             410.464         319.253
+6       421                      CC Viva Envigado - Pluviometro   Envigado             Las Vegas            136.91             423.164         309.082
+7       275                 Q. La Loca El Cafetal - Pluviometro      Bello                 Paris            146.41             440.436         300.824
+8       376                       Feria de Ganado - Pluviometro   Medellin            Belalcazar            103.21             310.134         300.488
+9       352   Institucion Educativa La Candelaria - Pluviometro   Medellin   Santo Domingo Savio            130.37             390.652         299.649
+
+Información del DataFrame:
+None

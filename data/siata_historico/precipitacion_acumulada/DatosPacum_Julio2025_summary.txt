@@ -1,0 +1,19 @@
+Resumen de DatosPacum_Julio2025.txt
+Generado: 2025-12-13 05:02:04.214598
+==================================================
+
+Primeras 10 filas:
+   Estacion                                                 Nombre            Municipio           Barrio  Climatologia mes  Acumulado Mes (mm)  Porcentaje Mes
+0       165                       Santa Rosa de Osos - Pluviometro   Santa Rosa de Osos   Avenida crespo            210.40             224.790        106.8390
+1        40                                        I.E Ciro Mendia             Medellin        Moscu No1            114.41             103.632         90.5795
+2        81                                      Bomberos Guayabal             Medellin       Campo Amor            107.95              92.710         85.8824
+3        56   I.E Inem Jose Felix de Restrepo Sede Santa Catalina              Medellin        El Tesoro            121.12              87.376         72.1400
+4        41                                   Comisaria El Poblado             Medellin       La Florida            121.86              86.868         71.2851
+5       168                       Santa Rita Guatape - Pluviometro           Alejandria               NA            367.86             250.698         68.1504
+6       323                        Acueducto Hatillo - Pluviometro              Barbosa               NA            258.64             176.022         68.0568
+7        33                                    Santa Maria Goretti               Caldas        La Docena            134.74              89.662         66.5445
+8        26                                  Escuela Rural El Plan             Medellin               NA            121.83              79.502         65.2565
+9       393             Deprimido Terminal del Norte - Pluviometro             Medellin           Caribe            146.98              94.488         64.2863
+
+Información del DataFrame:
+None

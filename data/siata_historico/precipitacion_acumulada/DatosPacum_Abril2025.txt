@@ -1,0 +1,125 @@
+Fecha actualizacion: 2025/06/11 14:58
+Estacion,Nombre,Municipio,Barrio,Climatologia mes,Acumulado Mes (mm),Porcentaje Mes
+437, Paradero Jalisco San Felix - Pluviometro, Bello, NA, 107.950, 477.774, 442.588
+37, Liceo Fernando Velez, Bello, El Carmelo, 138.430, 476.250, 344.037
+121, I.E Barrio Paris, Bello, Paris, 146.210, 493.014, 337.196
+393, Deprimido Terminal del Norte - Pluviometro, Medellin, Caribe, 121.750, 405.130, 332.756
+74, Edificio Gaspar de Rodas - Bello, Bello, Centro, 124.660, 411.480, 330.082
+51, Represa La Garcia , Bello, NA, 128.570, 410.464, 319.253
+421, CC Viva Envigado - Pluviometro, Envigado, Las Vegas, 136.910, 423.164, 309.082
+275, Q. La Loca El Cafetal - Pluviometro, Bello, Paris, 146.410, 440.436, 300.824
+376, Feria de Ganado - Pluviometro, Medellin, Belalcazar, 103.210, 310.134, 300.488
+352, Institucion Educativa La Candelaria - Pluviometro, Medellin, Santo Domingo Savio, 130.370, 390.652, 299.649
+378, Edificio Camacol - Pluviometro, Medellin, Naranjal, 98.8100, 295.148, 298.703
+66, I.E San Andres (Sede El Socorro), Girardota, NA, 133.300, 373.888, 280.486
+353, Villa del Socorro - Pluviometro, Medellin, Villa del Socorro, 134.430, 373.888, 278.128
+48, Escuela Rural Santa Angela, Medellin, NA, 168.430, 444.246, 263.757
+432, Andalucia Caldas - Pluviometro, Caldas, Andalucia, 199.310, 524.002, 262.908
+72, Jose Miguel de Restrepo, Copacabana, NA, 141.590, 366.776, 259.041
+36, Colegio Concejo de Itagui, Itagui, Ditaires, 196.840, 503.682, 255.884
+327, San Jose de Las Vegas - Pluviometro, Retiro, NA, 218.690, 558.292, 255.289
+241, Sede Social Picacho Las Vegas, Medellin, Picacho, 145.720, 369.570, 253.617
+242, IE Jesus Maria Valle, Medellin, Picacho, 161.800, 409.702, 253.215
+40, I.E Ciro Mendia, Medellin, Moscu No1, 145.470, 366.014, 251.608
+55, I.E Reino de Belgica, Medellin, Maria Cano Carambolas, 130.400, 325.882, 249.910
+47, Villa Nueva Sede La Luz, Copacabana, NA, 178.090, 443.738, 249.165
+8, Escuela CEDEPRO, Medellin, NA, 189.220, 465.328, 245.919
+373, Ancon 2 - Pluviometro, Copacabana, NA, 144.270, 353.568, 245.074
+7, Escuela Republica de Cuba, Medellin, La Esperanza, 165.480, 405.384, 244.975
+356, Villa Niza - Pluviometro, Medellin, Villa Niza, 136.720, 334.264, 244.488
+278, Vereda Potrerito - Pluviometro, Barbosa, NA, 201.250, 488.696, 242.830
+52, Centro Veterinario y de Zootecnia CES, Envigado, NA, 178.180, 427.228, 239.773
+127, I.E. Manuel Jose Sierra - Sede la Holanda, Girardota, NA, 165.610, 395.478, 238.801
+75, Institucion Educativa Rural El Tambo, San Pedro, NA, 123.950, 289.052, 233.200
+88, CUIDA Juan Cojo, Girardota, NA, 184.090, 426.466, 231.662
+76, I.E. Fontidueno, Bello, Fontidueno, 139.700, 319.786, 228.909
+18, Escuela El Salado, Medellin, NA, 247.290, 563.118, 227.716
+70, Indural Km6 Medellin-Bogota, Copacabana, NA, 144.530, 328.168, 227.059
+154, Centro de Desarrollo Infantil Pequenos Exploradores, Bello, Santa Rita, 141.100, 319.532, 226.458
+274, Carpinelo Amapolita - Pluviometro, Medellin, Carpinelo, 174.090, 392.430, 225.418
+429, Perfilador de Vientos - Pluviometro, Medellin, Belen Las Playas, 123.870, 278.384, 224.739
+35, I.E Joaquin Vallejo Arbelaez , Medellin, La Ladera, 185.030, 414.528, 224.033
+395, La Harenala Santa Maria - Pluviometro, Itagui, Santa Maria No. 1, 189.480, 421.894, 222.659
+248, Vivero EPM Piedras Blancas - Pluviometro, Guarne, NA, 172.920, 382.016, 220.921
+447, Deprimido San Juan Con Av Ferrocarril - Pluviometro, Medellin, Guayaquil, 148.340, 323.850, 218.316
+295, Laguna Quitasol - Pluviometro, Bello, NA, 176.360, 383.794, 217.620
+22, Escuela La Capilla del Rosario , Medellin, Belen Rincon, 159.210, 345.440, 216.971
+281, Megacolegio - Pluviometro, Bello, Paris, 176.530, 382.778, 216.835
+14, Escuela El Triunfo , Medellin, El Triunfo, 178.970, 384.302, 214.730
+20, Fundacion Hogares Claret, Medellin, NA, 189.650, 405.130, 213.620
+24, I.E Republica de Uruguay, Medellin, Alfonso Lopez, 166.470, 354.584, 213.002
+230, Alcaldia La Estrella - Pluviometro, La Estrella, El Dorado, 200.810, 426.466, 212.373
+288, Colegio Waldorf - Pluviometro, La Estrella, Bellavista, 212.450, 450.850, 212.215
+50, Universidad CES (Sabaneta), Sabaneta, Virgen del Carmen, 165.660, 351.282, 212.050
+56, I.E Inem Jose Felix de Restrepo Sede Santa Catalina , Medellin, El Tesoro, 160.400, 333.502, 207.919
+26, Escuela Rural El Plan, Medellin, NA, 237.080, 489.458, 206.453
+146, Club del Adulto Mayor - Sabaneta, Sabaneta, Prados de Sabaneta, 188.760, 388.874, 206.015
+211, La Ladera, Medellin, La Ladera, 155.240, 319.786, 205.995
+81, Bomberos Guayabal, Medellin, Campo Amor, 153.210, 315.214, 205.740
+23, Instituto Jorge Robledo, Medellin, Carlos E. Restrepo, 180.600, 370.078, 204.916
+5, I.E Santa Elena, Medellin, NA, 251.040, 512.826, 204.281
+418, Montanita San Antonio - Pluviometro, Medellin, NA, 182.500, 372.110, 203.896
+45, AMVA, Medellin, Calle Nueva, 163.090, 331.216, 203.088
+451, Heliodora - Pluviometro, Envigado, El Dorado, 182.240, 367.284, 201.539
+64, Ecoparque La Romera, Sabaneta, NA, 199.720, 397.764, 199.161
+44, I.E Villa Turbay, Medellin, Villa Turbay, 176.730, 351.790, 199.055
+171, Escombrera Mocatan - Pluviometro, Caldas, NA, 192.620, 382.016, 198.326
+31, Colegio Jose Manuel Sierra, Girardota, Calle Bolivar, 194.040, 381.000, 196.351
+129, Colegio Divino Salvador, Medellin, Miraflores, 147.140, 287.020, 195.066
+434, Museo de Antioquia - Pluviometro, Medellin, La Candelaria, 168.150, 324.104, 192.747
+184, Miraflores, Medellin, Cataluna, 137.480, 264.414, 192.329
+420, Pueblo Viejo - Pluviometro, La Estrella, NULL, 197.360, 379.222, 192.147
+21, Escuela Rural San Jose de la Montana, Medellin, NA, 202.550, 388.620, 191.864
+433, Salada Parte Alta - Pluviometro, Caldas, NA, 179.450, 343.408, 191.367
+289, Seminario Redemptoris - Pluviometro, Medellin, NA, 201.470, 385.064, 191.127
+168, Santa Rita Guatape - Pluviometro, Alejandria, NA, 352.680, 667.512, 189.268
+39, I.E Pedro Octavio Amado, Medellin, Altavista, 158.330, 297.180, 187.697
+46, I.E La Milagrosa , Medellin, La Milagrosa, 189.700, 353.569, 186.383
+11, Escuela Rural Fabio Zuluaga, Medellin, NA, 202.930, 374.904, 184.745
+323, Acueducto Hatillo - Pluviometro, Barbosa, NA, 236.280, 432.308, 182.964
+62, Gimnasio Cantabria, La Estrella, NA, 219.340, 397.510, 181.230
+65, I.E Las Lomitas, Sabaneta, NA, 183.260, 331.470, 180.874
+165, Santa Rosa de Osos - Pluviometro, Santa Rosa de Osos, Avenida crespo, 164.460, 297.434, 180.855
+43, Escuela Rural Quebrada Larga, Medellin, NA, 309.270, 558.038, 180.437
+1, Casa de Gobierno Altavista, Medellin, NA, 201.380, 360.934, 179.230
+53, Colegio Eduardo Santos, Medellin, Eduardo Santos, 201.010, 359.918, 179.055
+17, Escuela El Corazon , Medellin, El Corazon, 200.770, 354.838, 176.739
+71, CEFA, Medellin, Boston, 135.510, 239.268, 176.569
+34, I.E La Doctora, Sabaneta, Vegas de la Doctora, 203.490, 358.902, 176.373
+60, Torre SIATA, Medellin, Estadio, 159.850, 280.416, 175.424
+324, E.R Jamundi - Pluviometro, Girardota, NA, 216.340, 378.207, 174.821
+339, Ecoparque El Salado - Pluviometro, Envigado, NA, 208.910, 362.458, 173.500
+334, Manuel Mejia Vallejo - Pluviometro, Envigado, Loma El Atravesado, 193.930, 335.280, 172.887
+193, Fuente Clara - Pluviometro, Sabaneta, NA, 226.770, 390.906, 172.380
+234, I.E Manuel Jose Caicedo - Pluviometro, Barbosa, Aguas Calientes, 239.170, 404.368, 169.071
+9, Instituto Pedro Justo Berrio, Medellin, Las Mercedes, 163.520, 276.098, 168.847
+28, Liceo Salazar y Herrera, Medellin, La America, 185.520, 309.880, 167.033
+32, Colegio Presbitero Bernardo Montoya , Copacabana, La Maria, 174.960, 289.814, 165.646
+61, Planta de Agua Bocatoma, La Estrella, NA, 212.730, 350.266, 164.653
+4, I.E Hector Rogelio Montoya, Medellin, NA, 198.350, 325.628, 164.168
+244, Bomberos Envigado - Pluviometro, Envigado, Las Vegas, 194.690, 317.754, 163.210
+54, I.E Juan Maria Cespedes, Medellin, El Nogal - Los Almendros, 164.150, 266.954, 162.628
+30, Salon Social Barbosa, Barbosa, Centro, 264.440, 424.942, 160.695
+16, I.E Ramon Munera Lopera, Medellin, El Raizal, 182.720, 291.338, 159.445
+42, Escuela Rural Piedras Gordas, Medellin, NA, 238.540, 378.600, 158.716
+33, Santa Maria Goretti, Caldas, La Docena, 233.140, 369.316, 158.410
+328, Universidad EIA - Envigado - Pluviometro, Envigado, NA, 232.850, 366.776, 157.516
+253, Parque 3 Aguas - Pluviometro, Caldas, NA, 218.240, 342.900, 157.121
+12, I.E Concejo de Medellin, Medellin, La Floresta, 188.480, 295.656, 156.863
+49, Colegio Latino (Av. Las Palmas), Medellin, NA, 232.020, 356.618, 153.702
+29, Escuela Marina Orth, Medellin, NA, 230.610, 354.200, 153.593
+41, Comisaria El Poblado, Medellin, La Florida, 175.000, 256.286, 146.449
+19, Tecnologico Antioquia, Itagui, Las Americas-Zona Industrial No. 1, 191.050, 279.146, 146.111
+89, I.E Pedro Nel, Medellin, Florencia, 126.520, 184.404, 145.751
+3, Escuela Rural Yarumalito, Medellin, NA, 288.630, 415.036, 143.795
+10, Escuela Rural El Boqueron, Medellin, NA, 235.500, 337.058, 143.124
+267, Colegio Canadiense - Pluviometro, La Estrella, NA, 242.320, 334.772, 138.153
+57, Escuela la Clara, Caldas, NA, 226.000, 312.166, 138.127
+227, Sonson - Pluviometro, Sonson, Centro, 237.170, 323.596, 136.441
+160, Samana - Pluviometro, Samana, NA, 457.390, 601.980, 131.612
+261, Deslizamiento La Raya - Pluviometro, La Estrella, NA, 266.830, 336.042, 125.939
+383, Salinas Caldas - Pluviometro, Caldas, NA, 261.280, 328.422, 125.697
+320, Palmitas Potrera - Pluviometro, Medellin, NA, 288.120, 329.692, 114.429
+15, Colegio San Lucas , Medellin, San Lucas, 215.920, 222.758, 103.167
+58, Escuela Luis Javier Garcia Isaza, Caldas, NA, 213.150, 197.104, 92.4720
+266, Himalaya - Pluviometro, La Estrella, NA, 204.600, 18.0340, 8.81427
