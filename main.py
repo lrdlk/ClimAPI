@@ -7,7 +7,7 @@ Sistema que integra múltiples fuentes de datos meteorológicos:
 - Open-Meteo: Pronósticos gratuitos y datos históricos
 - OpenWeatherMap: Clima actual, pronóstico 5 días y calidad del aire
 - IDEAM: Datos de radares meteorológicos (AWS)
-- SIATA: Datos históricos meteorológicos de Medellín
+- SIATA: Datos históricos meteorológicos de Medellín y región
 
 Autor: ClimAPI Team
 Fecha: Diciembre 2025
