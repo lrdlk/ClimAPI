@@ -1255,3 +1255,4 @@
 2025-12-13 05:02:16,326 - INFO - Tiempo total: 0:00:30.310830
 2025-12-13 05:02:16,326 - INFO - Archivos guardados en: data\siata_historico
 2025-12-13 05:02:16,327 - INFO - ============================================================
+2025-12-13 05:06:16,071 - INFO - Buscando archivos en: s3://s3-radaresideam/l2_data/2025/12/12/Carimagua/CAR251212
