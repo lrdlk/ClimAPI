@@ -608,8 +608,8 @@ def pagina_nueva_consulta():
         with col1:
             # Ubicaciones predefinidas
             ubicaciones = {
-                "Medellín": {"lat": 6.245, "lon": -75.5715, "asl": 1495},
-                "Bogotá": {"lat": 4.711, "lon": -74.0721, "asl": 2640},
+                "Medellin": {"lat": 6.245, "lon": -75.5715, "asl": 1495},
+                "Bogota": {"lat": 4.711, "lon": -74.0721, "asl": 2640},
                 "Cartagena": {"lat": 10.391, "lon": -75.4794, "asl": 2},
                 "Cali": {"lat": 3.4516, "lon": -76.532, "asl": 995},
                 "Barranquilla": {"lat": 10.9639, "lon": -74.7964, "asl": 18},
