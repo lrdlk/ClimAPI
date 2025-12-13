@@ -1,0 +1,1204 @@
+2025-12-13 01:31:39,905 - INFO - ============================================================
+2025-12-13 01:31:39,909 - INFO - Iniciando descarga de datos históricos de SIATA
+2025-12-13 01:31:39,910 - INFO - Directorio de destino: data\siata_historico
+2025-12-13 01:31:39,915 - INFO - ============================================================
+2025-12-13 01:31:39,916 - INFO - Explorando directorio (profundidad 0): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:31:39,916 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:31:41,701 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:41,715 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:31:41,716 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:31:41,835 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:31:43,133 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:43,134 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:31:43,135 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A#
+2025-12-13 01:31:43,136 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A#
+2025-12-13 01:31:44,230 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:44,230 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:31:44,231 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:31:44,231 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:31:45,664 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:45,666 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:31:45,666 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:31:45,667 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:31:46,818 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:46,819 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:31:46,823 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:31:46,823 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:31:47,923 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:47,925 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:31:47,925 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:31:47,927 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:31:48,995 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:31:48,997 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:31:48,998 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:31:48,998 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:31:50,117 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:31:50,117 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:31:51,236 - INFO - Descargado: DatosPacum_Agosto2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:51,279 - INFO - Resumen guardado: DatosPacum_Agosto2025_summary.txt
+2025-12-13 01:31:51,281 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:31:52,446 - INFO - Descargado: DatosPacum_Mayo2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:52,480 - INFO - Resumen guardado: DatosPacum_Mayo2025_summary.txt
+2025-12-13 01:31:52,482 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:31:53,678 - INFO - Descargado: DatosPacum_Abril2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:53,718 - INFO - Resumen guardado: DatosPacum_Abril2025_summary.txt
+2025-12-13 01:31:53,719 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:31:54,888 - INFO - Descargado: DatosPacum_Diciembre2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:54,903 - INFO - Resumen guardado: DatosPacum_Diciembre2025_summary.txt
+2025-12-13 01:31:54,906 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:31:56,108 - INFO - Descargado: DatosPacum_Septiembre2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:56,174 - INFO - Resumen guardado: DatosPacum_Septiembre2025_summary.txt
+2025-12-13 01:31:56,183 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:31:57,389 - INFO - Descargado: DatosPacum_Junio2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:57,411 - INFO - Resumen guardado: DatosPacum_Junio2025_summary.txt
+2025-12-13 01:31:57,416 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:31:58,592 - INFO - Descargado: DatosPacum_Octubre2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:58,613 - INFO - Resumen guardado: DatosPacum_Octubre2025_summary.txt
+2025-12-13 01:31:58,615 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:31:59,759 - INFO - Descargado: DatosPacum_Noviembre2025.txt -> precipitacion_acumulada/
+2025-12-13 01:31:59,785 - INFO - Resumen guardado: DatosPacum_Noviembre2025_summary.txt
+2025-12-13 01:31:59,786 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:32:00,910 - INFO - Descargado: DatosPacum_Julio2025.txt -> precipitacion_acumulada/
+2025-12-13 01:32:00,933 - INFO - Resumen guardado: DatosPacum_Julio2025_summary.txt
+2025-12-13 01:32:00,968 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:32:02,163 - INFO - Descargado: DatosPacum_Febrero2025.txt -> precipitacion_acumulada/
+2025-12-13 01:32:02,179 - INFO - Resumen guardado: DatosPacum_Febrero2025_summary.txt
+2025-12-13 01:32:02,180 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:32:03,389 - INFO - Descargado: DatosPacum_Marzo2025.txt -> precipitacion_acumulada/
+2025-12-13 01:32:03,408 - INFO - Resumen guardado: DatosPacum_Marzo2025_summary.txt
+2025-12-13 01:32:03,411 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:03,412 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=D
+2025-12-13 01:32:03,412 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=D
+2025-12-13 01:32:04,496 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:04,508 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:04,515 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:32:04,551 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:32:07,338 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:07,354 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:32:07,356 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/
+2025-12-13 01:32:07,364 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:32:08,934 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:08,945 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:32:08,952 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#capas_detalle
+2025-12-13 01:32:08,970 - INFO - Consultando: https://www.siata.gov.co/#capas_detalle
+2025-12-13 01:32:10,430 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:10,448 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:10,460 - INFO - Explorando directorio (profundidad 2): https://www.instagram.com/siatamedellin/
+2025-12-13 01:32:10,485 - INFO - Consultando: https://www.instagram.com/siatamedellin/
+2025-12-13 01:32:14,036 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:14,036 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:32:14,037 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:32:14,037 - INFO - Consultando: https://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:32:15,563 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:15,564 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:15,565 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:32:15,565 - INFO - Consultando: https://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:32:17,144 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:17,145 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:17,146 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#loginModal
+2025-12-13 01:32:17,147 - INFO - Consultando: https://www.siata.gov.co/#loginModal
+2025-12-13 01:32:18,585 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:18,586 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:18,586 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RegisterModal
+2025-12-13 01:32:18,587 - INFO - Consultando: https://www.siata.gov.co/#RegisterModal
+2025-12-13 01:32:20,057 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:20,061 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:20,062 - INFO - Explorando directorio (profundidad 2): https://www.facebook.com/siatamedellin/
+2025-12-13 01:32:20,062 - INFO - Consultando: https://www.facebook.com/siatamedellin/
+2025-12-13 01:32:21,467 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:21,469 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:32:21,470 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#
+2025-12-13 01:32:21,470 - INFO - Consultando: https://www.siata.gov.co/#
+2025-12-13 01:32:22,873 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:22,873 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:22,874 - INFO - Explorando directorio (profundidad 2): https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:32:22,874 - INFO - Consultando: https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:32:23,973 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:23,980 - INFO - Encontrados 5 subdirectorios
+2025-12-13 01:32:23,981 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#ContactoModal
+2025-12-13 01:32:23,983 - INFO - Consultando: https://www.siata.gov.co/#ContactoModal
+2025-12-13 01:32:25,497 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:25,501 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:25,509 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#capas_informacion
+2025-12-13 01:32:25,512 - INFO - Consultando: https://www.siata.gov.co/#capas_informacion
+2025-12-13 01:32:26,919 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:26,919 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:26,919 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:32:26,919 - INFO - Consultando: https://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:32:28,447 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:28,448 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:28,449 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:32:28,449 - INFO - Consultando: https://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:32:30,013 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:30,014 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:32:30,019 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:32:30,020 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:32:31,111 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:31,113 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:31,118 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=D
+2025-12-13 01:32:31,120 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=D
+2025-12-13 01:32:32,255 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:32,307 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:32,318 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:32:32,326 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:32:33,419 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:33,420 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:33,420 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A#
+2025-12-13 01:32:33,420 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A#
+2025-12-13 01:32:34,507 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:34,508 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:32:34,508 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:32:34,509 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:32:35,946 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:35,950 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:32:35,951 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:32:35,952 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:32:37,036 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:37,037 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:32:37,037 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:32:37,037 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:32:38,114 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:38,116 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:38,117 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:32:38,117 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:32:39,232 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:32:39,242 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:32:40,393 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:32:40,393 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:32:41,460 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:32:41,461 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:32:42,539 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:32:42,539 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:32:43,605 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:32:43,606 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:32:44,768 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:32:44,778 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:32:45,889 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:32:45,893 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:32:46,993 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:32:46,994 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:32:48,080 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:32:48,092 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:32:49,272 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:32:49,284 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:32:50,406 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:32:50,416 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:32:51,518 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:32:51,518 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:32:51,519 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:32:51,519 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:32:52,963 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:52,966 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:32:52,967 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/
+2025-12-13 01:32:52,968 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:32:54,059 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:54,060 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:32:54,060 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/enso/
+2025-12-13 01:32:54,060 - INFO - Consultando: https://www.siata.gov.co/operacional/enso/
+2025-12-13 01:32:55,172 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:32:55,176 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:32:55,177 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/radiometro/
+2025-12-13 01:32:55,178 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/
+2025-12-13 01:32:56,567 - INFO - Encontrados 9 archivos de datos
+2025-12-13 01:32:56,572 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV400.csv
+2025-12-13 01:32:59,486 - INFO - Descargado: csv_DeltaThetaV400.csv -> radiometro/
+2025-12-13 01:32:59,557 - INFO - Resumen guardado: csv_DeltaThetaV400_summary.txt
+2025-12-13 01:32:59,561 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1200.csv
+2025-12-13 01:33:02,633 - INFO - Descargado: csv_DeltaThetaV1200.csv -> radiometro/
+2025-12-13 01:33:02,702 - INFO - Resumen guardado: csv_DeltaThetaV1200_summary.txt
+2025-12-13 01:33:02,712 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV200.csv
+2025-12-13 01:33:05,974 - INFO - Descargado: csv_DeltaThetaV200.csv -> radiometro/
+2025-12-13 01:33:06,148 - INFO - Resumen guardado: csv_DeltaThetaV200_summary.txt
+2025-12-13 01:33:06,168 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1000.csv
+2025-12-13 01:33:09,128 - INFO - Descargado: csv_DeltaThetaV1000.csv -> radiometro/
+2025-12-13 01:33:09,187 - INFO - Resumen guardado: csv_DeltaThetaV1000_summary.txt
+2025-12-13 01:33:09,191 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/Theta.csv
+2025-12-13 01:33:09,289 - ERROR - Error al consultar https://www.siata.gov.co/operacional/radiometro/Theta.csv: 403 Client Error: Forbidden for url: https://www.siata.gov.co/operacional/radiometro/Theta.csv
+2025-12-13 01:33:09,289 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV600.csv
+2025-12-13 01:33:12,363 - INFO - Descargado: csv_DeltaThetaV600.csv -> radiometro/
+2025-12-13 01:33:12,552 - INFO - Resumen guardado: csv_DeltaThetaV600_summary.txt
+2025-12-13 01:33:12,625 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV800.csv
+2025-12-13 01:33:18,917 - INFO - Descargado: csv_DeltaThetaV800.csv -> radiometro/
+2025-12-13 01:33:18,997 - INFO - Resumen guardado: csv_DeltaThetaV800_summary.txt
+2025-12-13 01:33:19,029 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1400.csv
+2025-12-13 01:33:24,544 - INFO - Descargado: csv_DeltaThetaV1400.csv -> radiometro/
+2025-12-13 01:33:24,772 - INFO - Resumen guardado: csv_DeltaThetaV1400_summary.txt
+2025-12-13 01:33:24,789 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/ThetaV.csv
+2025-12-13 01:33:24,970 - ERROR - Error al consultar https://www.siata.gov.co/operacional/radiometro/ThetaV.csv: 403 Client Error: Forbidden for url: https://www.siata.gov.co/operacional/radiometro/ThetaV.csv
+2025-12-13 01:33:24,970 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:33:24,970 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/mapas/
+2025-12-13 01:33:24,971 - INFO - Consultando: https://www.siata.gov.co/operacional/mapas/
+2025-12-13 01:33:26,220 - INFO - Encontrados 1 archivos de datos
+2025-12-13 01:33:26,351 - INFO - Consultando: https://www.siata.gov.co/operacional/mapas/lista_12h.txt
+2025-12-13 01:33:27,643 - INFO - Descargado: lista_12h.txt -> mapas/
+2025-12-13 01:33:27,650 - INFO - Resumen guardado: lista_12h_summary.txt
+2025-12-13 01:33:27,650 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:33:27,651 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=M;O=A
+2025-12-13 01:33:27,651 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=M;O=A
+2025-12-13 01:33:28,765 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:29,023 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:33:29,023 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:33:29,033 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:33:30,135 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:30,495 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:33:30,496 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=S;O=A
+2025-12-13 01:33:30,496 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=S;O=A
+2025-12-13 01:33:31,606 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:31,774 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:33:31,775 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/monitoreo/
+2025-12-13 01:33:31,778 - INFO - Consultando: https://www.siata.gov.co/operacional/monitoreo/
+2025-12-13 01:33:33,475 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:33,476 - INFO - Encontrados 10 subdirectorios
+2025-12-13 01:33:33,476 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/CicloAnual/
+2025-12-13 01:33:33,476 - INFO - Consultando: https://www.siata.gov.co/operacional/CicloAnual/
+2025-12-13 01:33:34,603 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:34,609 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:33:34,619 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:33:34,623 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:33:36,212 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:36,214 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:33:36,223 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/prcSirena/
+2025-12-13 01:33:36,228 - INFO - Consultando: https://www.siata.gov.co/operacional/prcSirena/
+2025-12-13 01:33:37,351 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:37,351 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:33:37,352 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=N;O=A
+2025-12-13 01:33:37,352 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=N;O=A
+2025-12-13 01:33:38,429 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:38,430 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:33:38,442 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/seriesdetiempo_prueba/
+2025-12-13 01:33:38,458 - INFO - Consultando: https://www.siata.gov.co/operacional/seriesdetiempo_prueba/
+2025-12-13 01:33:39,554 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:39,555 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:33:39,555 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/WRF/
+2025-12-13 01:33:39,557 - INFO - Consultando: https://www.siata.gov.co/operacional/WRF/
+2025-12-13 01:33:40,664 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:40,679 - INFO - Encontrados 9 subdirectorios
+2025-12-13 01:33:40,690 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/#
+2025-12-13 01:33:40,789 - INFO - Consultando: https://www.siata.gov.co/operacional/#
+2025-12-13 01:33:42,063 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:42,187 - INFO - Encontrados 16 subdirectorios
+2025-12-13 01:33:42,294 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/radar/
+2025-12-13 01:33:42,333 - INFO - Consultando: https://www.siata.gov.co/operacional/radar/
+2025-12-13 01:33:43,562 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:43,562 - INFO - Encontrados 16 subdirectorios
+2025-12-13 01:33:43,562 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/seriesdetiempo/
+2025-12-13 01:33:43,563 - INFO - Consultando: https://www.siata.gov.co/operacional/seriesdetiempo/
+2025-12-13 01:33:44,763 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:45,251 - INFO - Encontrados 18 subdirectorios
+2025-12-13 01:33:45,361 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:33:45,379 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:33:47,183 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:47,429 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:33:47,494 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:33:48,093 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:33:49,246 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:49,322 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:33:49,338 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:33:49,358 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:33:50,559 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:50,566 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:33:50,566 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=D
+2025-12-13 01:33:50,567 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=D
+2025-12-13 01:33:51,839 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:51,878 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:33:51,897 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:33:51,906 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:33:54,062 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:54,345 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:33:54,964 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:33:55,009 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:33:56,776 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:57,233 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:33:57,243 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:33:57,250 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:33:58,350 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:58,351 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:33:58,351 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:33:58,351 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:33:59,439 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:33:59,440 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:33:59,442 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:33:59,482 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:34:01,393 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:34:01,507 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:34:02,803 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:34:02,880 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:34:04,110 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:34:04,625 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:34:05,798 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:34:05,882 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:07,073 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:07,073 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:08,242 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:08,251 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:34:09,356 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:34:09,356 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:34:10,431 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:34:10,441 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:11,520 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:11,520 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:34:12,596 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:34:12,597 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:34:13,659 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:34:13,783 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:34:15,435 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:34:15,485 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:34:15,516 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A#
+2025-12-13 01:34:15,535 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A#
+2025-12-13 01:34:16,687 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:34:16,701 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:34:16,707 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:34:16,708 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:34:17,975 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:34:18,085 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:34:19,487 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:34:19,510 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:34:20,699 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:34:20,843 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:34:22,531 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:34:22,998 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:24,823 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:25,164 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:26,510 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:26,523 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:34:27,791 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:34:28,067 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:34:29,718 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:34:29,825 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:31,044 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:31,049 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:34:32,189 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:34:32,359 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:34:33,616 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:34:33,620 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:34:34,687 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:34:34,693 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:34:34,705 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=M;O=A
+2025-12-13 01:34:34,771 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=M;O=A
+2025-12-13 01:34:35,921 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:34:35,927 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:34:37,030 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:34:37,632 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:34:38,998 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:34:39,401 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:34:40,535 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:34:41,136 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:42,221 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:42,348 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:43,504 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:34:43,509 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:34:44,578 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:34:44,579 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:34:45,652 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:34:45,654 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:46,794 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:34:46,980 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:34:48,232 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:34:48,295 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:34:49,450 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:34:49,569 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:34:51,179 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:34:51,179 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:34:51,179 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/ReporteMunicipios/
+2025-12-13 01:34:51,180 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/ReporteMunicipios/
+2025-12-13 01:34:52,269 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:34:52,270 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:34:52,272 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:34:52,275 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:34:53,339 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:34:53,339 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:34:53,339 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=S;O=A
+2025-12-13 01:34:53,339 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=S;O=A
+2025-12-13 01:34:54,511 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:34:54,512 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:34:55,598 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:34:55,598 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:34:56,660 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:34:56,660 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:34:57,740 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:34:57,788 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:59,043 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:34:59,198 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:00,733 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:00,789 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:35:01,985 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:35:02,006 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:35:03,340 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:35:03,368 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:04,521 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:04,622 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:35:05,938 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:35:06,357 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:35:07,477 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:35:07,480 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:35:08,561 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:35:08,617 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:35:08,664 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/#
+2025-12-13 01:35:08,696 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/#
+2025-12-13 01:35:09,911 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:35:09,937 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:35:11,272 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:35:11,436 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:35:12,757 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:35:12,994 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:35:14,431 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:35:14,492 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:15,999 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:16,227 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:17,961 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:17,980 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:35:19,155 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:35:19,549 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:35:20,778 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:35:20,848 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:22,029 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:22,029 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:35:23,097 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:35:23,105 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:35:24,301 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:35:24,420 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:35:25,709 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:35:25,727 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:35:25,833 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=N;O=A
+2025-12-13 01:35:25,900 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=N;O=A
+2025-12-13 01:35:27,144 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:35:27,145 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:35:28,219 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:35:28,249 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:35:29,538 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:35:29,588 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:35:30,965 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:35:31,008 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:32,225 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:32,346 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:33,776 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:33,785 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:35:34,937 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:35:34,938 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:35:36,022 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:35:36,022 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:37,126 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:35:37,140 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:35:38,250 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:35:38,267 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:35:39,367 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:35:39,369 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:35:40,527 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:35:40,527 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:35:40,527 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:35:40,528 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:35:41,979 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:41,979 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:35:41,980 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:35:41,981 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:35:43,719 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:43,719 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:35:43,720 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 01:35:43,720 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 01:35:44,805 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:44,805 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:35:44,805 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:35:44,806 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:35:45,905 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:45,906 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:35:45,906 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:35:45,906 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:35:47,295 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:47,296 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:35:47,296 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:35:47,299 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:35:48,371 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:48,373 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:35:48,374 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:35:48,374 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:35:49,448 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:49,448 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:35:49,448 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:35:49,449 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:35:50,584 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:35:50,586 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:35:50,586 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:35:50,589 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:35:51,698 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:35:51,698 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:35:52,758 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:35:52,771 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:35:53,849 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:35:53,849 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:35:54,946 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:35:54,948 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:56,049 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:35:56,056 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:57,149 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:35:57,171 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:35:58,493 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:35:58,515 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:35:59,613 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:35:59,615 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:36:00,770 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:36:00,771 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:36:01,853 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:36:01,854 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:36:02,933 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:36:02,934 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:36:04,134 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:36:04,135 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:36:04,135 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:36:04,136 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:36:05,630 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:05,631 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:36:05,631 - INFO - Explorando directorio (profundidad 1): http://www.siata.gov.co/
+2025-12-13 01:36:05,632 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:36:07,174 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:07,174 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:36:07,174 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:36:07,175 - INFO - Consultando: http://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:36:08,615 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:08,629 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:08,635 - INFO - Explorando directorio (profundidad 2): https://www.instagram.com/siatamedellin/
+2025-12-13 01:36:08,637 - INFO - Consultando: https://www.instagram.com/siatamedellin/
+2025-12-13 01:36:10,172 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:10,173 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:36:10,180 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RegisterModal
+2025-12-13 01:36:10,196 - INFO - Consultando: http://www.siata.gov.co/#RegisterModal
+2025-12-13 01:36:12,224 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:12,342 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:12,439 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:36:12,515 - INFO - Consultando: http://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:36:14,269 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:14,304 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:14,388 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#capas_informacion
+2025-12-13 01:36:14,410 - INFO - Consultando: http://www.siata.gov.co/#capas_informacion
+2025-12-13 01:36:16,348 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:16,376 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:16,398 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:36:16,418 - INFO - Consultando: http://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:36:18,172 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:18,203 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:18,236 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#loginModal
+2025-12-13 01:36:18,287 - INFO - Consultando: http://www.siata.gov.co/#loginModal
+2025-12-13 01:36:20,155 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:20,164 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:20,169 - INFO - Explorando directorio (profundidad 2): https://www.facebook.com/siatamedellin/
+2025-12-13 01:36:20,174 - INFO - Consultando: https://www.facebook.com/siatamedellin/
+2025-12-13 01:36:21,601 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:21,661 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:36:21,701 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#capas_detalle
+2025-12-13 01:36:21,728 - INFO - Consultando: http://www.siata.gov.co/#capas_detalle
+2025-12-13 01:36:23,602 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:23,631 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:23,648 - INFO - Explorando directorio (profundidad 2): https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:36:23,699 - INFO - Consultando: https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:36:24,901 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:24,942 - INFO - Encontrados 5 subdirectorios
+2025-12-13 01:36:24,996 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#
+2025-12-13 01:36:25,043 - INFO - Consultando: http://www.siata.gov.co/#
+2025-12-13 01:36:25,293 - ERROR - Error al consultar http://www.siata.gov.co/#: HTTPSConnectionPool(host='www.siata.gov.co', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1081)')))
+2025-12-13 01:36:25,330 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#ContactoModal
+2025-12-13 01:36:25,647 - INFO - Consultando: http://www.siata.gov.co/#ContactoModal
+2025-12-13 01:36:27,734 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:27,780 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:27,814 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:36:27,834 - INFO - Consultando: http://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:36:29,987 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:36:30,084 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:36:30,208 - INFO - ============================================================
+2025-12-13 01:36:30,411 - INFO - Descarga completada
+2025-12-13 01:36:30,494 - INFO - Tiempo total: 0:04:50.293377
+2025-12-13 01:36:30,529 - INFO - Archivos guardados en: data\siata_historico
+2025-12-13 01:36:30,559 - INFO - ============================================================
+2025-12-13 01:36:31,355 - INFO - Inventario generado: data\siata_historico\inventario.csv
+2025-12-13 01:36:31,370 - INFO - Total de archivos: 43
+2025-12-13 01:39:44,117 - INFO - ============================================================
+2025-12-13 01:39:44,137 - INFO - Iniciando descarga de datos históricos de SIATA
+2025-12-13 01:39:44,171 - INFO - Directorio de destino: data\siata_historico
+2025-12-13 01:39:44,177 - INFO - ============================================================
+2025-12-13 01:39:44,177 - INFO - Explorando directorio (profundidad 0): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:39:44,178 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:39:46,469 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:46,471 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:39:46,471 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/
+2025-12-13 01:39:46,474 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:39:48,155 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:48,161 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:39:48,185 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:39:48,208 - INFO - Consultando: https://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:39:49,831 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:49,831 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:39:49,832 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#ContactoModal
+2025-12-13 01:39:49,832 - INFO - Consultando: https://www.siata.gov.co/#ContactoModal
+2025-12-13 01:39:51,287 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:51,294 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:39:51,320 - INFO - Explorando directorio (profundidad 2): https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:39:51,322 - INFO - Consultando: https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:39:52,457 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:52,457 - INFO - Encontrados 5 subdirectorios
+2025-12-13 01:39:52,457 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#capas_detalle
+2025-12-13 01:39:52,458 - INFO - Consultando: https://www.siata.gov.co/#capas_detalle
+2025-12-13 01:39:53,861 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:53,862 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:39:53,862 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RegisterModal
+2025-12-13 01:39:53,862 - INFO - Consultando: https://www.siata.gov.co/#RegisterModal
+2025-12-13 01:39:55,264 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:55,265 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:39:55,272 - INFO - Explorando directorio (profundidad 2): https://www.instagram.com/siatamedellin/
+2025-12-13 01:39:55,272 - INFO - Consultando: https://www.instagram.com/siatamedellin/
+2025-12-13 01:39:57,551 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:57,557 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:39:57,557 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#
+2025-12-13 01:39:57,560 - INFO - Consultando: https://www.siata.gov.co/#
+2025-12-13 01:39:59,160 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:39:59,160 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:39:59,162 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:39:59,162 - INFO - Consultando: https://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:40:00,622 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:00,622 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:40:00,623 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:40:00,623 - INFO - Consultando: https://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:40:02,125 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:02,143 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:40:02,183 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#capas_informacion
+2025-12-13 01:40:02,194 - INFO - Consultando: https://www.siata.gov.co/#capas_informacion
+2025-12-13 01:40:03,980 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:03,981 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:40:03,981 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:40:03,982 - INFO - Consultando: https://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:40:05,445 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:05,447 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:40:05,448 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/#loginModal
+2025-12-13 01:40:05,449 - INFO - Consultando: https://www.siata.gov.co/#loginModal
+2025-12-13 01:40:06,887 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:06,887 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:40:06,888 - INFO - Explorando directorio (profundidad 2): https://www.facebook.com/siatamedellin/
+2025-12-13 01:40:06,888 - INFO - Consultando: https://www.facebook.com/siatamedellin/
+2025-12-13 01:40:08,277 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:08,347 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:40:08,423 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:40:08,473 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:40:09,709 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:40:09,710 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:40:10,789 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:40:10,790 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:40:11,854 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:40:11,855 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:40:12,941 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:40:12,942 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:14,008 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:14,008 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:40:15,133 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:40:15,133 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:16,203 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:16,203 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:40:17,268 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:40:17,268 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:18,354 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:18,358 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:40:19,523 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:40:19,523 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:40:20,588 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:40:20,591 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:40:21,688 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:40:21,689 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:40:21,691 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=M;O=A
+2025-12-13 01:40:21,695 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=M;O=A
+2025-12-13 01:40:22,788 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:40:22,811 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:40:23,968 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:40:24,050 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:40:25,249 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:40:25,249 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:40:26,322 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:40:26,350 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:27,434 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:27,471 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:40:28,669 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:40:28,694 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:29,896 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:30,014 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:40:31,202 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:40:31,264 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:32,506 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:32,512 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:40:33,626 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:40:33,636 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:40:34,816 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:40:34,818 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:40:35,941 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:40:35,942 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:40:35,943 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=N;O=A
+2025-12-13 01:40:35,944 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=N;O=A
+2025-12-13 01:40:37,059 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:40:37,076 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:40:38,209 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:40:38,209 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:40:39,297 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:40:39,297 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:40:40,384 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:40:40,387 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:41,465 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:41,466 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:40:42,544 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:40:42,544 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:43,613 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:43,614 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:40:44,696 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:40:44,711 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:45,780 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:40:45,780 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:40:46,853 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:40:46,853 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:40:47,937 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:40:47,938 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:40:49,026 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:40:49,026 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:40:49,027 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:40:49,027 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:40:50,462 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:40:50,462 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:40:50,463 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=S;O=A
+2025-12-13 01:40:50,463 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/?C=S;O=A
+2025-12-13 01:40:51,563 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:40:51,564 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:40:52,662 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:40:52,663 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:40:53,735 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:40:53,736 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:40:54,830 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:40:54,833 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:55,934 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:40:55,934 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:40:57,000 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:40:57,000 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:58,060 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:40:58,060 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:40:59,131 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:40:59,131 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:00,269 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:00,269 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:41:01,355 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:41:01,366 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:41:02,438 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:41:02,439 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:41:03,496 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:41:03,496 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:41:03,497 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:41:03,497 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:41:05,276 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:05,279 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:41:05,280 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:41:05,281 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:41:06,424 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:06,425 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:41:06,425 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/ReporteMunicipios/
+2025-12-13 01:41:06,425 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/ReporteMunicipios/
+2025-12-13 01:41:07,505 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:07,507 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:41:07,508 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/#
+2025-12-13 01:41:07,508 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/#
+2025-12-13 01:41:08,630 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:41:08,630 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:41:09,807 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:41:09,808 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:41:10,897 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:41:10,903 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:41:11,995 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:41:11,996 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:41:13,083 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:41:13,084 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:41:14,151 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:41:14,152 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:41:15,236 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:41:15,237 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:41:16,380 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:41:16,381 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:17,505 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:17,506 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:41:18,577 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:41:18,577 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:41:19,658 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:41:19,659 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:41:20,723 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:41:20,723 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:41:20,724 - INFO - Explorando directorio (profundidad 1): http://www.siata.gov.co/
+2025-12-13 01:41:20,725 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:41:22,306 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:22,306 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:41:22,306 - INFO - Explorando directorio (profundidad 2): https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:41:22,307 - INFO - Consultando: https://siata.gov.co/sitio_web/index.php/
+2025-12-13 01:41:23,427 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:23,427 - INFO - Encontrados 5 subdirectorios
+2025-12-13 01:41:23,428 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:41:23,428 - INFO - Consultando: http://www.siata.gov.co/#RecuperarUsuarioModal
+2025-12-13 01:41:24,881 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:24,881 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:24,882 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:41:24,882 - INFO - Consultando: http://www.siata.gov.co/#RecuperarContrasenaModal
+2025-12-13 01:41:26,409 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:26,413 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:26,415 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#capas_detalle
+2025-12-13 01:41:26,417 - INFO - Consultando: http://www.siata.gov.co/#capas_detalle
+2025-12-13 01:41:27,948 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:27,952 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:27,955 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#capas_informacion
+2025-12-13 01:41:27,955 - INFO - Consultando: http://www.siata.gov.co/#capas_informacion
+2025-12-13 01:41:29,659 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:29,659 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:29,660 - INFO - Explorando directorio (profundidad 2): https://www.instagram.com/siatamedellin/
+2025-12-13 01:41:29,661 - INFO - Consultando: https://www.instagram.com/siatamedellin/
+2025-12-13 01:41:31,080 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:31,081 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:41:31,082 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#RegisterModal
+2025-12-13 01:41:31,082 - INFO - Consultando: http://www.siata.gov.co/#RegisterModal
+2025-12-13 01:41:32,582 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:32,584 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:32,584 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#loginModal
+2025-12-13 01:41:32,585 - INFO - Consultando: http://www.siata.gov.co/#loginModal
+2025-12-13 01:41:34,101 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:34,101 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:34,102 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#ContactoModal
+2025-12-13 01:41:34,103 - INFO - Consultando: http://www.siata.gov.co/#ContactoModal
+2025-12-13 01:41:35,576 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:35,577 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:35,578 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:41:35,578 - INFO - Consultando: http://www.siata.gov.co/#QuienesSomosModal
+2025-12-13 01:41:37,178 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:37,178 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:37,179 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:41:37,179 - INFO - Consultando: http://www.siata.gov.co/#PaginaDeshabilitadaModal
+2025-12-13 01:41:38,605 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:38,606 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:38,606 - INFO - Explorando directorio (profundidad 2): https://www.facebook.com/siatamedellin/
+2025-12-13 01:41:38,606 - INFO - Consultando: https://www.facebook.com/siatamedellin/
+2025-12-13 01:41:40,095 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:40,096 - INFO - Encontrados 0 subdirectorios
+2025-12-13 01:41:40,096 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/#
+2025-12-13 01:41:40,096 - INFO - Consultando: http://www.siata.gov.co/#
+2025-12-13 01:41:41,580 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:41,581 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:41:41,581 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:41:41,581 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:41:42,711 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:42,712 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:41:42,712 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:41:42,712 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:41:44,099 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:41:44,099 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:41:44,100 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:41:44,100 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:41:45,204 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:41:45,205 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:41:46,283 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:41:46,283 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:41:47,352 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:41:47,353 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:41:48,432 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:41:48,432 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:41:49,498 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:41:49,499 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:41:50,581 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:41:50,582 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:41:51,665 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:41:51,665 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:41:52,769 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:41:52,770 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:53,846 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:41:53,846 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:41:54,915 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:41:54,916 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:41:55,978 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:41:55,979 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:41:57,045 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:41:57,046 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:41:57,047 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:41:57,047 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:42:00,738 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:00,739 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:00,739 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:00,739 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:01,882 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:01,882 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:01,883 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=D
+2025-12-13 01:42:01,884 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=D
+2025-12-13 01:42:02,972 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:02,974 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:02,975 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:02,976 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:04,050 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:04,051 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:04,051 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A#
+2025-12-13 01:42:04,051 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A#
+2025-12-13 01:42:05,134 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:05,135 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:42:05,135 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:42:05,135 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:42:06,206 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:06,206 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:42:06,207 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:06,207 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:07,352 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:07,360 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:07,374 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:42:07,374 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:42:08,983 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:09,064 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:09,130 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=D
+2025-12-13 01:42:09,164 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=D
+2025-12-13 01:42:10,359 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:10,365 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:10,365 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:10,366 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:11,565 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:42:11,565 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:42:12,636 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:42:12,721 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:42:14,013 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:42:14,014 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:42:15,101 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:42:15,105 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:42:16,194 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:42:16,195 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:42:17,404 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:42:17,404 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:42:18,475 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:42:18,475 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:42:19,547 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:42:19,547 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:42:20,608 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:42:20,608 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:42:21,717 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:42:21,720 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:42:22,807 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:42:22,807 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:42:23,881 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:42:23,881 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:23,881 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:42:23,882 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:42:25,644 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:25,646 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:25,646 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:42:25,647 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:42:26,834 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:26,836 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:26,836 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:26,836 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:27,922 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:27,923 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:27,923 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A#
+2025-12-13 01:42:27,923 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A#
+2025-12-13 01:42:28,990 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:28,990 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:42:28,991 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:42:28,991 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:42:30,144 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:30,145 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:42:30,145 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:30,145 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:42:31,231 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:31,231 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:31,231 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:42:31,231 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:42:32,673 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:32,674 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:32,674 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:32,674 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:33,763 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:42:33,763 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:42:34,857 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:42:34,857 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:42:35,917 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:42:35,917 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:42:37,071 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:42:37,072 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:42:38,141 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:42:38,141 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:42:39,228 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:42:39,229 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:42:40,308 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:42:40,308 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:42:41,395 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:42:41,396 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:42:42,482 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:42:42,483 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:42:43,570 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:42:43,570 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:42:44,636 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:42:44,637 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:42:45,722 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:42:45,723 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:45,723 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:42:45,723 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:42:47,404 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:47,404 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:47,404 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:42:47,405 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:42:48,550 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:48,550 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:48,551 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:48,551 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:42:49,642 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:49,642 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:49,643 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=D
+2025-12-13 01:42:49,643 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=D
+2025-12-13 01:42:50,732 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:50,732 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:42:50,732 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A#
+2025-12-13 01:42:50,733 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A#
+2025-12-13 01:42:51,820 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:51,820 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:42:51,820 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:42:51,820 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:42:52,907 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:52,911 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:42:52,911 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 01:42:52,912 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/#
+2025-12-13 01:42:54,050 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:54,051 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:42:54,051 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:42:54,051 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:42:55,470 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:42:55,470 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:42:55,471 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:55,471 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/
+2025-12-13 01:42:56,568 - INFO - Encontrados 11 archivos de datos
+2025-12-13 01:42:56,569 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Octubre2025.txt
+2025-12-13 01:42:57,660 - INFO - Archivo ya existe, omitiendo: DatosPacum_Octubre2025.txt
+2025-12-13 01:42:57,660 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Junio2025.txt
+2025-12-13 01:42:58,807 - INFO - Archivo ya existe, omitiendo: DatosPacum_Junio2025.txt
+2025-12-13 01:42:58,807 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Marzo2025.txt
+2025-12-13 01:42:59,865 - INFO - Archivo ya existe, omitiendo: DatosPacum_Marzo2025.txt
+2025-12-13 01:42:59,865 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Diciembre2025.txt
+2025-12-13 01:43:00,937 - INFO - Archivo ya existe, omitiendo: DatosPacum_Diciembre2025.txt
+2025-12-13 01:43:00,938 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Febrero2025.txt
+2025-12-13 01:43:02,026 - INFO - Archivo ya existe, omitiendo: DatosPacum_Febrero2025.txt
+2025-12-13 01:43:02,030 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Noviembre2025.txt
+2025-12-13 01:43:03,206 - INFO - Archivo ya existe, omitiendo: DatosPacum_Noviembre2025.txt
+2025-12-13 01:43:03,206 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Abril2025.txt
+2025-12-13 01:43:04,342 - INFO - Archivo ya existe, omitiendo: DatosPacum_Abril2025.txt
+2025-12-13 01:43:04,346 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Septiembre2025.txt
+2025-12-13 01:43:05,412 - INFO - Archivo ya existe, omitiendo: DatosPacum_Septiembre2025.txt
+2025-12-13 01:43:05,412 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Mayo2025.txt
+2025-12-13 01:43:06,484 - INFO - Archivo ya existe, omitiendo: DatosPacum_Mayo2025.txt
+2025-12-13 01:43:06,487 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Julio2025.txt
+2025-12-13 01:43:07,584 - INFO - Archivo ya existe, omitiendo: DatosPacum_Julio2025.txt
+2025-12-13 01:43:07,584 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/AcumPrecipitacion/DatosPacum_Agosto2025.txt
+2025-12-13 01:43:08,680 - INFO - Archivo ya existe, omitiendo: DatosPacum_Agosto2025.txt
+2025-12-13 01:43:08,682 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:43:08,682 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:43:08,682 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:43:10,177 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:10,177 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:43:10,178 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:43:10,178 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=N;O=A
+2025-12-13 01:43:11,247 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:11,248 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:43:11,248 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:43:11,248 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=S;O=A
+2025-12-13 01:43:12,328 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:12,335 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:43:12,336 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:43:12,336 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/?C=M;O=A
+2025-12-13 01:43:13,494 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:13,495 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:43:13,495 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/
+2025-12-13 01:43:13,495 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:43:14,589 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:14,589 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:14,590 - INFO - Explorando directorio (profundidad 1): https://www.siata.gov.co/operacional/
+2025-12-13 01:43:14,590 - INFO - Consultando: https://www.siata.gov.co/operacional/
+2025-12-13 01:43:15,662 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:15,663 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:15,663 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/monitoreo/
+2025-12-13 01:43:15,663 - INFO - Consultando: https://www.siata.gov.co/operacional/monitoreo/
+2025-12-13 01:43:16,751 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:16,758 - INFO - Encontrados 10 subdirectorios
+2025-12-13 01:43:16,758 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/WRF/
+2025-12-13 01:43:16,759 - INFO - Consultando: https://www.siata.gov.co/operacional/WRF/
+2025-12-13 01:43:17,834 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:17,836 - INFO - Encontrados 9 subdirectorios
+2025-12-13 01:43:17,836 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/
+2025-12-13 01:43:17,836 - INFO - Consultando: https://www.siata.gov.co/
+2025-12-13 01:43:19,241 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:19,243 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:43:19,243 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/seriesdetiempo/
+2025-12-13 01:43:19,243 - INFO - Consultando: https://www.siata.gov.co/operacional/seriesdetiempo/
+2025-12-13 01:43:20,346 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:20,349 - INFO - Encontrados 18 subdirectorios
+2025-12-13 01:43:20,349 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/#
+2025-12-13 01:43:20,350 - INFO - Consultando: https://www.siata.gov.co/operacional/#
+2025-12-13 01:43:21,424 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:21,424 - INFO - Encontrados 16 subdirectorios
+2025-12-13 01:43:21,425 - INFO - Explorando directorio (profundidad 2): http://www.siata.gov.co/
+2025-12-13 01:43:21,425 - INFO - Consultando: http://www.siata.gov.co/
+2025-12-13 01:43:22,923 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:22,925 - INFO - Encontrados 13 subdirectorios
+2025-12-13 01:43:22,926 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/seriesdetiempo_prueba/
+2025-12-13 01:43:22,926 - INFO - Consultando: https://www.siata.gov.co/operacional/seriesdetiempo_prueba/
+2025-12-13 01:43:24,143 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:24,144 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:24,144 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:43:24,145 - INFO - Consultando: https://www.siata.gov.co/operacional/Meteorologia/
+2025-12-13 01:43:25,267 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:25,267 - INFO - Encontrados 8 subdirectorios
+2025-12-13 01:43:25,268 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=N;O=A
+2025-12-13 01:43:25,268 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=N;O=A
+2025-12-13 01:43:26,365 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:26,488 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:26,562 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/radar/
+2025-12-13 01:43:26,569 - INFO - Consultando: https://www.siata.gov.co/operacional/radar/
+2025-12-13 01:43:27,737 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:27,856 - INFO - Encontrados 16 subdirectorios
+2025-12-13 01:43:27,926 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=S;O=A
+2025-12-13 01:43:27,932 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=S;O=A
+2025-12-13 01:43:29,097 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:29,098 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:29,098 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/radiometro/
+2025-12-13 01:43:29,098 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/
+2025-12-13 01:43:30,299 - INFO - Encontrados 9 archivos de datos
+2025-12-13 01:43:30,300 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV600.csv
+2025-12-13 01:43:33,121 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV600.csv
+2025-12-13 01:43:33,123 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV800.csv
+2025-12-13 01:43:35,876 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV800.csv
+2025-12-13 01:43:35,878 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/Theta.csv
+2025-12-13 01:43:35,934 - ERROR - Error al consultar https://www.siata.gov.co/operacional/radiometro/Theta.csv: 403 Client Error: Forbidden for url: https://www.siata.gov.co/operacional/radiometro/Theta.csv
+2025-12-13 01:43:35,935 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1200.csv
+2025-12-13 01:43:38,645 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV1200.csv
+2025-12-13 01:43:38,647 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1400.csv
+2025-12-13 01:43:41,445 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV1400.csv
+2025-12-13 01:43:41,447 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV200.csv
+2025-12-13 01:43:44,225 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV200.csv
+2025-12-13 01:43:44,227 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/ThetaV.csv
+2025-12-13 01:43:44,309 - ERROR - Error al consultar https://www.siata.gov.co/operacional/radiometro/ThetaV.csv: 403 Client Error: Forbidden for url: https://www.siata.gov.co/operacional/radiometro/ThetaV.csv
+2025-12-13 01:43:44,311 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV400.csv
+2025-12-13 01:43:47,062 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV400.csv
+2025-12-13 01:43:47,209 - INFO - Consultando: https://www.siata.gov.co/operacional/radiometro/csv_DeltaThetaV1000.csv
+2025-12-13 01:43:50,382 - INFO - Archivo ya existe, omitiendo: csv_DeltaThetaV1000.csv
+2025-12-13 01:43:50,398 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:43:50,422 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/prcSirena/
+2025-12-13 01:43:50,425 - INFO - Consultando: https://www.siata.gov.co/operacional/prcSirena/
+2025-12-13 01:43:51,668 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:51,724 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:43:51,726 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/enso/
+2025-12-13 01:43:51,741 - INFO - Consultando: https://www.siata.gov.co/operacional/enso/
+2025-12-13 01:43:52,843 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:52,853 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:43:52,853 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/mapas/
+2025-12-13 01:43:52,854 - INFO - Consultando: https://www.siata.gov.co/operacional/mapas/
+2025-12-13 01:43:53,972 - INFO - Encontrados 1 archivos de datos
+2025-12-13 01:43:53,975 - INFO - Consultando: https://www.siata.gov.co/operacional/mapas/lista_12h.txt
+2025-12-13 01:43:55,069 - INFO - Archivo ya existe, omitiendo: lista_12h.txt
+2025-12-13 01:43:55,070 - INFO - Encontrados 12 subdirectorios
+2025-12-13 01:43:55,070 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/?C=M;O=A
+2025-12-13 01:43:55,070 - INFO - Consultando: https://www.siata.gov.co/operacional/?C=M;O=A
+2025-12-13 01:43:56,148 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:56,148 - INFO - Encontrados 17 subdirectorios
+2025-12-13 01:43:56,148 - INFO - Explorando directorio (profundidad 2): https://www.siata.gov.co/operacional/CicloAnual/
+2025-12-13 01:43:56,149 - INFO - Consultando: https://www.siata.gov.co/operacional/CicloAnual/
+2025-12-13 01:43:57,417 - INFO - Encontrados 0 archivos de datos
+2025-12-13 01:43:57,418 - INFO - Encontrados 7 subdirectorios
+2025-12-13 01:43:57,418 - INFO - ============================================================
+2025-12-13 01:43:57,418 - INFO - Descarga completada
+2025-12-13 01:43:57,418 - INFO - Tiempo total: 0:04:13.240717
+2025-12-13 01:43:57,419 - INFO - Archivos guardados en: data\siata_historico
+2025-12-13 01:43:57,419 - INFO - ============================================================
+2025-12-13 01:44:01,650 - INFO - Inventario generado: data\siata_historico\inventario.csv
+2025-12-13 01:44:01,653 - INFO - Total de archivos: 19

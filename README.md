@@ -1,439 +1,822 @@
-# 🌤️ ClimAPI v1.0.0 - Dashboard Meteorológico
+# 🌦️ CLIMAPI - Sistema Integrado de Consulta de Datos Climáticos
 
-**Estado:** ✅ **PROYECTO EN ESTADO ÓPTIMO** | **Integridad:** 100% | **Pinggy.io:** ✅ **ACTIVO**
+Sistema completo para consultar y procesar datos climáticos de múltiples fuentes en Colombia.
 
-Dashboard meteorológico unificado con datos de múltiples fuentes en tiempo real. Backend FastAPI + Frontend Next.js.
-
-> **⚠️ ¿Error de PowerShell?** Lee [`POWERSHELL_ERROR_FIXED.md`](POWERSHELL_ERROR_FIXED.md) - **¡Problema resuelto!**  
-> **⚡ INICIO RÁPIDO:** Ejecuta `.\run-tunnel-ssh.ps1` para iniciar el túnel SSH (sin necesidad de pinggy.exe)
-
----
-
-## 📋 Descripción General
-
-ClimAPI es un proyecto fullstack moderno que permite:
-
-✅ **Backend API (FastAPI)**
-- Consumir datos meteorológicos desde múltiples fuentes (Open-Meteo, SIATA, OpenWeatherMap)
-- Validación robusta de coordenadas
-- Caché inteligente con TTL (15 min)
-- Normalización de datos desde múltiples formatos
-- Agregador de fuentes para datos consolidados
-- Documentación automática en `/docs`
-
-✅ **Dashboard Meteorológico (Streamlit)**
-- 4 modos de visualización (Tiempo Real, Histórico, Comparativa, Información)
-- Gráficos interactivos con Plotly
-- Datos en tiempo real desde múltiples fuentes
-- Visualización de datos históricos desde CSV
-- Comparación lado a lado de fuentes de datos
-- Estadísticas y agregación de datos
-
-✅ **Frontend (Next.js) - En Desarrollo**
-- Dashboard interactivo con mapas
-- Gráficos en tiempo real
-- Tabla de datos meteorológicos
-- Múltiples ubicaciones
-
-✅ **Procesamiento de Datos**
-- Transformación de formatos Open-Meteo, SIATA, IDEAM
-- Cálculo de estadísticas (min/max/avg)
-- Exportación a CSV y JSON
-- Almacenamiento en caché con gestor de TTL
+## 📋 Tabla de Contenidos
+- [Descripción](#descripción)
+- [🗺️ Roadmap del Proyecto](#roadmap)
+- [Fuentes de Datos](#fuentes-de-datos)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Instalación](#instalación)
+- [Configuración](#configuración)
+- [Uso](#uso)
+- [Posibles Fallas y Soluciones](#posibles-fallas-y-soluciones)
+- [Normalización de Datos](#normalización-de-datos)
 
 ---
 
-## 🗂️ Estructura del Proyecto
+## 🎯 Descripción
+
+CLIMAPI es un sistema integrado que permite consultar y procesar datos meteorológicos de múltiples fuentes:
+
+- **Meteoblue**: Pronósticos detallados con meteogramas visuales
+- **Open-Meteo**: API gratuita con pronósticos y datos históricos
+- **OpenWeatherMap**: Clima actual, pronóstico 5 días y calidad del aire
+- **Meteosource**: API freemium con datos actuales y pronósticos detallados
+- **IDEAM**: Datos de radares meteorológicos desde AWS
+- **SIATA**: Datos históricos meteorológicos de Medellín
+
+---
+
+## 🗺️ Roadmap
+
+**📊 Estado del Proyecto: 27% completado**
+
+El proyecto sigue un roadmap estructurado de 8 etapas, desde la recolección de datos hasta el despliegue con MLflow. 
+
+### Progreso Actual
+- ✅ **Recolección de datos** (75%) - 6 APIs integradas
+- 🔄 **Procesamiento y limpieza** (20%) - En progreso
+- ✅ **Dashboard Streamlit** (80%) - Implementado
+
+### Próximos Hitos
+1. Normalización de datos y esquemas comunes
+2. Análisis exploratorio y feature engineering
+3. Entrenamiento de modelos con MLflow
+4. API REST con FastAPI
+5. Despliegue en producción
+
+📄 **Ver roadmap completo:** [ROADMAP.md](ROADMAP.md)  
+🔗 **Roadmap interactivo:** [Phind Interactive](https://interactive.phind.com/streaming-preview/session_1765509468704/index.html)
+
+---
+
+## 🌐 Fuentes de Datos
+
+### 1. Meteoblue
+- **Tipo**: API comercial (requiere API key + secret)
+- **Datos**: Pronósticos hasta 7 días, meteogramas, múltiples variables
+- **Formato**: JSON + PNG (imágenes)
+- **Almacenamiento**: `data/data_meteoblue/` y `data/images_meteo_blue/`
+- **Notebook**: No tiene notebook dedicado
+- **Cliente**: `src/data_sources/meteoblue.py`
+
+### 2. Open-Meteo
+- **Tipo**: API gratuita (sin API key)
+- **Datos**: Pronósticos 1-16 días, datos históricos desde 1940
+- **Formato**: JSON + CSV
+- **Almacenamiento**: `data/data_openmeteo/`
+- **Notebook**: No tiene notebook dedicado
+- **Cliente**: `src/data_sources/open_meteo.py`
+
+### 3. OpenWeatherMap
+- **Tipo**: API freemium (plan gratuito disponible)
+- **Datos**: Clima actual, pronóstico 5 días (cada 3h), calidad del aire
+- **Formato**: JSON
+- **Almacenamiento**: `data/data_openweathermap/`
+- **Notebook**: No tiene notebook dedicado
+- **Cliente**: `src/data_sources/openweather.py`
+
+### 4. Meteosource
+- **Tipo**: API freemium (plan gratuito con 400 llamadas/día)
+- **Datos**: Clima actual, pronóstico horario (hasta 7 días), pronóstico diario (hasta 14 días)
+- **Variables**: Temperatura, sensación térmica, humedad, viento, precipitación, presión, visibilidad
+- **Formato**: JSON
+- **Almacenamiento**: `data/data_meteosource/`
+- **Notebook**: No tiene notebook dedicado
+- **Cliente**: `src/data_sources/Meteosource.py`
+- **Ventajas**: Usa place_id (nombres de ciudad simples), respuesta rápida, buena cobertura
+
+### 5. IDEAM - Radares Meteorológicos
+- **Tipo**: AWS Open Data (público, sin credenciales)
+- **Datos**: Datos de radar nivel 2 (4 radares disponibles)
+- **Radares**: Barrancabermeja, Guaviare, Munchique, Carimagua
+- **Formato**: Archivos binarios comprimidos
+- **Almacenamiento**: `data/Radar_IDEAM/`
+- **Notebook**: `notebooks/API_IDEAM.ipynb`
+- **Cliente**: `src/data_sources/ideam_radar_downloader.py`
+- **Procesadores**: `src/processors/radar_*.py`
+
+### 6. SIATA - Sistema de Alerta Temprana de Medellín
+- **Tipo**: Datos públicos web scraping
+- **Datos**: Datos históricos meteorológicos de Medellín
+- **Formato**: TXT, CSV, XLSX, JSON
+- **Almacenamiento**: `data/siata_historico/`
+- **Notebook**: `notebooks/SIATA_Historico.ipynb`
+- **Cliente**: `src/data_sources/siata_cliente.py`
+
+---
+
+## 📁 Estructura del Proyecto
 
 ```
-ClimAPI/
-├── 📄 main.py                    ← Entry point (delegador)
-├── 📄 verify_integrity.py        ← Verificador de integridad
-├── 📄 requirements.txt           ← Dependencias
+ClimApi/
+├── main.py                          # ✅ Script principal integrado
+├── README.md                        # ✅ Documentación completa
+├── requirements.txt                 # Dependencias
+├── .env.example                     # Plantilla de configuración
+├── .env                            # Configuración (NO subir a git)
 │
-├── 📁 backend/                   ← 🔧 BACKEND FASTAPI
-│   ├── 📄 __init__.py
-│   ├── 📄 requirements.txt
-│   └── 📁 app/
-│       ├── 📄 main.py            ← FastAPI app
-│       ├── 📄 config.py          ← Configuración
-│       ├── 📄 models.py          ← Modelos Pydantic
-│       ├── 📁 services/
-│       │   └── 📄 open_meteo.py  ← Cliente Open-Meteo
-│       ├── 📁 processors/
-│       │   ├── 📄 storage.py     ← Caché + File I/O
-│       │   └── 📄 transform.py   ← Normalización
-│       ├── 📁 scripts/
-│       │   └── 📄 legacy_main.py ← CLI script
-│       ├── 📁 api/
-│       │   └── 📁 routes/
-│       │       ├── 📄 health.py
-│       │       ├── 📄 weather.py
-│       │       └── 📄 locations.py
-│       └── 📁 tests/             ← Tests (placeholder)
+├── config/                          # Configuraciones
 │
-├── 📁 dashboard/                 ← 📊 DASHBOARD STREAMLIT (UNIFICADO)
-│   ├── 📄 app.py                 ← Dashboard principal (4 modos)
-│   ├── 📄 README.md              ← Documentación dashboard
-│   ├── 📄 test_integration.py    ← Tests de integración
-│   └── 📁 .streamlit/
-│       └── 📄 config.toml        ← Configuración Streamlit
+├── data/                            # Datos climáticos
+│   ├── data_meteoblue/             # JSON de Meteoblue
+│   ├── images_meteo_blue/          # Meteogramas PNG
+│   ├── data_openmeteo/             # CSV/JSON de Open-Meteo
+│   ├── data_openweathermap/        # JSON de OpenWeatherMap
+│   ├── data_meteosource/           # JSON de Meteosource
+│   ├── Radar_IDEAM/                # Datos de radares
+│   │   ├── Barrancabermeja/
+│   │   ├── Guaviare/
+│   │   ├── Munchique/
+│   │   └── Carimagua/
+│   └── siata_historico/            # Datos históricos SIATA
+│       ├── precipitacion/
+│       ├── temperatura/
+│       └── otros/
 │
-├── 📁 frontend/                  ← 🎨 FRONTEND NEXT.JS
-│   ├── 📄 package.json
-│   ├── 📄 tsconfig.json
-│   ├── 📄 next.config.js
-│   ├── 📄 tailwind.config.ts
-│   ├── 📁 app/
-│   │   ├── 📄 layout.tsx
-│   │   └── 📄 page.tsx
-│   └── 📁 lib/
-│       ├── 📄 api.ts
-│       ├── 📄 types.ts
-│       └── 📄 utils.ts
+├── logs/                            # Logs de operaciones
+│   ├── ideam/
+│   └── siata/
 │
-├── 📁 data_sources/              ← Integraciones externas
-├── 📄 SUMMARY.md                 ← Resumen del trabajo
-├── 📄 INTEGRITY_REPORT.md        ← Reporte de verificación
-├── 📄 ARCHITECTURE.md            ← Documentación arquitectura
-├── 📄 INTEGRATION_STATUS.md      ← Estado de integración (nuevo)
-├── 📄 NEXT_STEPS.md              ← Guía de próximos pasos
-└── 📄 QUICKSTART.md              ← Inicio rápido
-```
-
-## 🚀 Inicio Rápido
-
-### ⚡ Opción A: Con Acceso Remoto (Pinggy.io vía SSH)
-
-```powershell
-# 1. Abre PowerShell en el directorio del proyecto
-cd "e:\C0D3\Python\Jupyter\ClimAPI"
-
-# 2. Inicia el túnel SSH (Terminal 1) - SIN necesidad de pinggy.exe
-.\run-tunnel-ssh.ps1
-
-# 3. En una NUEVA terminal, inicia el dashboard (Terminal 2)
-.venv\Scripts\streamlit.exe run dashboard/app.py
-
-# 4. Accede al dashboard:
-#    - Local:  http://localhost:8501
-#    - Remoto: https://Fm4hH7kZ8sz.free.pinggy.io
-```
-
-**Nota:** Esta opción usa SSH (que ya tienes instalado). No necesitas descargar pinggy.exe.
-
----
-
-### ⚡ Opción B: Solo Local (sin Pinggy)
-
-```bash
-# 1. Activa el entorno virtual
-.venv\Scripts\activate
-
-# 2. Inicia el dashboard
-streamlit run dashboard/app.py
-
-# 3. Accede a http://localhost:8501
+├── notebooks/                       # Jupyter Notebooks
+│   ├── API_IDEAM.ipynb             # Exploración IDEAM
+│   └── SIATA_Historico.ipynb       # Exploración SIATA
+│
+├── src/                             # Código fuente
+│   ├── data_sources/               # Clientes de APIs
+│   │   ├── meteoblue.py
+│   │   ├── open_meteo.py
+│   │   ├── openweather.py
+│   │   ├── Meteosource.py
+│   │   ├── ideam_radar_downloader.py
+│   │   └── siata_cliente.py
+│   │
+│   ├── processors/                 # Procesadores de datos
+│   │   ├── radar_processor.py
+│   │   ├── radar_advanced_processor.py
+│   │   └── radar_raw_processor.py
+│   │
+│   └── visualizers/                # Visualizaciones (vacío)
+│
+├── tests/                          # Tests (vacío)
+│
+└── visualizaciones/                # Visualizaciones generadas
+    └── mapa_radares_ideam.html
 ```
 
 ---
 
-### Requisitos
-- Python 3.10+
-- pip
-- Node.js 16+ (para frontend, opcional)
+## 🚀 Instalación
 
-### 1. Instalar Dependencias
+### Prerequisitos
+- Python 3.8 o superior
+- pip (gestor de paquetes Python)
+- Git (opcional)
 
+### Pasos
+
+1. **Clonar o descargar el repositorio**
 ```bash
-# Backend
-pip install -r backend/requirements.txt
-
-# Frontend (opcional)
-cd frontend
-npm install
-cd ..
+cd ClimApi
 ```
 
-### 2. Iniciar API Backend
-
+2. **Crear entorno virtual (recomendado)**
 ```bash
-python main.py api
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux/Mac
+source venv/bin/activate
 ```
 
-Accede a:
-- **API:** http://localhost:8000
-- **Documentación:** http://localhost:8000/docs
-- **ReDoc:** http://localhost:8000/redoc
-
-### 3. Comandos Disponibles
-
+3. **Instalar dependencias**
 ```bash
-# Iniciar Dashboard Streamlit (RECOMENDADO)
-python main.py dashboard
-→ Abre en http://localhost:8501
-
-# Iniciar API FastAPI
-python main.py api
-→ Abre en http://localhost:8000
-→ Documentación en http://localhost:8000/docs
-
-# Ejecutar script legacy (CLI)
-python main.py legacy
-
-# Ejecutar tests
-python main.py test
-
-# Ver ayuda
-python main.py help
+pip install -r requirements.txt
 ```
 
-### 4. 🌐 Acceso Remoto con Pinggy.io (NUEVO)
-
-Para exponer tu dashboard a internet con **HTTPS seguro**:
-
+4. **Instalar dependencias opcionales para procesamiento de radar**
 ```bash
-# Opción A: Script Automático (Recomendado)
-python pinggy_direct.py
-
-# Opción B: Comando Directo
-pinggy.exe -p 443 -R0:127.0.0.1:8501 -o StrictHostKeyChecking=no -o ServerAliveInterval=30 Fm4hH7kZ8sz+force@free.pinggy.io
-
-# Opción C: Instalador Interactivo
-python pinggy_installer.py
-```
-
-**Resultado:**
-- URL pública: `https://Fm4hH7kZ8sz.free.pinggy.io`
-- Accesible desde cualquier dispositivo
-- HTTPS automático (sin certificados)
-- Compartible con equipo/clientes
-
-**Requiere:**
-- ✅ pinggy.exe (descargable desde https://pinggy.io)
-- ✅ Dashboard en puerto 8501
-
-📖 Ver: [`START_PINGGY.md`](START_PINGGY.md) | [`PINGGY_COMMAND.md`](PINGGY_COMMAND.md) | [`PINGGY_GUIDE.md`](PINGGY_GUIDE.md)
-
-### 4. Dashboard Streamlit - 4 Modos
-
-**Tiempo Real**: Datos en directo desde múltiples fuentes (Open-Meteo, SIATA, etc.)
-**Datos Históricos**: Visualización y análisis de datos CSV históricos
-**Comparativa**: Comparación lado a lado de fuentes de datos
-**Información**: Estadísticas del sistema y estado de cachés
-
----
-
-## 📊 Endpoints de la API
-
-### Health Check
-```bash
-GET /health
-```
-Respuesta:
-```json
-{
-  "status": "healthy",
-  "version": "1.0.0"
-}
-```
-
-### Obtener Clima
-```bash
-GET /api/weather?lat=6.2442&lon=-75.5812
-```
-Respuesta:
-```json
-{
-  "location": "Medellín",
-  "temperature": 22.5,
-  "humidity": 65,
-  "wind_speed": 3.2,
-  "timestamp": "2025-12-07T14:00:00"
-}
-```
-
-### Ubicaciones Predefinidas
-```bash
-GET /api/locations
-```
-Respuesta:
-```json
-[
-  {
-    "name": "Medellín",
-    "latitude": 6.2442,
-    "longitude": -75.5812
-  },
-  ...
-]
+# Si vas a procesar datos de radar (avanzado)
+pip install arm-pyart wradlib netCDF4 xarray
 ```
 
 ---
 
 ## ⚙️ Configuración
 
-Edita `backend/.env` para personalizar:
+### 1. Crear archivo de configuración
+
+Copia el archivo de ejemplo:
+```bash
+cp .env.example .env
+```
+
+### 2. Configurar API Keys
+
+Edita el archivo `.env` con tus credenciales:
 
 ```env
-# Servidor
-HOST=0.0.0.0
-PORT=8000
-DEBUG=True
+# Meteoblue (requiere registro en https://www.meteoblue.com/en/weather-api)
+METEOBLUE_API_KEY=tu_api_key
+METEOBLUE_SHARED_SECRET=tu_shared_secret
 
-# CORS
-ALLOWED_ORIGINS=http://localhost:3000,http://localhost:3001
+# OpenWeatherMap (registro gratuito en https://openweathermap.org/api)
+OPENWEATHER_API_KEY=tu_api_key
 
-# Caché
-CACHE_TTL_MINUTES=15
+# Meteosource (registro gratuito en https://www.meteosource.com)
+METEOSOURCE_API_KEY=tu_api_key
 
-# Logging
-LOG_LEVEL=INFO
+# Open-Meteo (no requiere API key)
+# IDEAM (no requiere credenciales)
+# SIATA (no requiere credenciales)
 ```
 
----
+### 3. APIs sin configuración requerida
 
-## 🔗 Stack Tecnológico
+- **Open-Meteo**: Totalmente gratuito, sin API key
+- **IDEAM**: Datos públicos en AWS, sin credenciales
+- **SIATA**: Web scraping de datos públicos
 
-### Backend
-- **Framework:** FastAPI 0.109.0
-- **Servidor:** Uvicorn 0.27.0
-- **Validación:** Pydantic 2.5.3
-- **Config:** Pydantic-Settings 2.1.0
-- **HTTP:** httpx 0.25.2 (async)
+### 4. Límites de APIs gratuitas
 
-### Frontend
-- **Framework:** Next.js 14+
-- **Styling:** Tailwind CSS
-- **Components:** shadcn/ui
-- **HTTP Client:** fetch / axios
-
-### Testing
-- **Framework:** pytest 7.4.3
-- **Coverage:** pytest-cov 4.1.0
-- **Async:** pytest-asyncio 0.23.1
-
-### Data Sources
-- **Open-Meteo:** API pública (implementada)
-- **SIATA:** Radar meteorológico Medellín
-- **IDEAM:** Datos Colombia
-- **MeteoBlue:** Pronósticos
+- **Meteosource**: 400 llamadas/día en plan gratuito
+- **OpenWeatherMap**: 1,000 llamadas/día en plan gratuito
+- **Open-Meteo**: Sin límite de llamadas
+- **IDEAM/SIATA**: Sin límite (datos públicos)
 
 ---
 
-## 📈 Verificación del Proyecto
+## 📖 Uso
 
-Para verificar la integridad del proyecto:
+### 🎨 Dashboard Streamlit (Recomendado)
+
+El dashboard interactivo ofrece la mejor experiencia visual:
 
 ```bash
-python verify_integrity.py
+streamlit run dashboard.py
 ```
 
-Resultado esperado:
+Características del dashboard:
+- 🏠 **Inicio**: Vista general con estadísticas y actividad reciente
+- ✅ **Verificación APIs**: Verifica el estado de todas las APIs en tiempo real
+- 📊 **Consultas Realizadas**: Visualiza y analiza consultas previas con gráficos interactivos
+- 🔍 **Nueva Consulta**: Realiza nuevas consultas con formularios intuitivos
+- 📁 **Datos por API**: Explora datos guardados organizados por fuente
+
+El dashboard se abrirá automáticamente en tu navegador en `http://localhost:8501`
+
+### Modo Interactivo (Terminal)
+
+Ejecuta el script principal:
+```bash
+python main.py
 ```
-✅ Estructura: 17/17
-✅ Imports: 6/6
-✅ Funcionalidad: 5/5
-✅ INTEGRIDAD: 100%
+
+El menú interactivo te permite:
+1. Consulta completa (todas las APIs)
+2. Consultar Meteoblue individual
+3. Consultar Open-Meteo pronóstico
+4. Consultar Open-Meteo histórico
+5. Consultar OpenWeatherMap
+6. Consultar Meteosource
+7. Consultar radares IDEAM
+8. Listar radares disponibles
+9. Descargar datos SIATA históricos
+10. Salir
+
+### Uso Programático
+
+```python
+from main import ClimAPIManager
+
+# Inicializar gestor
+manager = ClimAPIManager()
+
+# Consulta completa para Medellín
+manager.consulta_completa(
+    lat=6.245,
+    lon=-75.5715,
+    location_name="Medellín",
+    asl=1495
+)
+
+# Consulta específica Open-Meteo
+forecast = manager.consultar_openmeteo(6.245, -75.5715, "Medellín")
+
+# Consulta Meteosource (usa place_id)
+data = manager.consultar_meteosource("medellin", "Medellín")
+
+# Datos históricos
+manager.consultar_openmeteo_historico(
+    lat=6.245,
+    lon=-75.5715,
+    location_name="Medellín",
+    start_date="2024-12-01",
+    end_date="2024-12-13"
+)
+
+# Listar radares IDEAM
+manager.listar_radares_ideam()
+
+# Descargar datos SIATA
+manager.descargar_datos_siata(max_depth=2)
+```
+
+### Uso de Notebooks
+
+#### IDEAM Radar
+```bash
+jupyter notebook notebooks/API_IDEAM.ipynb
+```
+
+Incluye:
+- Exploración de radares disponibles
+- Descarga de datos de radar
+- Procesamiento básico de archivos
+- Visualización de cobertura
+
+#### SIATA Histórico
+```bash
+jupyter notebook notebooks/SIATA_Historico.ipynb
+```
+
+Incluye:
+- Web scraping de datos históricos
+- Organización por categorías
+- Análisis exploratorio de datos
+- Generación de resúmenes
+
+---
+
+## ⚠️ Posibles Fallas y Soluciones
+
+### 1. Error de Autenticación en Meteoblue
+
+**Error:**
+```
+HTTP 401 Unauthorized
+```
+
+**Causa:** API key o shared secret incorrecto/expirado
+
+**Solución:**
+- Verifica que las credenciales en `.env` sean correctas
+- Asegúrate de copiar el shared secret completo (sin espacios)
+- Verifica que tu cuenta Meteoblue esté activa
+- Revisa el límite de llamadas de tu plan
+
+### 2. Error de Rate Limiting (Too Many Requests)
+
+**Error:**
+```
+HTTP 429 Too Many Requests
+```
+
+**Causa:** Excediste el límite de llamadas a la API
+
+**Solución:**
+- Espera antes de realizar más consultas
+- Implementa delays entre llamadas: `time.sleep(1)`
+- Considera usar un plan de pago con más llamadas
+- Usa cache para evitar consultas repetidas
+
+### 3. Datos IDEAM No Disponibles
+
+**Error:**
+```
+⚠️  No se encontraron archivos para Radar en fecha
+```
+
+**Causa:** Los datos IDEAM tienen 24 horas de delay
+
+**Solución:**
+- Consulta datos de ayer o anteriores
+- Usa: `fecha = datetime.now() - timedelta(days=1)`
+- Verifica que el radar esté operativo
+- Intenta con diferentes fechas
+
+### 4. Error Meteosource Place ID Inválido
+
+**Error:**
+```
+HTTP 404 Not Found
+```
+
+**Causa:** Place ID no existe o está mal escrito
+
+**Solución:**
+- Usa nombres de ciudades en minúsculas sin acentos: `medellin`, `bogota`, `cali`
+- Verifica el place_id en la documentación de Meteosource
+- Prueba con variaciones: `medellin`, `medellín`, `medellin_co`
+- Usa coordenadas si el place_id no funciona
+
+### 5. Timeout en SIATA
+
+**Error:**
+```
+requests.exceptions.Timeout
+```
+
+**Causa:** Servidor SIATA lento o sobrecargado
+
+**Solución:**
+- Aumenta el timeout: `self.timeout = 60`
+- Reduce la profundidad de exploración: `max_depth=1`
+- Intenta en horarios de menor tráfico
+- Aumenta el delay entre peticiones: `self.delay = 2`
+
+### 5. Dependencias Faltantes
+
+**Error:**
+```
+ModuleNotFoundError: No module named 'xxx'
+```
+
+**Solución:**
+```bash
+pip install -r requirements.txt
+
+# Si faltan dependencias de radar
+pip install arm-pyart wradlib netCDF4 xarray
+```
+
+### 7. Permisos de Escritura
+
+**Error:**
+```
+PermissionError: [Errno 13] Permission denied
+```
+
+**Causa:** Sin permisos para escribir en directorios
+
+**Solución:**
+- Ejecuta con permisos adecuados
+- Verifica que los directorios `data/` y `logs/` tengan permisos de escritura
+```bash
+chmod -R 755 data logs
+```
+
+### 8. Encoding de Caracteres
+
+**Error:**
+```
+UnicodeDecodeError / UnicodeEncodeError
+```
+
+**Causa:** Problemas con caracteres especiales (acentos)
+
+**Solución:**
+- Usa `encoding='utf-8'` al abrir archivos
+- Asegúrate de que `.env` esté en UTF-8
+- En Windows, usa `chcp 65001` en CMD
+
+### 9. AWS S3 Access Denied
+
+**Error:**
+```
+botocore.exceptions.ClientError: Access Denied
+```
+
+**Causa:** Problemas con bucket IDEAM
+
+**Solución:**
+- Verifica que estés usando: `bucket_name = 's3-radaresideam'`
+- Usa configuración sin firma: `Config(signature_version=UNSIGNED)`
+- Verifica tu conexión a internet
+- Intenta con otra región: `region_name='us-east-1'`
+
+### 10. Pandas/NumPy Compatibility
+
+**Error:**
+```
+AttributeError: module 'pandas' has no attribute 'xxx'
+```
+
+**Causa:** Versiones incompatibles
+
+**Solución:**
+```bash
+pip install --upgrade pandas numpy
+pip install pandas==2.0.0 numpy==1.24.0
+```
+
+### 11. Memoria Insuficiente
+
+**Error:**
+```
+MemoryError
+```
+
+**Causa:** Procesamiento de archivos grandes de radar
+
+**Solución:**
+- Procesa archivos en lotes más pequeños
+- Limita el número de archivos: `limite=10`
+- Libera memoria: `del variable; gc.collect()`
+- Aumenta la memoria virtual del sistema
+
+---
+
+## 📊 Normalización de Datos
+
+### Objetivo
+
+Crear un esquema unificado para datos de diferentes fuentes, facilitando análisis comparativos y machine learning.
+
+### Paso 1: Organizar Datos por Tipo
+
+Crea la siguiente estructura en `data/normalized/`:
+
+```
+data/normalized/
+├── weather_current/          # Clima actual
+│   ├── meteoblue/
+│   ├── openmeteo/
+│   ├── openweather/
+│   └── meteosource/
+│
+├── weather_forecast/         # Pronósticos
+│   ├── meteoblue/
+│   ├── openmeteo/
+│   ├── openweather/
+│   └── meteosource/
+│
+├── weather_historical/       # Datos históricos
+│   ├── openmeteo/
+│   └── siata/
+│
+├── radar/                    # Datos de radar
+│   └── ideam/
+│
+└── air_quality/             # Calidad del aire
+    └── openweather/
+```
+
+**Comando:**
+```bash
+mkdir -p data/normalized/{weather_current,weather_forecast,weather_historical,radar,air_quality}/{meteoblue,openmeteo,openweather,meteosource,siata,ideam}
+```
+
+### Paso 2: Definir Esquema Común
+
+#### Esquema de Clima (weather_schema.json)
+
+```json
+{
+  "location": {
+    "name": "string",
+    "latitude": "float",
+    "longitude": "float",
+    "elevation": "int"
+  },
+  "timestamp": "ISO8601 datetime",
+  "source": "string (meteoblue|openmeteo|openweather)",
+  "data": {
+    "temperature": {
+      "value": "float (°C)",
+      "min": "float",
+      "max": "float"
+    },
+    "humidity": "float (%)",
+    "pressure": "float (hPa)",
+    "wind": {
+      "speed": "float (km/h)",
+      "direction": "int (degrees)",
+      "gust": "float (km/h)"
+    },
+    "precipitation": {
+      "amount": "float (mm)",
+      "probability": "float (%)"
+    },
+    "clouds": "float (%)",
+    "visibility": "float (km)"
+  }
+}
+```
+
+#### Esquema de Pronóstico (forecast_schema.json)
+
+```json
+{
+  "location": {...},
+  "generated_at": "ISO8601 datetime",
+  "source": "string",
+  "forecast": [
+    {
+      "datetime": "ISO8601 datetime",
+      "data": {...}  // Mismo esquema que weather
+    }
+  ]
+}
+```
+
+#### Esquema de Datos Históricos (historical_schema.json)
+
+Similar al forecast pero con:
+- `period`: {"start": "date", "end": "date"}
+- Más variables disponibles
+
+### Paso 3: Script de Normalización
+
+Crea `src/processors/data_normalizer.py`:
+
+```python
+import pandas as pd
+import json
+from pathlib import Path
+from datetime import datetime
+
+class DataNormalizer:
+    """Normaliza datos de diferentes fuentes"""
+    
+    def __init__(self):
+        self.schemas = self._load_schemas()
+        self.output_dir = Path("data/normalized")
+    
+    def normalize_meteoblue(self, data):
+        """Normaliza datos de Meteoblue"""
+        # Implementar transformación
+        pass
+    
+    def normalize_openmeteo(self, data):
+        """Normaliza datos de Open-Meteo"""
+        pass
+    
+    def normalize_openweather(self, data):
+        """Normaliza datos de OpenWeatherMap"""
+        pass
+    
+    def normalize_meteosource(self, data):
+        """Normaliza datos de Meteosource"""
+        pass
+    
+    def normalize_all(self):
+        """Normaliza todos los datos disponibles"""
+        pass
+```
+
+### Paso 4: Unidades Estandarizadas
+
+| Variable | Unidad Estándar | Conversiones Comunes |
+|----------|----------------|----------------------|
+| Temperatura | °C | F = (C × 9/5) + 32 |
+| Velocidad viento | km/h | m/s = km/h / 3.6 |
+| Presión | hPa | 1 hPa = 1 mbar |
+| Precipitación | mm | 1 inch = 25.4 mm |
+| Visibilidad | km | miles = km × 0.621 |
+
+### Paso 5: Limpieza de Datos
+
+#### Valores Faltantes
+
+```python
+# Estrategias por variable
+strategies = {
+    "temperature": "interpolate",  # Interpolar
+    "precipitation": "fill_zero",   # Llenar con 0
+    "wind_speed": "forward_fill",   # Propagar anterior
+    "humidity": "mean"              # Media del día
+}
+```
+
+#### Outliers
+
+```python
+# Límites razonables para Colombia
+limits = {
+    "temperature": (-10, 45),  # °C
+    "humidity": (0, 100),      # %
+    "wind_speed": (0, 200),    # km/h
+    "pressure": (800, 1100)    # hPa
+}
+```
+
+### Paso 6: Formato de Salida
+
+#### CSV (para análisis)
+
+```
+date,source,location,temperature,humidity,precipitation
+2024-12-13T12:00:00,openmeteo,Medellín,24.5,65,0.0
+```
+
+#### Parquet (para Big Data)
+
+```python
+df.to_parquet('data/normalized/weather_2024.parquet',
+              compression='snappy',
+              index=False)
+```
+
+#### HDF5 (para series temporales)
+
+```python
+df.to_hdf('data/normalized/weather.h5',
+          key='medellin',
+          mode='a')
+```
+
+### Paso 7: Script de Verificación
+
+Crea `scripts/verify_normalization.py`:
+
+```python
+def verify_normalized_data():
+    """Verifica integridad de datos normalizados"""
+    
+    checks = [
+        "check_schema_compliance",
+        "check_data_ranges",
+        "check_temporal_continuity",
+        "check_missing_values",
+        "check_duplicates"
+    ]
+    
+    for check in checks:
+        result = run_check(check)
+        print(f"{'✅' if result else '❌'} {check}")
+```
+
+### Paso 8: Documentación de Transformaciones
+
+Mantén un registro de transformaciones:
+
+```json
+{
+  "transformation_log": [
+    {
+      "date": "2024-12-13",
+      "source": "meteoblue",
+      "file": "forecast_medellin_20241213.json",
+      "transformations": [
+        "temperature: F to C conversion",
+        "wind_speed: mph to km/h",
+        "timestamp: localized to UTC"
+      ],
+      "records_processed": 168,
+      "records_valid": 165,
+      "records_dropped": 3
+    }
+  ]
+}
 ```
 
 ---
 
-## 📚 Documentación
+## 📝 Notas Finales
 
-Dentro del proyecto encontrarás:
+### Licencias de Datos
 
-| Archivo | Descripción |
-|---------|-------------|
-| **QUICKSTART.md** | Inicio rápido (2 minutos) |
-| **SUMMARY.md** | Resumen del trabajo realizado |
-| **ARCHITECTURE.md** | Diagrama de arquitectura |
-| **NEXT_STEPS.md** | Guía de próximas prioridades |
-| **INTEGRITY_REPORT.md** | Reporte de verificación |
-| **PROJECT_STATUS.json** | Estado actual en JSON |
+- **Meteoblue**: Comercial - Revisar términos de licencia
+- **Open-Meteo**: CC BY 4.0 - Atribución requerida
+- **OpenWeatherMap**: Revisar plan específico
+- **Meteosource**: Revisar términos del plan (gratuito/premium)
+- **IDEAM**: Datos públicos colombianos
+- **SIATA**: Datos públicos de Medellín
 
----
+### Buenas Prácticas
 
-## 🎯 Próximas Prioridades
+1. **Siempre usa `.gitignore`** para excluir:
+   - `.env` (credenciales)
+   - `data/` (archivos grandes)
+   - `.cache/` (cache de requests)
+   - `__pycache__/` (bytecode Python)
 
-1. **Endpoints REST** - Implementar rutas completas
-2. **Test Suite** - Escribir tests unitarios
-3. **Frontend Integration** - Conectar Next.js
-4. **Múltiples Fuentes** - SIATA, IDEAM, MeteoBlue
-5. **CI/CD** - GitHub Actions
+2. **Respeta rate limits** de las APIs
+3. **Documenta** tus transformaciones de datos
+4. **Valida** los datos antes de usarlos
+5. **Mantén logs** de operaciones importantes
 
----
+### Próximos Pasos
 
-## 🎯 Estado del Proyecto
-
-### ✅ Completado
-- Monorepo unificado con estructura clara
-- Backend API FastAPI funcional
-- Múltiples fuentes de datos meteorológicos integradas
-- Caché inteligente con TTL (15 minutos)
-- Dashboard Streamlit con 4 modos de visualización
-- Soporte para datos históricos (CSV) y tiempo real
-- Tests de integración completos
-- Documentación integral
-
-### 📊 Dashboard Integrado (NUEVO)
-El dashboard proporciona 4 modos complementarios:
-- **Tiempo Real**: Agregación de múltiples fuentes con status indicators
-- **Histórico**: Análisis de datos CSV con filtros temporales
-- **Comparativa**: Visualización lado a lado de fuentes
-- **Info**: Métricas del sistema y estado de cachés
-
-### 🔮 Próximas Mejoras
-- [ ] Frontend Next.js con integración completa
-- [ ] Base de datos persistente
-- [ ] Alertas de umbral meteorológico
-- [ ] Pronóstico extendido (7 días)
-- [ ] Autenticación y perfiles de usuario
-- [ ] Exportación a múltiples formatos
-- [ ] Despliegue en la nube (Azure, AWS, Heroku)
+1. Implementar procesamiento avanzado de radar
+2. Crear visualizaciones interactivas
+3. Desarrollar modelos de predicción
+4. Integrar más fuentes de datos
+5. Crear API REST para servir datos
 
 ---
-
-## 🤝 Contribuir
-
-Para contribuir al proyecto:
-
-1. Fork el repositorio
-2. Crea una rama (`git checkout -b feature/AmazingFeature`)
-3. Commit cambios (`git commit -m 'Add AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
----
-
-## 📝 Licencia
-
-Este proyecto está bajo licencia MIT.
-
----
-
-## 📞 Soporte
-
-- **Documentación:** Revisa los archivos `.md` en el proyecto
-- **Dashboard:** `python main.py dashboard`
-- **Issues:** Abre un issue en el repositorio
-- **Contacto:** gargamel@example.com
-
----
-
-**¡Gracias por usar ClimAPI! 🌤️**
-
-*Última actualización: 8 de diciembre de 2025 | v1.0.0 - INTEGRACIÓN COMPLETA*
 
 ## 🤝 Contribuciones
 
-Este proyecto está diseñado para ser un punto de partida. Siéntete libre de:
-- Agregar nuevas fuentes de datos
-- Mejorar las visualizaciones
-- Agregar análisis estadísticos
-- Implementar alertas meteorológicas
+Para contribuir al proyecto:
 
-## 📄 Licencia
+1. Fork del repositorio
+2. Crea una rama: `git checkout -b feature/nueva-funcionalidad`
+3. Commit cambios: `git commit -am 'Agrega nueva funcionalidad'`
+4. Push a la rama: `git push origin feature/nueva-funcionalidad`
+5. Crea un Pull Request
 
-Este proyecto es de código abierto y está disponible para uso educativo y personal.
+---
 
+## 📧 Contacto
+
+Para preguntas o sugerencias sobre CLIMAPI.
+
+---
+
+**Última actualización**: Diciembre 2025
+**Versión**: 1.0.0

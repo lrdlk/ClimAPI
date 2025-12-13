@@ -1,259 +1,216 @@
-# 📊 Guía Rápida del Dashboard
+# 🎨 CLIMAPI Dashboard - Guía de Uso Rápido
 
-## 🚀 Inicio Inmediato
+## 🚀 Inicio Rápido
 
+### 1. Instalar dependencias
 ```bash
-python main.py dashboard
+pip install streamlit streamlit-option-menu
 ```
 
-Esto abrirá automáticamente el dashboard en: **http://localhost:8501**
+### 2. Ejecutar el dashboard
+```bash
+streamlit run dashboard.py
+```
+
+El dashboard se abrirá automáticamente en `http://localhost:8501`
 
 ---
 
-## 📑 Modos del Dashboard
+## 📋 Funcionalidades
 
-### 1. 📊 Tiempo Real
-**Para ver datos meteorológicos en vivo**
+### 🏠 Página de Inicio
+- Vista general del sistema
+- Estadísticas de consultas realizadas
+- Gráfico de actividad reciente
+- Contador de datos por API
 
-- Selecciona una ubicación del dropdown (Medellín, Bogotá, Cali, etc.)
-- Visualiza datos de múltiples fuentes:
-  - Open-Meteo (siempre disponible)
-  - SIATA Medellín (para Medellín)
-  - OpenWeatherMap (si tienes API key)
-  - MeteoBlue (si tienes API key)
-  - Radar IDEAM (si tienes acceso)
+### ✅ Verificación de APIs
+- **Verifica todas las APIs con un solo clic**
+- Endpoints de prueba en tiempo real:
+  - ☁️ Meteoblue
+  - 🌐 Open-Meteo
+  - 🌤️ OpenWeatherMap
+  - 🌦️ Meteosource
+  - 📡 IDEAM Radar (AWS)
+  - 🌐 SIATA
 
-**Características:**
-- Status indicators para cada fuente
-- Gráficos interactivos con Plotly
-- Estadísticas agregadas
-- Datos actualizados cada 15 minutos (caché TTL)
+- Muestra estado de configuración
+- Detecta errores comunes (401, 429, timeout)
+
+### 📊 Consultas Realizadas
+- Lista de todas las consultas previas
+- Selector interactivo por fecha y ubicación
+- Pestañas por fuente de datos
+- Visualizaciones automáticas:
+  - Gráficos de temperatura
+  - Tablas de datos
+  - Métricas destacadas
+
+### 🔍 Nueva Consulta
+- **Formulario intuitivo** para consultas
+- Ubicaciones predefinidas de Colombia:
+  - Medellín
+  - Bogotá
+  - Cartagena
+  - Cali
+  - Barranquilla
+  - Personalizado (coordenadas manuales)
+
+- Tipos de consulta:
+  - Completa (todas las APIs)
+  - Individual por API
+
+- Los datos se guardan automáticamente en `data/`
+
+### 📁 Datos por API
+- Explorador de datos por fuente
+- Visualización de archivos guardados
+- Previsualización de datos:
+  - JSON para Meteoblue, OpenWeather, Meteosource
+  - DataFrames para Open-Meteo (CSV)
+- Muestra hasta 10 archivos más recientes
 
 ---
 
-### 2. 📈 Datos Históricos
-**Para analizar datos pasados desde archivos CSV**
+## 🎯 Casos de Uso
 
-- Selecciona un archivo CSV del dropdown
-- Filtra por rango de fechas
-- Visualiza 4 tipos de gráficos:
-  - 🌡️ Temperatura (mín/máx/promedio)
-  - 💧 Humedad relativa
-  - 🌧️ Precipitación
-  - 💨 Velocidad del viento
+### Verificar Estado de las APIs
+1. Ve a "✅ Verificación APIs"
+2. Clic en "🔄 Verificar Todas las APIs"
+3. Espera los resultados en tiempo real
+4. Revisa si hay errores de configuración
 
-**Características:**
-- Estadísticas descriptivas (media, desv. est., cuartiles)
-- Exporta datos filtrados a CSV
-- Filtros interactivos de fechas
+### Realizar una Nueva Consulta
+1. Ve a "🔍 Nueva Consulta"
+2. Selecciona una ubicación (o ingresa coordenadas)
+3. Elige el tipo de consulta
+4. Clic en "🚀 Realizar Consulta"
+5. Espera la confirmación
+6. Los datos se guardan automáticamente
 
----
+### Visualizar Consultas Previas
+1. Ve a "📊 Consultas Realizadas"
+2. Selecciona una consulta del dropdown
+3. Navega por las pestañas de cada API
+4. Visualiza gráficos y tablas interactivas
 
-### 3. 📋 Comparativa
-**Para comparar fuentes de datos lado a lado**
-
-- Selecciona una ubicación
-- Visualiza cómo diferentes fuentes reportan el mismo dato
-- Identifica inconsistencias o diferencias
-- Útil para validar datos
-
-**Información mostrada:**
-- Temperatura por fuente
-- Humedad por fuente
-- Diferencias entre fuentes
-- Tiempo de respuesta de cada una
-
----
-
-### 4. ℹ️ Información
-**Para ver métricas del sistema**
-
-- **Cache Manager Stats**: Información sobre cachés activos
-  - Ubicaciones en caché
-  - Tamaño total
-  - TTL configurado
-  
-- **Aggregator Status**: Estado de fuentes conectadas
-  - Fuentes disponibles
-  - Errores recientes
-  
-- **Data Viewer**: Visor JSON de datos raw
-  - Inspecciona estructura de datos
-  - Verifica tipos de campos
-  - Debug de problemas
+### Explorar Datos Guardados
+1. Ve a "📁 Datos por API"
+2. Selecciona la API de interés
+3. Explora los archivos disponibles
+4. Expande para ver detalles
 
 ---
 
 ## ⚙️ Configuración
 
-### Ubicaciones Disponibles
-Por defecto: **Medellín, Bogotá, Cali**
+### Variables de Entorno Requeridas
 
-Puedes agregar más editando la variable `LOCATIONS` en `dashboard/app.py`:
+El dashboard lee automáticamente del archivo `.env`:
 
+```env
+METEOBLUE_API_KEY=tu_api_key
+METEOBLUE_SHARED_SECRET=tu_shared_secret
+OPENWEATHER_API_KEY=tu_api_key
+METEOSOURCE_API_KEY=tu_api_key
+```
+
+### APIs sin Configuración
+- **Open-Meteo**: Funciona sin API key
+- **IDEAM**: Acceso público a AWS
+- **SIATA**: Datos públicos
+
+---
+
+## 🐛 Solución de Problemas
+
+### Error: "No module named 'streamlit'"
+```bash
+pip install streamlit
+```
+
+### Error: "Port 8501 is already in use"
+```bash
+streamlit run dashboard.py --server.port 8502
+```
+
+### Error: "ModuleNotFoundError: No module named 'main'"
+Asegúrate de ejecutar el dashboard desde el directorio raíz del proyecto:
+```bash
+cd ClimApi
+streamlit run dashboard.py
+```
+
+### Las APIs no responden
+1. Verifica tu conexión a internet
+2. Revisa el archivo `.env` con las API keys correctas
+3. Usa la página "✅ Verificación APIs" para diagnosticar
+
+### No se muestran consultas previas
+- Realiza al menos una consulta primero
+- Verifica que exista el directorio `data/`
+- Revisa que haya archivos `.json` en `data/`
+
+---
+
+## 📊 Capturas de Pantalla
+
+### Página de Inicio
+- Métricas: Total de consultas por API
+- Gráfico: Histograma de consultas por fecha
+- Tarjetas: Resumen de ubicaciones
+
+### Verificación de APIs
+- Estado visual: ✅ (OK), ❌ (Error), ⚠️ (Advertencia)
+- Mensajes descriptivos de error
+- Información de configuración
+
+### Consultas Realizadas
+- Selector de consultas con fecha y ubicación
+- Métricas: Ubicación, Coordenadas, Altitud
+- Pestañas por fuente de datos
+- Gráficos interactivos de Plotly
+
+---
+
+## 🎨 Personalización
+
+### Cambiar el Puerto
+```bash
+streamlit run dashboard.py --server.port 8080
+```
+
+### Modo Oscuro
+En el dashboard, menú superior derecho → Settings → Theme → Dark
+
+### Ocultar Menú de Streamlit
+Edita `dashboard.py` y agrega en `st.set_page_config()`:
 ```python
-LOCATIONS = {
-    "Medellín": {"lat": 6.2476, "lon": -75.5679},
-    "Bogotá": {"lat": 4.7110, "lon": -74.0721},
-    "Cali": {"lat": 3.4372, "lon": -76.5069},
-    # Agrega más aquí
+menu_items={
+    'Get Help': None,
+    'Report a bug': None,
+    'About': "CLIMAPI Dashboard v1.0"
 }
 ```
 
-### API Keys (Opcional)
-Para activar más fuentes de datos, agrega variables de entorno:
+---
 
-```bash
-# Bash/Zsh
-export OPENWEATHERMAP_API_KEY="tu_key_aqui"
-export METEOBLUE_API_KEY="tu_key_aqui"
+## 🔗 Enlaces Útiles
 
-# PowerShell
-$env:OPENWEATHERMAP_API_KEY = "tu_key_aqui"
-$env:METEOBLUE_API_KEY = "tu_key_aqui"
-```
+- **Documentación Streamlit**: https://docs.streamlit.io
+- **Plotly Gráficos**: https://plotly.com/python/
+- **CLIMAPI GitHub**: [Tu repositorio]
 
 ---
 
-## 📁 Archivos Históricos (CSV)
+## 📝 Notas
 
-El dashboard busca archivos CSV en la carpeta `data/`:
-
-```
-data/
-├── weather_medellin_20251208_033340.csv
-├── weather_bogota_20251208_033341.csv
-├── weather_cali_20251208_033342.csv
-└── weather_data.csv
-```
-
-**Formato esperado:**
-```
-timestamp,temperature,humidity,precipitation,wind_speed
-2025-12-08 10:00:00,22.5,65.3,0.0,3.2
-2025-12-08 11:00:00,23.1,62.1,0.0,3.5
-```
+- El dashboard NO modifica archivos en `src/`
+- Todas las consultas se guardan en `data/`
+- Los logs se generan automáticamente
+- Cache de Streamlit: Los datos se actualizan al recargar
 
 ---
 
-## 🔧 Combinaciones de Ejecución
-
-### Solo Dashboard
-```bash
-python main.py dashboard
-```
-
-### API + Dashboard (en paralelo)
-```bash
-# Terminal 1
-python main.py api
-
-# Terminal 2
-python main.py dashboard
-```
-
-Dashboard + API = Mayor funcionalidad:
-- Dashboard consume datos de la API
-- API cacheador centralizado
-- Mejor rendimiento en múltiples requests
-
-### Ejecutar Tests del Dashboard
-```bash
-python dashboard/test_integration.py
-```
-
----
-
-## 📊 Uso Práctico
-
-### Monitoreo Meteorológico
-1. Abre modo "Tiempo Real"
-2. Selecciona tu ubicación
-3. Observa métricas en vivo
-4. Cambia la ubicación para comparar
-
-### Análisis Histórico
-1. Abre modo "Datos Históricos"
-2. Selecciona un archivo CSV
-3. Filtra por período
-4. Exporta datos de interés
-
-### Validación de Datos
-1. Abre modo "Comparativa"
-2. Compara múltiples fuentes
-3. Identifica anomalías
-4. Documenta discrepancias
-
-### Debugging
-1. Abre modo "Información"
-2. Verifica Cache Manager Stats
-3. Inspecciona JSON raw
-4. Confirma fuentes activas
-
----
-
-## 🐛 Troubleshooting
-
-### Dashboard no abre
-```bash
-# Reinstala Streamlit
-pip install streamlit==1.31.1 --force-reinstall
-
-# O ejecuta el diagnóstico
-python main.py help
-```
-
-### Datos no se cargan en Tiempo Real
-1. Verifica conexión a internet
-2. Abre modo "Información" → Aggregator Status
-3. Revisa si Open-Meteo está disponible
-4. Comprueba si hay errores en logs
-
-### CSV no aparece en dropdown
-1. Verifica que archivos están en `data/`
-2. Confirma que tienen extension `.csv`
-3. Revisa que Streamlit tiene permisos de lectura
-4. Recarga la página (Ctrl+F5)
-
-### Rendimiento lento
-1. El caché está rellenando (espera 30 segundos)
-2. Reduce número de ubicaciones
-3. Cierra pestaña "Información" si la inspección es lenta
-4. Verifica recursos del sistema (CPU, RAM)
-
----
-
-## 💡 Tips & Tricks
-
-- **Atajos Streamlit**: 
-  - `C` = Borrar caché
-  - `R` = Recargar
-  - `Ctrl+M` = Temas
-
-- **Mejor visualización**: Usa el modo "wide" (arriba-derecha)
-
-- **CSV personalizado**: Coloca tu archivo en `data/` y recarga
-
-- **Comparativas rápidas**: Modo "Comparativa" es más rápido que cambiar ubicación
-
-- **JSON viewer**: Perfecto para debugging de estructuras de datos
-
----
-
-## 📚 Archivos Relacionados
-
-- **Main logic**: `dashboard/app.py`
-- **Configuration**: `dashboard/.streamlit/config.toml`
-- **Tests**: `dashboard/test_integration.py`
-- **Backend API**: `backend/app/main.py`
-- **Aggregator**: `backend/app/services/aggregator.py`
-- **Cache Manager**: `backend/app/services/cache_manager.py`
-
----
-
-**¡Disfruta del Dashboard! 🌤️**
-
-Para más detalles técnicos, consulta:
-- `dashboard/README.md` - Documentación técnica completa
-- `INTEGRATION_STATUS.md` - Estado de integración
-- `ARCHITECTURE.md` - Arquitectura del proyecto
+**Versión**: 1.0.0  
+**Última actualización**: Diciembre 2025

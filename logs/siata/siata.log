@@ -1,0 +1,96 @@
+[2025-12-13 01:11:12] [INFO] ============================================================
+[2025-12-13 01:11:12] [INFO] 🚀 SIATA DATA DOWNLOADER
+[2025-12-13 01:11:12] [INFO] ============================================================
+[2025-12-13 01:11:12] [INFO] 📁 Creando estructura de directorios...
+[2025-12-13 01:11:12] [SUCCESS] ✓ Estructura creada
+[2025-12-13 01:11:12] [INFO] 📥 Descargando: https://www.siata.gov.co/operacional/Meteorologia/
+[2025-12-13 01:11:13] [SUCCESS] ✓ Página obtenida (5262 bytes)
+[2025-12-13 01:11:13] [INFO] 🔍 Descubriendo archivos de datos...
+[2025-12-13 01:11:13] [SUCCESS] ✓ 0 archivos encontrados
+[2025-12-13 01:11:13] [INFO] 
+📥 Descargando archivos...
+[2025-12-13 01:11:13] [INFO] 
+📂 Organizando archivos...
+[2025-12-13 01:11:13] [SUCCESS] ✓ Total: 0 archivos (0.00 MB)
+[2025-12-13 01:11:13] [INFO] 
+📊 Analizando archivos...
+[2025-12-13 01:11:13] [SUCCESS] ✓ Analizados: 0/0 (0.0%)
+[2025-12-13 01:11:13] [INFO] 
+╔══════════════════════════════════════════════════════════╗
+║          REPORTE FINAL - SIATA DATA DOWNLOADER          ║
+╚══════════════════════════════════════════════════════════╝
+
+📅 Fecha: 2025-12-13 01:11:13
+
+📁 ALMACENAMIENTO:
+   - Directorio: data\siata_historico
+   - Logs: logs\siata
+
+📊 ESTADÍSTICAS:
+   - Total de archivos: 0
+   - Tamaño total: 0.00 MB
+
+   Por tipo:
+
+📈 ANÁLISIS:
+   - Archivos analizados: 0
+   - Parseables: 0
+   - Tasa éxito: 0.0%
+
+🎯 PRÓXIMOS PASOS:
+   1. Revisar logs: cat logs\siata/siata.log
+   2. Explorar datos: ls -la data\siata_historico/
+   3. Analizar en Python/Jupyter
+   4. Visualizar con matplotlib, seaborn, plotly
+
+═══════════════════════════════════════════════════════════
+
+[2025-12-13 01:11:13] [SUCCESS] ✅ Proceso completado correctamente
+[2025-12-13 01:11:41] [INFO] ============================================================
+[2025-12-13 01:11:41] [INFO] 🚀 SIATA DATA DOWNLOADER
+[2025-12-13 01:11:41] [INFO] ============================================================
+[2025-12-13 01:11:41] [INFO] 📁 Creando estructura de directorios...
+[2025-12-13 01:11:41] [SUCCESS] ✓ Estructura creada
+[2025-12-13 01:11:41] [INFO] 📥 Descargando: https://www.siata.gov.co/operacional/Meteorologia/
+[2025-12-13 01:11:42] [SUCCESS] ✓ Página obtenida (5262 bytes)
+[2025-12-13 01:11:42] [INFO] 🔍 Descubriendo archivos de datos...
+[2025-12-13 01:11:42] [SUCCESS] ✓ 0 archivos encontrados
+[2025-12-13 01:11:42] [INFO] 
+📥 Descargando archivos...
+[2025-12-13 01:11:42] [INFO] 
+📂 Organizando archivos...
+[2025-12-13 01:11:42] [SUCCESS] ✓ Total: 0 archivos (0.00 MB)
+[2025-12-13 01:11:42] [INFO] 
+📊 Analizando archivos...
+[2025-12-13 01:11:42] [SUCCESS] ✓ Analizados: 0/0 (0.0%)
+[2025-12-13 01:11:42] [INFO] 
+╔══════════════════════════════════════════════════════════╗
+║          REPORTE FINAL - SIATA DATA DOWNLOADER          ║
+╚══════════════════════════════════════════════════════════╝
+
+📅 Fecha: 2025-12-13 01:11:42
+
+📁 ALMACENAMIENTO:
+   - Directorio: data\siata_historico
+   - Logs: logs\siata
+
+📊 ESTADÍSTICAS:
+   - Total de archivos: 0
+   - Tamaño total: 0.00 MB
+
+   Por tipo:
+
+📈 ANÁLISIS:
+   - Archivos analizados: 0
+   - Parseables: 0
+   - Tasa éxito: 0.0%
+
+🎯 PRÓXIMOS PASOS:
+   1. Revisar logs: cat logs\siata/siata.log
+   2. Explorar datos: ls -la data\siata_historico/
+   3. Analizar en Python/Jupyter
+   4. Visualizar con matplotlib, seaborn, plotly
+
+═══════════════════════════════════════════════════════════
+
+[2025-12-13 01:11:42] [SUCCESS] ✅ Proceso completado correctamente
