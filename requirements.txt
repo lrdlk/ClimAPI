@@ -21,6 +21,7 @@ scipy
 
 # Machine Learning
 scikit-learn
+jupyter
 
 # AWS y datos de radar
 boto3
@@ -30,13 +31,12 @@ botocore
 Pillow
 
 # Procesamiento de datos de radar (opcional pero recomendado)
-# Instalar con: pip install arm-pyart
-# arm-pyart
+arm-pyart
 
 # Alternativas para procesamiento de radar
-# wradlib
-# netCDF4
-# xarray
+wradlib
+netCDF4
+xarray
 
 # Visualizaciones interactivas
 plotly
@@ -48,3 +48,4 @@ tqdm
 # Dashboard
 streamlit
 streamlit-option-menu
+

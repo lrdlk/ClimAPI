@@ -2,7 +2,6 @@
 Script para descargar datos de radares meteorológicos IDEAM desde AWS Open Data
 Guarda datos en data/Radar_IDEAM y logs en logs/ideam
 """
-
 import os
 import boto3
 import gzip
