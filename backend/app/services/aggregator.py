@@ -117,6 +117,7 @@ class WeatherAggregator:
                     tasks.append(self._fetch_openweather(latitude, longitude, timeout))
                 elif name == "meteoblue":
                     tasks.append(self._fetch_meteoblue(latitude, longitude, timeout))
+                    tasks.append(self._fetch_meteoblue_meteogram(latitude, longitude, timeout))
                 elif name == "radar_ideam":
                     tasks.append(self._fetch_radar_ideam(latitude, longitude, timeout))
         
@@ -239,44 +240,62 @@ class WeatherAggregator:
         longitude: float,
         timeout: int
     ) -> Dict[str, Any]:
-        """Obtiene datos de MeteoBlue."""
+        """Obtiene datos del paquete basic-day_clouds-day_sunmoon de MeteoBlue."""
         try:
             if not self.meteoblue_api_key:
                 return {"error": "API key de MeteoBlue no configurada"}
-            
-            import httpx
-            
-            params = {
-                "apikey": self.meteoblue_api_key,
-                "lat": latitude,
-                "lon": longitude,
-                "asl": 700,
-                "timeformat": "unixtime"
+            # Usar la clase de data_sources para mantener consistencia
+            from data_sources.meteoblue import MeteoBlueSource
+            src = MeteoBlueSource(api_key=self.meteoblue_api_key)
+            res = src.get_basic_day_clouds_sunmoon(latitude=latitude, longitude=longitude, asl=700)
+            logger.info(f"✓ Paquete MeteoBlue (basic-day_clouds-day_sunmoon) obtenido")
+            return {
+                "data": res.get("data"),
+                "timestamp": res.get("timestamp", datetime.utcnow().isoformat()),
+                "cached": False
             }
-            
-            async with httpx.AsyncClient(timeout=timeout) as client:
-                response = await client.get(
-                    "https://api.meteoblue.com/v1/current",
-                    params=params
-                )
-                response.raise_for_status()
-                data = response.json()
-                
-                logger.info(f"✓ Datos obtenidos de MeteoBlue para ({latitude}, {longitude})")
-                return {
-                    "data": {
-                        "temperature": data["data"]["temperature"],
-                        "humidity": data["data"]["relativehumidity"],
-                        "wind_speed": data["data"]["windspeed"],
-                        "wind_direction": data["data"]["winddirection"],
-                        "precipitation": data["data"].get("precipitation", 0),
-                        "weather": data["data"].get("weathercode", "")
-                    },
-                    "timestamp": datetime.utcnow().isoformat(),
-                    "cached": False
-                }
         except Exception as e:
             logger.error(f"Error MeteoBlue: {str(e)}")
+            return {"error": str(e)}
+
+    async def _fetch_meteoblue_meteogram(
+        self,
+        latitude: float,
+        longitude: float,
+        timeout: int
+    ) -> Dict[str, Any]:
+        """Descarga el meteograma y lo guarda en data/meteogram_medellin.png."""
+        try:
+            if not self.meteoblue_api_key:
+                return {"error": "API key de MeteoBlue no configurada"}
+
+            from data_sources.meteoblue import MeteoBlueSource
+            import os
+            save_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "data", "meteogram_medellin.png")
+
+            src = MeteoBlueSource(api_key=self.meteoblue_api_key)
+            res = src.get_meteogram_image(
+                latitude=latitude,
+                longitude=longitude,
+                asl=700,
+                location_name="Medellín",
+                tz="America/Bogota",
+                dpi=72,
+                lang="en",
+                temperature_units="C",
+                precipitation_units="mm",
+                windspeed_units="kmh",
+                format="png",
+                save_path=save_path,
+            )
+            logger.info(f"✓ Meteograma guardado en {save_path}")
+            return {
+                "data": {"meteogram_path": save_path, "saved": res.get("saved", False)},
+                "timestamp": res.get("timestamp", datetime.utcnow().isoformat()),
+                "cached": False
+            }
+        except Exception as e:
+            logger.warning(f"Meteograma no disponible: {str(e)}")
             return {"error": str(e)}
     
     async def _fetch_radar_ideam(

@@ -8,7 +8,31 @@ de alta calidad con diferentes formatos (JSON, Protobuf).
 from typing import Dict, Any, Optional
 import logging
 from datetime import datetime
-from .base_source import BaseWeatherSource
+try:
+    from .base_source import BaseWeatherSource
+except Exception:
+    import requests
+
+    class BaseWeatherSource:
+        def __init__(self, name: str, base_url: str, api_key: str, timeout: int, max_retries: int):
+            self.name = name
+            self.base_url = base_url.rstrip("/")
+            self.api_key = api_key
+            self.timeout = timeout
+            self.max_retries = max_retries
+
+        def _make_request(self, endpoint: str, params: Optional[Dict[str, Any]] = None):
+            url = endpoint if endpoint.startswith("http") else f"{self.base_url}/{endpoint.lstrip('/')}"
+            session = requests.Session()
+            for attempt in range(self.max_retries):
+                try:
+                    resp = session.get(url, params=params or {}, timeout=self.timeout)
+                    resp.raise_for_status()
+                    return resp
+                except Exception as e:
+                    if attempt == self.max_retries - 1:
+                        raise
+                    continue
 
 logger = logging.getLogger(__name__)
 
@@ -160,6 +184,115 @@ class MeteoBlueSource(BaseWeatherSource):
 
         except Exception as e:
             logger.error(f"Error al obtener pronóstico: {e}")
+            raise
+
+    def get_basic_day_clouds_sunmoon(
+        self,
+        latitude: float,
+        longitude: float,
+        asl: int = 0,
+        format: str = "json",
+    ) -> Dict[str, Any]:
+        """
+        Obtiene el paquete combinado basic-day_clouds-day_sunmoon de MeteoBlue.
+
+        Args:
+            latitude: Latitud
+            longitude: Longitud
+            asl: Altitud sobre el nivel del mar (metros)
+            format: Formato de respuesta (json)
+
+        Returns:
+            Dict con datos crudos y metadatos.
+        """
+        logger.info(
+            f"Obteniendo paquete basic-day_clouds-day_sunmoon para ({latitude}, {longitude})"
+        )
+
+        endpoint = (
+            f"basic-day_clouds-day_sunmoon?apikey={self.api_key}"
+            f"&lat={latitude}&lon={longitude}&asl={asl}&format={format}"
+        )
+
+        try:
+            response = self._make_request(endpoint, params={})
+            data = response.json()
+
+            return {
+                "source": self.name,
+                "timestamp": datetime.now().isoformat(),
+                "location": {"lat": latitude, "lon": longitude, "asl": asl},
+                "data": data,
+                "raw_data": data,
+            }
+        except Exception as e:
+            logger.error(f"Error al obtener paquete basic-day_clouds-day_sunmoon: {e}")
+            raise
+
+    def get_meteogram_image(
+        self,
+        latitude: float,
+        longitude: float,
+        asl: int,
+        location_name: str,
+        tz: str = "America/Bogota",
+        dpi: int = 72,
+        lang: str = "en",
+        temperature_units: str = "C",
+        precipitation_units: str = "mm",
+        windspeed_units: str = "kmh",
+        format: str = "png",
+        save_path: Optional[str] = None,
+    ) -> Dict[str, Any]:
+        """
+        Obtiene la imagen de meteograma (meteogram_one) y opcionalmente la guarda.
+
+        Returns:
+            Dict con bytes de imagen y metadatos. Si save_path se proporciona,
+            también escribe el archivo en disco.
+        """
+        logger.info(
+            f"Obteniendo imagen meteogram_one para ({latitude}, {longitude})"
+        )
+
+        # Este endpoint está bajo /images
+        images_base = self.base_url.replace("/packages", "/images")
+        endpoint = (
+            f"{images_base}/meteogram_one?lat={latitude}&lon={longitude}&asl={asl}"
+            f"&tz={tz}&apikey={self.api_key}&format={format}&dpi={dpi}&lang={lang}"
+            f"&temperature_units={temperature_units}&precipitation_units={precipitation_units}"
+            f"&windspeed_units={windspeed_units}&location_name={location_name}"
+        )
+
+        try:
+            # _make_request espera endpoint relativo a base_url; para imagen usamos URL completo
+            response = self._make_request(endpoint, params={})
+            content = response.content
+
+            if save_path:
+                try:
+                    import os
+                    os.makedirs(os.path.dirname(save_path), exist_ok=True)
+                    with open(save_path, "wb") as f:
+                        f.write(content)
+                    saved = True
+                except Exception as file_err:
+                    logger.warning(f"No se pudo guardar imagen en {save_path}: {file_err}")
+                    saved = False
+            else:
+                saved = False
+
+            return {
+                "source": self.name,
+                "timestamp": datetime.now().isoformat(),
+                "location": {"lat": latitude, "lon": longitude, "asl": asl},
+                "format": format,
+                "bytes": content,
+                "saved": saved,
+                "save_path": save_path,
+            }
+        except Exception as e:
+            logger.error(f"Error al obtener meteograma: {e}")
             raise
 
 

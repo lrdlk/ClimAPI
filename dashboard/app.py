@@ -437,6 +437,18 @@ def show_realtime_dashboard(latitude: float, longitude: float, location_name: st
         fig.update_layout(title="Disponibilidad de Datos")
         st.plotly_chart(fig, use_container_width=True)
 
+    # Meteograma (si disponible)
+    st.divider()
+    st.subheader("🖼️ Meteograma (MeteoBlue)")
+    try:
+        meteogram_path = Path("data/meteogram_medellin.png")
+        if meteogram_path.exists():
+            st.image(str(meteogram_path), caption="Meteograma - Medellín", use_column_width=True)
+        else:
+            st.info("No se encontró el meteograma en data/meteogram_medellin.png. Asegúrate de tener METEOBLUE_API_KEY configurada y actualizar datos.")
+    except Exception as e:
+        st.warning(f"No fue posible mostrar el meteograma: {e}")
+
 
 def show_historical_dashboard(data_file: str):
     """Muestra dashboard con datos históricos de CSV."""
