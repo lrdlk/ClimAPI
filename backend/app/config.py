@@ -31,9 +31,12 @@ class Settings(BaseSettings):
     # CORS - Soporta string separado por comas o lista
     ALLOWED_ORIGINS: Union[str, List[str]] = "http://localhost:3000,http://localhost:3001"
     
-    # Logging
+    # Logging & Tracing
     LOG_LEVEL: str = "INFO"
     DEBUG_MODE: bool = False
+    ENABLE_TRACING: bool = True
+    STRUCTURED_LOGS: bool = False
+    LOG_FILE: str = "logs/climapi.log"
     
     # Cache
     CACHE_TTL_MINUTES: int = 15

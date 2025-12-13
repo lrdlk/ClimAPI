@@ -4,20 +4,35 @@ Endpoints para datos meteorológicos con múltiples fuentes.
 """
 
 import logging
-from fastapi import FastAPI, HTTPException
+from pathlib import Path
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional, List
+import time
 
 # Importar configuración
 from .config import settings
 
-# Configurar logging
-logging.basicConfig(
-    level=getattr(logging, settings.LOG_LEVEL),
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+# Importar utilidades de logging y tracing
+from .utils.logger import (
+    setup_logging, 
+    get_logger, 
+    get_tracer, 
+    get_metrics_collector,
+    trace_id_var
 )
-logger = logging.getLogger(__name__)
+
+# Configurar logging con tracing
+log_file = Path(settings.LOG_FILE) if hasattr(settings, 'LOG_FILE') else None
+setup_logging(
+    level=settings.LOG_LEVEL,
+    log_file=log_file,
+    structured=getattr(settings, 'STRUCTURED_LOGS', False)
+)
+logger = get_logger(__name__)
+tracer = get_tracer("climapi")
+metrics = get_metrics_collector()
 
 # Crear app FastAPI
 app = FastAPI(
@@ -40,6 +55,65 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Add tracing middleware
+@app.middleware("http")
+async def trace_requests(request: Request, call_next):
+    """Middleware to trace all HTTP requests."""
+    import uuid
+    
+    # Generate or extract trace ID
+    trace_id = request.headers.get("X-Trace-ID", str(uuid.uuid4()))
+    trace_id_var.set(trace_id)
+    
+    # Record request start
+    start_time = time.time()
+    logger.info(f"→ {request.method} {request.url.path}", extra={
+        'extra_fields': {
+            'method': request.method,
+            'path': request.url.path,
+            'trace_id': trace_id
+        }
+    })
+    
+    # Process request
+    try:
+        response = await call_next(request)
+        duration = time.time() - start_time
+        
+        # Record metrics
+        metrics.record("http_request_duration", duration, {
+            'method': request.method,
+            'path': request.url.path,
+            'status': str(response.status_code)
+        })
+        
+        # Log response
+        logger.info(f"✓ {request.method} {request.url.path} - {response.status_code} ({duration:.3f}s)", extra={
+            'extra_fields': {
+                'method': request.method,
+                'path': request.url.path,
+                'status_code': response.status_code,
+                'duration': duration,
+                'trace_id': trace_id
+            }
+        })
+        
+        # Add trace ID to response headers
+        response.headers["X-Trace-ID"] = trace_id
+        return response
+    except Exception as e:
+        duration = time.time() - start_time
+        logger.error(f"✗ {request.method} {request.url.path} failed ({duration:.3f}s): {str(e)}", extra={
+            'extra_fields': {
+                'method': request.method,
+                'path': request.url.path,
+                'duration': duration,
+                'error': str(e),
+                'trace_id': trace_id
+            }
+        })
+        raise
 
 # Rutas básicas
 @app.get("/")

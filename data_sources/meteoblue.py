@@ -9,6 +9,7 @@ from typing import Dict, Any, Optional
 import logging
 from datetime import datetime
 from .base_source import BaseWeatherSource
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -160,6 +161,51 @@ class MeteoBlueSource(BaseWeatherSource):
 
         except Exception as e:
             logger.error(f"Error al obtener pronóstico: {e}")
+            raise
+
+    def get_meteogram_image(
+        self,
+        latitude: float,
+        longitude: float,
+        tz: str = "America/Bogota",
+        location_name: Optional[str] = None,
+        dpi: int = 72,
+        lang: str = "en",
+        temperature_units: str = "C",
+        precipitation_units: str = "mm",
+        windspeed_units: str = "kmh",
+        format: str = "png",
+    ) -> bytes:
+        """
+        Descarga la imagen de meteograma de MeteoBlue.
+
+        Returns:
+            bytes: contenido binario de la imagen.
+        """
+        logger.info(
+            f"Descargando meteograma para ({latitude}, {longitude}) en {tz}"
+        )
+
+        images_base = "https://my.meteoblue.com/images"
+        endpoint = (
+            f"meteogram_one?lat={latitude}&lon={longitude}&asl=1405"
+            f"&tz={requests.utils.quote(tz)}&apikey={self.api_key}"
+            f"&format={format}&dpi={dpi}&lang={lang}"
+            f"&temperature_units={temperature_units}"
+            f"&precipitation_units={precipitation_units}"
+            f"&windspeed_units={windspeed_units}"
+        )
+        if location_name:
+            endpoint += f"&location_name={requests.utils.quote(location_name)}"
+
+        try:
+            # petición directa porque el base_url es para /packages
+            url = f"{images_base}/{endpoint}"
+            resp = requests.get(url, timeout=self.timeout)
+            resp.raise_for_status()
+            return resp.content
+        except Exception as e:
+            logger.error(f"Error al obtener meteograma: {e}")
             raise
 
 
