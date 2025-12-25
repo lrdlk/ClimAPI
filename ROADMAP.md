@@ -9,17 +9,17 @@
 | Métrica | Valor |
 |---------|-------|
 | **Horizonte estimado** | 8-14 semanas (2-3.5 meses) |
-| **Fase actual** | 15% (2/8 etapas en progreso) |
+| **Fase actual** | 25% (3/8 etapas en progreso) |
 | **Etapas completadas** | 2/8 |
 | **Próxima recomendada** | Procesamiento y limpieza |
-| **Tareas completadas** | 5/12 |
+| **Tareas completadas** | 6/16 |
 
 ---
 
 ## 🎯 Etapas del Proyecto
 
 ### ✅ 1. Recolección de datos
-**Progreso: 75%** 🟢
+**Progreso: 85%** 🟢
 
 Obtener datos climáticos de APIs y almacenarlos.
 
@@ -29,6 +29,7 @@ Obtener datos climáticos de APIs y almacenarlos.
 - ✅ Implementar clientes para 6 fuentes de datos (Meteoblue, Open-Meteo, OpenWeather, Meteosource, IDEAM, SIATA)
 - ✅ Sistema de logs automático
 - ✅ Dashboard para visualización de consultas
+- ✅ Cobertura de datos ampliada y descargas consolidadas en lote
 
 **Pendiente:**
 - ⏳ Elegir y poblar la base de datos (PostgreSQL/MongoDB)
@@ -38,13 +39,15 @@ Obtener datos climáticos de APIs y almacenarlos.
 ---
 
 ### 🔄 2. Procesamiento y limpieza
-**Progreso: 20%** 🟡
+**Progreso: 40%** 🟡
 
 Normalizar, unificar formatos y preparar datasets.
 
 **Completado:**
 - ✅ Documentación de estructura de datos por API
 - ✅ Guía de normalización en README.md
+- ✅ Normalización inicial de columnas clave (temperatura, viento, precipitación, humedad, presión)
+- ✅ Carga consolidada en DataFrame unificado con conversión de tipos y timestamps
 
 **Pendiente:**
 - ⏳ Implementar `src/processors/data_normalizer.py`
@@ -59,12 +62,13 @@ Normalizar, unificar formatos y preparar datasets.
 ---
 
 ### 3. Análisis exploratorio y feature engineering
-**Progreso: 0%** ⚪
+**Progreso: 5%** 🟡
 
 Visualizar series temporales y crear variables útiles.
 
 **Tareas:**
-- ⏳ Visualizar correlaciones y estacionalidad
+- ✅ Visualizar correlaciones iniciales entre variables
+- ⏳ Visualizar estacionalidad
 - ⏳ Generar notebooks de análisis exploratorio
 - ⏳ Crear features (hora, día semana, estacionalidad, ventanas móviles)
 - ⏳ Detectar patrones climáticos
@@ -193,15 +197,15 @@ Dockerizar, desplegar y monitorear el sistema.
 - [ ] Configurar servidor MLflow
 
 ### Procesamiento de Datos
+- [x] Unificar datasets en DataFrame normalizado (tipos y timestamps)
+- [x] Documentar decisiones de limpieza y normalización
 - [ ] Manejar valores nulos, outliers y estandarizar unidades
-- [ ] Visualizar correlaciones y estacionalidad
 - [ ] Crear features (hora, estacionalidad, ventanas móviles)
-- [ ] Dividir datos y definir métricas (RMSE, MAE)
 
-### Machine Learning
+### Análisis y Métricas
+- [x] Visualizar correlaciones iniciales
+- [ ] Dividir datos y definir métricas (RMSE, MAE)
 - [ ] Entrenar modelos baseline y avanzados
-- [ ] Registrar parámetros, métricas y modelo en MLflow
-- [ ] Optimizar hiperparámetros
 
 ### Desarrollo de APIs
 - [ ] Crear endpoints /predict y /health
@@ -212,7 +216,7 @@ Dockerizar, desplegar y monitorear el sistema.
 - [ ] Dockerizar API y dashboard
 - [ ] Ejecutar pruebas de integración y monitoreo
 
-**Progreso:** 5/12 tareas completadas (42%)
+**Progreso:** 6/16 tareas completadas (38%)
 
 ---
 
@@ -277,7 +281,7 @@ Dockerizar, desplegar y monitorear el sistema.
 ## 📅 Cronograma Estimado
 
 ```
-Semana 1-2:   ✅ Recolección de datos (75% completado)
+Semana 1-2:   ✅ Recolección de datos (85% completado)
 Semana 3-4:   🔄 Procesamiento y limpieza (en progreso)
 Semana 5-7:   ⏳ Análisis exploratorio y feature engineering
 Semana 8-10:  ⏳ Entrenamiento de modelos + MLflow
@@ -286,17 +290,17 @@ Semana 13:    🔄 Dashboard finalización (80% completado)
 Semana 14-16: ⏳ Despliegue, pruebas y monitoreo
 ```
 
-**Estado actual:** Semana 2-3 ✅
+**Estado actual:** Semana 3 ✅
 
 ---
 
 ## 🎯 Próximos Pasos Inmediatos
 
 ### Esta Semana
-1. **[ALTA]** Implementar script de normalización (`data_normalizer.py`)
-2. **[ALTA]** Crear esquemas comunes de datos (JSON schemas)
-3. **[MEDIA]** Configurar base de datos PostgreSQL/MongoDB
-4. **[MEDIA]** Iniciar notebooks de EDA
+1. **[ALTA]** Finalizar `src/processors/data_normalizer.py` consolidando la lógica usada en el notebook
+2. **[ALTA]** Crear esquemas comunes de datos (JSON schemas) y validarlos contra el DataFrame unificado
+3. **[MEDIA]** Configurar base de datos PostgreSQL/MongoDB y persistir el DataFrame consolidado
+4. **[MEDIA]** Extender EDA a estacionalidad y outliers
 
 ### Próxima Semana
 1. **[ALTA]** Pipeline ETL completo
@@ -307,6 +311,12 @@ Semana 14-16: ⏳ Despliegue, pruebas y monitoreo
 ---
 
 ## 📝 Notas de Progreso
+
+### 2025-12-24
+- ✅ Ingesta masiva consolidada en DataFrame unificado (temperatura, viento, precipitación, presión, humedad) con conversión de tipos y timestamps
+- ✅ Normalización inicial de unidades clave (°C, m/s, mm, hPa, %) y manejo básico de faltantes
+- ✅ Correlaciones iniciales entre temperatura y humedad en notebook de análisis
+- 🔄 Pendiente: esquemas JSON comunes y persistencia en base de datos
 
 ### 2024-12-13
 - ✅ Dashboard Streamlit implementado con verificación de APIs
@@ -334,9 +344,9 @@ Semana 14-16: ⏳ Despliegue, pruebas y monitoreo
 
 ```
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-Recolección de datos        ████████████████░░░░ 75%
-Procesamiento y limpieza    ████░░░░░░░░░░░░░░░░ 20%
-EDA y feature engineering   ░░░░░░░░░░░░░░░░░░░░  0%
+Recolección de datos        ██████████████████░░ 85%
+Procesamiento y limpieza    ████████░░░░░░░░░░░░ 40%
+EDA y feature engineering   █░░░░░░░░░░░░░░░░░░  5%
 Entrenamiento de modelos    ░░░░░░░░░░░░░░░░░░░░  0%
 Integración MLflow          ░░░░░░░░░░░░░░░░░░░░  0%
 API con FastAPI             ░░░░░░░░░░░░░░░░░░░░  0%
@@ -344,11 +354,11 @@ Dashboard Streamlit         ████████████████░�
 Despliegue y pruebas        ░░░░░░░░░░░░░░░░░░░░  0%
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Progreso Global: ██████████░░░░░░░░░░░░░░░░░░░░ 27%
+Progreso Global: ████████████░░░░░░░░░░░░░░░░░░ 30%
 ```
 
 ---
 
-**Última actualización:** 13 de diciembre de 2025  
-**Versión:** 1.0.0  
+**Última actualización:** 24 de diciembre de 2025  
+**Versión:** 1.0.1  
 **Mantener este roadmap actualizado con cada hito alcanzado** ✅

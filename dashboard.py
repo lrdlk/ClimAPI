@@ -766,13 +766,13 @@ def pagina_roadmap():
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric("Progreso Total", "27%", delta="En desarrollo")
+        st.metric("Progreso Total", "30%", delta="En desarrollo")
     
     with col2:
         st.metric("Etapas Completadas", "2/8")
     
     with col3:
-        st.metric("Tareas Completadas", "5/12")
+        st.metric("Tareas Completadas", "6/16")
     
     with col4:
         st.metric("Tiempo Estimado", "8-14 semanas")
@@ -783,9 +783,9 @@ def pagina_roadmap():
     st.header("🎯 Progreso por Etapa")
     
     etapas = [
-        {"nombre": "1. Recolección de datos", "progreso": 75, "estado": "🟢 Avanzado"},
-        {"nombre": "2. Procesamiento y limpieza", "progreso": 20, "estado": "🟡 En desarrollo"},
-        {"nombre": "3. Análisis exploratorio", "progreso": 0, "estado": "⚪ Pendiente"},
+        {"nombre": "1. Recolección de datos", "progreso": 85, "estado": "🟢 Avanzado"},
+        {"nombre": "2. Procesamiento y limpieza", "progreso": 40, "estado": "🟡 En desarrollo"},
+        {"nombre": "3. Análisis exploratorio", "progreso": 5, "estado": "🟡 Inicial"},
         {"nombre": "4. Entrenamiento de modelos", "progreso": 0, "estado": "⚪ Pendiente"},
         {"nombre": "5. Integración MLflow", "progreso": 0, "estado": "⚪ Pendiente"},
         {"nombre": "6. API FastAPI", "progreso": 0, "estado": "⚪ Pendiente"},
@@ -819,15 +819,19 @@ def pagina_roadmap():
         - ✅ Implementar clientes para 6 APIs
         - ✅ Sistema de logs automático
         - ✅ Dashboard de visualización
+        - ✅ Unificar datasets en DataFrame normalizado (tipos y timestamps)
+        - ✅ Correlaciones iniciales (temperatura vs humedad)
         """)
     
     with col2:
         st.subheader("⏳ Pendiente")
         st.markdown("""
-        - ⏳ Base de datos PostgreSQL/MongoDB
-        - ⏳ Normalización de datos
-        - ⏳ Notebooks de EDA
-        - ⏳ Entrenamiento de modelos
+        - ⏳ Finalizar normalizador (`data_normalizer.py`)
+        - ⏳ Esquemas JSON comunes y validaciones
+        - ⏳ Manejo de nulos/outliers y estandarización de unidades
+        - ⏳ Persistencia en base de datos (PostgreSQL/MongoDB)
+        - ⏳ EDA avanzado (estacionalidad, outliers)
+        - ⏳ Entrenamiento de modelos y métricas
         - ⏳ Integración MLflow
         - ⏳ API con FastAPI
         - ⏳ Despliegue Docker
@@ -840,14 +844,14 @@ def pagina_roadmap():
     
     st.info("""
     **Prioridad ALTA:**
-    1. Implementar `data_normalizer.py` para unificar formatos
-    2. Crear esquemas comunes de datos (JSON schemas)
-    3. Validar integridad de datos procesados
+    1. Finalizar `data_normalizer.py` consolidando la lógica actual del notebook
+    2. Crear y validar esquemas JSON comunes contra el DataFrame unificado
+    3. Persistir el DataFrame consolidado en PostgreSQL/MongoDB
     
     **Prioridad MEDIA:**
-    1. Configurar base de datos PostgreSQL/MongoDB
-    2. Iniciar notebooks de EDA (Análisis Exploratorio)
-    3. Documentar decisiones de limpieza
+    1. Extender EDA a estacionalidad y detección de outliers
+    2. Documentar decisiones de limpieza y normalización
+    3. Preparar pipeline ETL y baseline de métricas
     """)
     
     st.markdown("---")
@@ -930,7 +934,7 @@ def main():
         st.markdown("---")
         st.markdown("### Información")
         st.info("""
-        **CLIMAPI Dashboard v1.0**
+        **CLIMAPI Dashboard v1.0.1**
         
         Sistema integrado para consulta
         y visualización de datos climáticos.
