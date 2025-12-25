@@ -18,7 +18,7 @@ lxml
 matplotlib
 seaborn
 scipy
-
+openpyxl
 # Machine Learning
 scikit-learn
 jupyter
