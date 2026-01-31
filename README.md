@@ -2,6 +2,15 @@
 
 Sistema completo para consultar y procesar datos climáticos de múltiples fuentes en Colombia.
 
+## 🚀 Despliegue en Streamlit Cloud
+
+**¿Quieres desplegar el dashboard?** Ver guías de despliegue:
+- 🚀 [**QUICK_START_DEPLOY.md**](QUICK_START_DEPLOY.md) - Inicio rápido (10 min)
+- 📦 [**DEPLOYMENT_STREAMLIT.md**](DEPLOYMENT_STREAMLIT.md) - Guía completa
+- 📊 [**INFORME_DESPLIEGUE_STREAMLIT.md**](INFORME_DESPLIEGUE_STREAMLIT.md) - Análisis técnico
+
+---
+
 ## 📋 Tabla de Contenidos
 - [Descripción](#descripción)
 - [🗺️ Roadmap del Proyecto](#roadmap)
