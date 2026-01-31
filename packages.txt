@@ -1,0 +1,19 @@
+# System dependencies required for scientific Python packages
+# This file is used by Streamlit Cloud to install system packages
+
+# For arm-pyart, wradlib, netCDF4 compilation
+gcc
+g++
+gfortran
+libhdf5-dev
+libnetcdf-dev
+libgeos-dev
+libproj-dev
+
+# For image processing
+libfreetype6-dev
+libpng-dev
+
+# For cartopy and geospatial libraries
+proj-bin
+libgeos-c1v5
